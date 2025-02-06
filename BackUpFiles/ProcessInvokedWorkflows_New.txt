@@ -1,0 +1,60 @@
+1."SubmissionWizard_Process\Sequence Disabling capture data.xaml"
+
+2."StateMachine Selecting Engagement Type.xaml"
+2.1."Sequence Selecting Engagement Type.xaml"
+
+2.2."Sequence Fileroom Session Timeout.xaml"
+2.2.1."Sequence Launch and Login.xaml"
+
+2.3."Sequence Session Log Out Check.xaml"
+2.3.1."Sequence Launch and Login.xaml"
+
+3."Flowchart Binder Options.xaml"
+
+3.1."Ui Element Validation\Sequence Read Excel Data.xaml"
+3.1.1."Ui Element Validation\Sequence TC_Select_Binder_Options.xaml"
+3.1.1.1."Ui Element Validation\Sequence Typeinto Combo Box Validation.xaml"
+3.1.1.2."Ui Element Validation\Sequence Text Label Validation.xaml"
+3.1.1.3."Ui Element Validation\Sequence Type into Validation.xaml"
+3.1.1.4."Sequence Check Box Validation.xaml"
+3.1.1.5."Ui Element Validation\Sequence Combo Box Validation.xaml"
+3.1.1.6."Ui Element Validation\Sequence Graphic Validation.xaml"
+
+3.2."Sequence Binder Options.xaml"
+3.2.1."Settings_for_infinity\Sequence Enable state taxability.xaml"
+
+3.2.2."Settings_for_infinity\Sequence Enable state taxability.xaml"
+3.2.3."Assign members\Sequence Assign members.xaml"
+
+4."Mouse Scroll\Sequence Selecting Binder Template.xaml"
+
+5."Sequence Select Demo Document.xaml"
+
+6."Sequence Select Application Tax Return.xaml"
+
+6.1."Sequence Select CCH Tax Return.xaml"
+6.2."Sequence Select ProfxSystem Tax Return.xaml"
+6.3."Sequence Select Ultra Tax Return.xaml"
+6.3.1."Select Tax Return\Ultra\Sequence Browse File.xaml"
+6.3.1.1."Select Tax Return\Ultra\Sequence Search File.xaml"
+
+7."Sequence Select Lacerte Tax Return.xaml"
+7.1."Select Tax Return\Lacerte\Sequence Browse File.xaml"
+7.1.1."Select Tax Return\Lacerte\Sequence Search File.xaml"
+7.2."Sequence Lacerte Sign in Prompt.xaml"
+
+8."Extract Binder ID For Dev Env.xaml"
+
+9."BinderID\StateMachine BinderID.xaml"
+9.1."Sequence Submission wizard Open Option.xaml"
+9.2."BinderID\Sequence Get Binder ID.xaml"
+9.3."Sequence Fileroom Session Timeout.xaml"
+9.3.1."Sequence Launch and Login.xaml"
+9.3.1.1."Sequence Go To Fileroom.xaml"
+
+9.4."Sequence Session Log Out Check.xaml"
+9.4.1."Sequence Launch and Login.xaml"
+9.4.1.1."Sequence Go To Fileroom.xaml"
+
+10."Sequence Jobs in Queue.xaml"
+

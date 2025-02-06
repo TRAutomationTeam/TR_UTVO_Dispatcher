@@ -1,0 +1,1185 @@
+<Activity mc:Ignorable="sap sap2010" x:Class="Sequence_Binder_Options" xmlns="http://schemas.microsoft.com/netfx/2009/xaml/activities" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:sap="http://schemas.microsoft.com/netfx/2009/xaml/activities/presentation" xmlns:sap2010="http://schemas.microsoft.com/netfx/2010/xaml/activities/presentation" xmlns:sc="clr-namespace:System.ComponentModel;assembly=System.ComponentModel.TypeConverter" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=System.Private.CoreLib" xmlns:this="clr-namespace:" xmlns:ui="http://schemas.uipath.com/workflow/activities" xmlns:uix="http://schemas.uipath.com/workflow/activities/uix" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+  <x:Members>
+    <x:Property Name="In_Str_LeadsheetOption" Type="InArgument(x:String)" />
+    <x:Property Name="In_Str_OfficeLocation" Type="InArgument(x:String)" />
+    <x:Property Name="In_Str_Owner" Type="InArgument(x:String)" />
+    <x:Property sap2010:Annotation.AnnotationText="Transaction item to be processed." Name="in_TransactionItem" Type="InArgument(ui:QueueItem)" />
+    <x:Property Name="In_Str_7216Consent" Type="InArgument(x:String)" />
+    <x:Property Name="in_str_FilePath" Type="InArgument(x:String)" />
+    <x:Property Name="in_str_Scanverify" Type="InArgument(x:String)" />
+    <x:Property Name="in_str_Assignmembers" Type="InArgument(x:String)" />
+    <x:Property sap2010:Annotation.AnnotationText="Dictionary structure to store configuration data of the process (settings, constants and assets)." Name="in_Config" Type="InArgument(scg:Dictionary(x:String, x:Object))" />
+    <x:Property Name="In_ScanVerifyPlus" Type="InArgument(x:String)" />
+    <x:Property Name="in_str_ForeignTaxPaid" Type="InArgument(x:String)" />
+    <x:Property Name="in_str_TaxExemptIncome" Type="InArgument(x:String)" />
+    <x:Property Name="in_TaxExemptIncome" Type="InArgument(x:String)" />
+    <x:Property Name="in_AutoTaxExemptIncome" Type="InArgument(x:String)" />
+    <x:Property Name="in_str_Taxsoftware" Type="InArgument(x:String)" />
+    <x:Property Name="in_str_ServiceType" Type="InArgument(x:String)" />
+  </x:Members>
+  <this:Sequence_Binder_Options.in_str_Assignmembers>
+    <InArgument x:TypeArguments="x:String" />
+  </this:Sequence_Binder_Options.in_str_Assignmembers>
+  <this:Sequence_Binder_Options.In_ScanVerifyPlus>
+    <InArgument x:TypeArguments="x:String" />
+  </this:Sequence_Binder_Options.In_ScanVerifyPlus>
+  <this:Sequence_Binder_Options.in_TaxExemptIncome>
+    <InArgument x:TypeArguments="x:String" />
+  </this:Sequence_Binder_Options.in_TaxExemptIncome>
+  <this:Sequence_Binder_Options.in_AutoTaxExemptIncome>
+    <InArgument x:TypeArguments="x:String" />
+  </this:Sequence_Binder_Options.in_AutoTaxExemptIncome>
+  <this:Sequence_Binder_Options.in_str_Taxsoftware>
+    <InArgument x:TypeArguments="x:String" />
+  </this:Sequence_Binder_Options.in_str_Taxsoftware>
+  <this:Sequence_Binder_Options.in_str_ServiceType>
+    <InArgument x:TypeArguments="x:String" />
+  </this:Sequence_Binder_Options.in_str_ServiceType>
+  <VisualBasic.Settings>
+    <x:Null />
+  </VisualBasic.Settings>
+  <sap:VirtualizedContainerService.HintSize>1100,6152</sap:VirtualizedContainerService.HintSize>
+  <sap2010:WorkflowViewState.IdRef>Sequence_Binder_Options_1</sap2010:WorkflowViewState.IdRef>
+  <TextExpression.NamespacesForImplementation>
+    <scg:List x:TypeArguments="x:String" Capacity="36">
+      <x:String>System.Activities</x:String>
+      <x:String>System.Activities.Statements</x:String>
+      <x:String>System.Activities.Expressions</x:String>
+      <x:String>System.Activities.Validation</x:String>
+      <x:String>System.Activities.XamlIntegration</x:String>
+      <x:String>Microsoft.VisualBasic</x:String>
+      <x:String>Microsoft.VisualBasic.Activities</x:String>
+      <x:String>System</x:String>
+      <x:String>System.Collections</x:String>
+      <x:String>System.Collections.Generic</x:String>
+      <x:String>System.Data</x:String>
+      <x:String>System.Diagnostics</x:String>
+      <x:String>System.Drawing</x:String>
+      <x:String>System.IO</x:String>
+      <x:String>System.Linq</x:String>
+      <x:String>System.Net.Mail</x:String>
+      <x:String>System.Xml</x:String>
+      <x:String>System.Xml.Linq</x:String>
+      <x:String>UiPath.Core</x:String>
+      <x:String>UiPath.Core.Activities</x:String>
+      <x:String>System.Windows.Markup</x:String>
+      <x:String>UiPath.UIAutomationNext.Enums</x:String>
+      <x:String>UiPath.UIAutomationCore.Contracts</x:String>
+      <x:String>System.Collections.ObjectModel</x:String>
+      <x:String>UiPath.UIAutomationNext.Contracts</x:String>
+      <x:String>System.Runtime.Serialization</x:String>
+      <x:String>System.Reflection</x:String>
+      <x:String>System.Security</x:String>
+      <x:String>UiPath.UIAutomationNext.Activities</x:String>
+      <x:String>UiPath.Platform.ObjectLibrary</x:String>
+      <x:String>UiPath.Shared.Activities</x:String>
+      <x:String>System.ComponentModel</x:String>
+      <x:String>UiPath.Activities.System.Arrays</x:String>
+      <x:String>Microsoft.VisualBasic.CompilerServices</x:String>
+      <x:String>GlobalVariablesNamespace</x:String>
+      <x:String>GlobalConstantsNamespace</x:String>
+    </scg:List>
+  </TextExpression.NamespacesForImplementation>
+  <TextExpression.ReferencesForImplementation>
+    <scg:List x:TypeArguments="AssemblyReference" Capacity="90">
+      <AssemblyReference>Microsoft.VisualBasic</AssemblyReference>
+      <AssemblyReference>Microsoft.VisualBasic.Core</AssemblyReference>
+      <AssemblyReference>Microsoft.VisualBasic.Forms</AssemblyReference>
+      <AssemblyReference>NPOI</AssemblyReference>
+      <AssemblyReference>System</AssemblyReference>
+      <AssemblyReference>System.Activities</AssemblyReference>
+      <AssemblyReference>System.Collections</AssemblyReference>
+      <AssemblyReference>System.ComponentModel</AssemblyReference>
+      <AssemblyReference>System.ComponentModel.EventBasedAsync</AssemblyReference>
+      <AssemblyReference>System.ComponentModel.Primitives</AssemblyReference>
+      <AssemblyReference>System.ComponentModel.TypeConverter</AssemblyReference>
+      <AssemblyReference>System.Configuration.ConfigurationManager</AssemblyReference>
+      <AssemblyReference>System.Console</AssemblyReference>
+      <AssemblyReference>System.Core</AssemblyReference>
+      <AssemblyReference>System.Data</AssemblyReference>
+      <AssemblyReference>System.Data.DataSetExtensions</AssemblyReference>
+      <AssemblyReference>System.Drawing</AssemblyReference>
+      <AssemblyReference>System.Linq</AssemblyReference>
+      <AssemblyReference>System.Memory</AssemblyReference>
+      <AssemblyReference>System.ObjectModel</AssemblyReference>
+      <AssemblyReference>System.Private.CoreLib</AssemblyReference>
+      <AssemblyReference>System.Private.DataContractSerialization</AssemblyReference>
+      <AssemblyReference>System.Private.ServiceModel</AssemblyReference>
+      <AssemblyReference>System.Private.Uri</AssemblyReference>
+      <AssemblyReference>System.Reflection.DispatchProxy</AssemblyReference>
+      <AssemblyReference>System.Reflection.Metadata</AssemblyReference>
+      <AssemblyReference>System.Runtime.InteropServices</AssemblyReference>
+      <AssemblyReference>System.Runtime.Serialization.Formatters</AssemblyReference>
+      <AssemblyReference>System.Runtime.Serialization.Primitives</AssemblyReference>
+      <AssemblyReference>System.Security.Permissions</AssemblyReference>
+      <AssemblyReference>System.Xaml</AssemblyReference>
+      <AssemblyReference>System.Xml</AssemblyReference>
+      <AssemblyReference>System.Xml.Linq</AssemblyReference>
+      <AssemblyReference>UiPath.Excel.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.OCR.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.Platform</AssemblyReference>
+      <AssemblyReference>UiPath.Studio.Constants</AssemblyReference>
+      <AssemblyReference>UiPath.System.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.System.Activities.Design</AssemblyReference>
+      <AssemblyReference>UiPath.Testing.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.UiAutomation.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.UIAutomationCore</AssemblyReference>
+      <AssemblyReference>UiPath.UIAutomationNext</AssemblyReference>
+      <AssemblyReference>UiPath.UIAutomationNext.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.Workflow</AssemblyReference>
+      <AssemblyReference>System.Memory.Data</AssemblyReference>
+    </scg:List>
+  </TextExpression.ReferencesForImplementation>
+  <Sequence DisplayName="Sequence_Binder_Options" sap:VirtualizedContainerService.HintSize="1110.4,6087.2" sap2010:WorkflowViewState.IdRef="Sequence_1">
+    <Sequence.Variables>
+      <Variable x:TypeArguments="x:Boolean" Name="bool_ScanVerifyPlus" />
+    </Sequence.Variables>
+    <sap:WorkflowViewStateService.ViewState>
+      <scg:Dictionary x:TypeArguments="x:String, x:Object">
+        <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+      </scg:Dictionary>
+    </sap:WorkflowViewStateService.ViewState>
+    <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="1048,142.4" sap2010:WorkflowViewState.IdRef="LogMessage_2" Level="Trace" Message="[&quot;Selecting Binder Options&quot;]" />
+    <ui:MultipleAssign DisplayName="MultiAssign BinderInputDetails" sap:VirtualizedContainerService.HintSize="1048,429.6" sap2010:WorkflowViewState.IdRef="MultipleAssign_1">
+      <ui:MultipleAssign.AssignOperations>
+        <scg:List x:TypeArguments="ui:AssignOperation" Capacity="16">
+          <ui:AssignOperation sap2010:WorkflowViewState.IdRef="AssignOperation_1">
+            <ui:AssignOperation.To>
+              <OutArgument x:TypeArguments="x:String">[In_Str_OfficeLocation]</OutArgument>
+            </ui:AssignOperation.To>
+            <ui:AssignOperation.Value>
+              <InArgument x:TypeArguments="x:String">[in_TransactionItem.SpecificContent("OfficeLocation").ToString]</InArgument>
+            </ui:AssignOperation.Value>
+          </ui:AssignOperation>
+          <ui:AssignOperation sap2010:WorkflowViewState.IdRef="AssignOperation_2">
+            <ui:AssignOperation.To>
+              <OutArgument x:TypeArguments="x:String">[In_Str_LeadsheetOption]</OutArgument>
+            </ui:AssignOperation.To>
+            <ui:AssignOperation.Value>
+              <InArgument x:TypeArguments="x:String">[in_TransactionItem.SpecificContent("LeadsheetOption").ToString]</InArgument>
+            </ui:AssignOperation.Value>
+          </ui:AssignOperation>
+          <ui:AssignOperation sap2010:WorkflowViewState.IdRef="AssignOperation_3">
+            <ui:AssignOperation.To>
+              <OutArgument x:TypeArguments="x:String">[In_Str_7216Consent]</OutArgument>
+            </ui:AssignOperation.To>
+            <ui:AssignOperation.Value>
+              <InArgument x:TypeArguments="x:String">[in_TransactionItem.SpecificContent("7216Consent").ToString]</InArgument>
+            </ui:AssignOperation.Value>
+          </ui:AssignOperation>
+          <ui:AssignOperation sap2010:WorkflowViewState.IdRef="AssignOperation_4">
+            <ui:AssignOperation.To>
+              <OutArgument x:TypeArguments="x:String">[in_str_Assignmembers]</OutArgument>
+            </ui:AssignOperation.To>
+            <ui:AssignOperation.Value>
+              <InArgument x:TypeArguments="x:String">[in_TransactionItem.SpecificContent("Assignmembers").ToString]</InArgument>
+            </ui:AssignOperation.Value>
+          </ui:AssignOperation>
+          <ui:AssignOperation sap2010:WorkflowViewState.IdRef="AssignOperation_5">
+            <ui:AssignOperation.To>
+              <OutArgument x:TypeArguments="x:String">[In_ScanVerifyPlus]</OutArgument>
+            </ui:AssignOperation.To>
+            <ui:AssignOperation.Value>
+              <InArgument x:TypeArguments="x:String">[in_TransactionItem.SpecificContent("ScanVerify+").ToString]</InArgument>
+            </ui:AssignOperation.Value>
+          </ui:AssignOperation>
+          <ui:AssignOperation sap2010:WorkflowViewState.IdRef="AssignOperation_6">
+            <ui:AssignOperation.To>
+              <OutArgument x:TypeArguments="x:String">[in_str_ForeignTaxPaid]</OutArgument>
+            </ui:AssignOperation.To>
+            <ui:AssignOperation.Value>
+              <InArgument x:TypeArguments="x:String">[in_TransactionItem.SpecificContent("ForeignTaxPaid").ToString]</InArgument>
+            </ui:AssignOperation.Value>
+          </ui:AssignOperation>
+          <ui:AssignOperation sap2010:WorkflowViewState.IdRef="AssignOperation_7">
+            <ui:AssignOperation.To>
+              <OutArgument x:TypeArguments="x:String">[in_str_TaxExemptIncome]</OutArgument>
+            </ui:AssignOperation.To>
+            <ui:AssignOperation.Value>
+              <InArgument x:TypeArguments="x:String">[in_TransactionItem.SpecificContent("TaxExemptIncome").ToString]</InArgument>
+            </ui:AssignOperation.Value>
+          </ui:AssignOperation>
+          <ui:AssignOperation sap2010:WorkflowViewState.IdRef="AssignOperation_8">
+            <ui:AssignOperation.To>
+              <OutArgument x:TypeArguments="x:String">[in_AutoTaxExemptIncome]</OutArgument>
+            </ui:AssignOperation.To>
+            <ui:AssignOperation.Value>
+              <InArgument x:TypeArguments="x:String">[in_TransactionItem.SpecificContent("AutoTaxExemptIncome").ToString]</InArgument>
+            </ui:AssignOperation.Value>
+          </ui:AssignOperation>
+          <ui:AssignOperation sap2010:WorkflowViewState.IdRef="AssignOperation_9">
+            <ui:AssignOperation.To>
+              <OutArgument x:TypeArguments="x:String">[in_str_Taxsoftware]</OutArgument>
+            </ui:AssignOperation.To>
+            <ui:AssignOperation.Value>
+              <InArgument x:TypeArguments="x:String">[in_TransactionItem.SpecificContent("TaxSoftware").ToString]</InArgument>
+            </ui:AssignOperation.Value>
+          </ui:AssignOperation>
+          <ui:AssignOperation sap2010:WorkflowViewState.IdRef="AssignOperation_10">
+            <ui:AssignOperation.To>
+              <OutArgument x:TypeArguments="x:String">[In_Str_Owner]</OutArgument>
+            </ui:AssignOperation.To>
+            <ui:AssignOperation.Value>
+              <InArgument x:TypeArguments="x:String">[in_TransactionItem.SpecificContent("Owner").ToString]</InArgument>
+            </ui:AssignOperation.Value>
+          </ui:AssignOperation>
+          <ui:AssignOperation sap2010:WorkflowViewState.IdRef="AssignOperation_11">
+            <ui:AssignOperation.To>
+              <OutArgument x:TypeArguments="x:String">[in_str_ServiceType]</OutArgument>
+            </ui:AssignOperation.To>
+            <ui:AssignOperation.Value>
+              <InArgument x:TypeArguments="x:String">[in_TransactionItem.SpecificContent("ServiceType").ToString]</InArgument>
+            </ui:AssignOperation.Value>
+          </ui:AssignOperation>
+        </scg:List>
+      </ui:MultipleAssign.AssignOperations>
+      <sap:WorkflowViewStateService.ViewState>
+        <scg:Dictionary x:TypeArguments="x:String, x:Object">
+          <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+          <x:Boolean x:Key="IsPinned">False</x:Boolean>
+        </scg:Dictionary>
+      </sap:WorkflowViewStateService.ViewState>
+    </ui:MultipleAssign>
+    <ui:CommentOut DisplayName="Pop-up to download updates" sap:VirtualizedContainerService.HintSize="1048,52.8" sap2010:WorkflowViewState.IdRef="CommentOut_8">
+      <ui:CommentOut.Body>
+        <Sequence DisplayName="Ignored Activities" sap:VirtualizedContainerService.HintSize="496,675" sap2010:WorkflowViewState.IdRef="Sequence_49">
+          <sap:WorkflowViewStateService.ViewState>
+            <scg:Dictionary x:TypeArguments="x:String, x:Object">
+              <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+            </scg:Dictionary>
+          </sap:WorkflowViewStateService.ViewState>
+          <uix:NApplicationCard AttachMode="ByInstance" CloseMode="Never" ContinueOnError="True" DisplayName="Use Application: SurePrep Updates" sap:VirtualizedContainerService.HintSize="433.6,564" sap2010:WorkflowViewState.IdRef="NApplicationCard_2" OpenMode="Never" ScopeGuid="85392833-fd14-4972-8e90-c013531b1f7a" Version="V2">
+            <uix:NApplicationCard.Body>
+              <ActivityAction x:TypeArguments="x:Object">
+                <ActivityAction.Argument>
+                  <DelegateInArgument x:TypeArguments="x:Object" Name="WSSessionData" />
+                </ActivityAction.Argument>
+                <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="400,272.8" sap2010:WorkflowViewState.IdRef="Sequence_13">
+                  <sap:WorkflowViewStateService.ViewState>
+                    <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                      <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                    </scg:Dictionary>
+                  </sap:WorkflowViewStateService.ViewState>
+                  <uix:NClick ActivateBefore="True" ClickType="Single" ContinueOnError="True" DisplayName="Click 'Skip'" sap:VirtualizedContainerService.HintSize="337.6,157.6" sap2010:WorkflowViewState.IdRef="NClick_6" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="85392833-fd14-4972-8e90-c013531b1f7a" Timeout="2" Version="V3">
+                    <uix:NClick.Target>
+                      <uix:TargetAnchorable DesignTimeRectangle="265, 140, 80, 30" DesignTimeScaleFactor="1" ElementType="Button" FriendlyName="'Skip'" FullSelectorArgument="&lt;ctrl name='Skip' role='push button' /&gt;" FuzzySelectorArgument="&lt;ctrl name='Skip' role='push button' automationid='' check:text='Skip' /&gt;" Guid="bb4a10e0-97fe-46d6-9a63-e9f7e10d5d25" ImageBase64="iVBORw0KGgoAAAANSUhEUgAAAFQAAAAiCAYAAADBEP4dAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAJfSURBVGhD7ZbLaxNRFIf9XwQR1IUKroRuxIX0L3CjKymKoHQhLiw+Nm5EBSm48kkr2laMKKG2utG2SlFjtVKJtqbYJpi2aV7N+zjn4u9iyIiVHOeOcD74IHNvZhI+7tyZDaSIokGFsUH3X4iqbQhs0I2HrqttCDSokECDCgk0qJBAgwoJNKiQQIMKCTSokECDCglCG/TFxwWKvp7znQujwGnQ8wOTlF+r/PwHRI0GUU/fuJlLrhRoNrXacs77r2mq1uq059RQy5xLgbOgW47comyxTIvLBeo4OdAy/7ug+848oIOXh2nz4Zstcy4FzoIeuDhMlWqdYrPffecRdOvR25QplGnVs/NshJ68TdgV2tX7lGr1BuW8Vc6rm5lP52jn8X7fa/5LgdNbPp1dM1GHxuO0q/tO0xyC8i1ertboUuSNGfcL+mxq3qzYayPTVPfKvpxJNl0rCIHToJ3nIjSdWDJReIV9Tmbs6uKgPMaBBsfi9hy/oHeff7Lzy7kSfVvK2+OgBE6Dwh3H+mg0lmhaXRwUnO6fsN/9U1A+j6Nu966JsSAEoQgK+YnPeyB/5jCpTNHsjyv5kl2561mhc6ksbeq6YceCEDgLyk/53Sfu2ePex+9MnDHv/ZOPsYdeeRQzK3cynjLjfkF5D+a5q9Ep892Hr77Y6wYlcBYUT3nAkeILGdrbc9/MIyh/5jcBhm99v6B8nWK5SqVKjT54e/I2783g198KQhCqW/5v9bvlXQk0qJDgvw4aJoEGFRJoUCGBBhUSaFAhgQYVEmhQIYEGFRLYoBMzi2obAhtUkYDoB97SFonCYE1yAAAAAElFTkSuQmCC" InformativeScreenshot="be5dcd75a2e6aa3f1bda0c7153b0ef97.png" ScopeSelectorArgument="&lt;wnd app='sureprep.applicationloader.exe' cls='HwndWrapper*' title='SurePrep Updates' /&gt;" SearchSteps="Selector, FuzzySelector, Image" Version="V1" Visibility="Interactive">
+                        <uix:TargetAnchorable.Anchors>
+                          <scg:List x:TypeArguments="uix:ITarget" Capacity="1">
+                            <uix:Target Accuracy="1" DesignTimeRectangle="31, 10, 101, 15" ElementType="Text" FriendlyName="'SurePrep Updates'" FullSelectorArgument="&lt;ctrl name='SurePrep Updates' role='text' /&gt;" FuzzyAccuracy="1" FuzzySelectorArgument="&lt;ctrl name='SurePrep Updates' role='text' automationid='' check:text='SurePrep Updates' /&gt;" ImageBase64="iVBORw0KGgoAAAANSUhEUgAAAGkAAAATCAYAAACTOyOdAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAP5SURBVGhD7ZbZS1VRFMb7U3oIeggKogiCoB6ihx6DIAqkAaMJFQMbCBogyxLLyByy0ubBNNNCRc1LOaTmlCVZNBkFEfgfnPpt+zb7nI5179XgXjgPH+esvdZea+317b3XnjM+MelFSG1EJKUBIpLSABFJaYCIpDRARFISKLzb7TX3vQ/V/Q/4SCpreOEtzLzgzd10xmBeRrEXG/7smzBTbDpRa/2D+ZvPeTvONobazhZKH/Z71c0jvjFkxt2xeEHeR6pjoToXh6s7vA3Ha0J1icCSNPrhhyGFIvLvGs0m8L9gW4mV95a1mEWff9Dns5tNrMy94q09eMM3FswjEcRLEjGCcZOBJanu2RsT/NCVJ38YSXfx0aAdcxMlmUXbS82iQc/rr966I3fMPydl1d4qS3ywOIzji9OkOMuzKq3/4trnxn7xjjLjq+B2l5nHuGvLBsstbbF+XfyLpGBcsDH/vrXlhiE+t4xuGq2d07h0V4XNT/NYDzJAn1XSZMa3nK43ccGyPRe9pt6paxN7xrAlhltr33VHoUF544DvNMVDEoVo6Z8KmHOhyfh5OjJhQPD9lW3WVsUBYSQdvRoz45BN8fMqWo0tpw6Zf5F0vfWl1QVzFOIl6eStTiMX1fQYmfUph8yiBqNTvlq7C24DNwdiuHFP3ekyvu7Fxowf8sooqPMaut+aecSVrQsfSe2Dn8xOwBFQr4iHJDeZFTmXva2FD63MvYyNbFUcEnWvu2AcFUu7jcUhYyeS2gY+Gh3FRBahLuIlyV0fOxob5YCNdMhhJAV1wbpQhzX7rlmZtZObNgL2vWPfrF7wkSQMvftui5d/81nCJKHTMQf8S48teoFrQldsMA4Flw1++EofJElxteNdJEOS5iiHYBytvap52Fudd9Wu1dUF64JPyJAt8ZUDm0FXqdseQChJAhNYdKIkEdg9SS7c4gQRjIN/ZJ0kF9OdpLCeSm7uDgbsanoC/2Hro4isQTlgIx2y1o4P7FRUVxesS1geQdR3jpv6ZP/uYcCSRBBOkGQdcxq1CsDpQtc5+uWvyaw/dtcEkj++OsaJkHSr/ZWRD1ya6megY+iT+YokEciOZ5e6xRTokdjqBUkfw5Z+gKy4PBCQ5Rt75aATSt9F1trxo7oAV8f4kp3lVqc8Gn/1IGRqTi2l1xgbJDuMJCUqUEh6knYIjZ+E0PEKQj8dSTwWuALcK4/HgGzjJQkQQ68q/BCH06NCSsdVyNXs+hNYA68q8mEOX3oveaJXXPLCD/6ynSJRh+nWrrowj17s6vDLSSMerzvy4NXr1mX3ucfGDh/IzKd29F/F/+t1l8oI60nJImxzpBIikn4hIinCjBGRlPKY9H4CYVN+v2vjhawAAAAASUVORK5CYII=" SearchSteps="Selector, FuzzySelector, Image" />
+                          </scg:List>
+                        </uix:TargetAnchorable.Anchors>
+                      </uix:TargetAnchorable>
+                    </uix:NClick.Target>
+                  </uix:NClick>
+                </Sequence>
+              </ActivityAction>
+            </uix:NApplicationCard.Body>
+            <uix:NApplicationCard.TargetApp>
+              <uix:TargetApp Area="1869, 334, 450, 186" FilePath="C:\Program Files (x86)\SurePrepLLC\PBFX\sureprep.applicationloader.exe" IconBase64="iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAW5SURBVFhHrZd5bBRlGIcXAgjIoQbb3QUs3e5hSYyBmABRIQqJiv7hX/yhMYpRpIWAiIWelBsLpBFSelq6OAutAaTszBSiwUQhJg0IGg+UoMFAiQEPROTqMT7v7ky7OzvLJW/yZNNN9/s9M/PN972f62aVo610hbQiPlfd79PWPOXT1hVlaxU7srX1n2dpG78aq1UeHqO+v9+rbq5yq1WvZapbcjPUmoEZarUrU60xR7mDCmrLXLkEB7TycTnaisUIHETgLwS6s7X3DAQMBAwEDAQMBAwEriNwimDFo9bOdO+rv9c3Vxnuy1d8acg24/oqpBe7gnoplIwI6mXzEDju11b0IGAgAOsITytgZKrVUGN41LpLnj3183x5SiVBHXDagUozNl5BvZDbLQJFAQR2InIdAQMB47YFtNpjWcvDZQhcJMhw4CD03YGQviQmENSXTuSznTthIGDckYBWc2FMY0MR4d/YQi3OwJMQD39YfxeBAmE8IkcQMG4icBmBDgROIPAzAr8j0NUrsKe2zjdfURICE7kC+ci5+IwL5OqLhVGI6AgQ7CjQhcDXPm3tCgRmIBBAwIvAGAQeReBlBJoztC1tWSXhcgL+TQjtI0+py5mjDGFyWuGLYH6/XP2dcgR60gic5XVc6tNWu7O0KhcS8R+bRbAr47PNrpHnKwZklTdNJehESnCcL0dvjeRltkXGu9WIyx3dYQksmohABwIE2wWW/eDXlk8fp63tx+toRqaWXBEM4wpbHILlyk+P3aAUEPyLO7q90RttHugRgfH6/P65+tubEDASBLpCbcUXgm2l3wX2lz4e2L3KFTo+x4xKLQIs5sG1WGBy+JVxS5TV7uiHn7ijioHAeW90x2QQgYUhBE4mCWiFe/2bKt/KWVW9gAGegWcTkL+9kBgsPAanIDlcYEJ6Pg5XI9AtAp7odoM7sN4d3SYCC/IR6EwSaCtszymtK/DlRc4zwHWQq7LohCYYAlb4fRCF1PB8pX10OFzmUcN/I8DV9woc8UZbMkRgJwKG7RFcC7aWzvLNjWxwGFC4DK+AJVAAImb/v9+yFyoz3drWXZ5omPAkgT8RmCYCPzoInA7uW+r3vd7yIIMcsA1q8T3kwBQ4a36XiNy5xaO+3cpb0lTmINCFQL4IXHQQOBTQiobllNXK1U2GX81B7XwE6QQjMMzbHBaBFxHotAlAS4UIdDsI7PXrRQP8TWusW/wGyG23h3RDj+074Sj4QcKFJxC45CBQlU6gVQQC7A0yCAyGarAHOSET9zmI/fZWBNI+giD9QMJ7PhpkB3MKtZCJWAj9IfZbU+CGj+Anx0mosSUnCwiyzMpO5hQuyCo4AmK/c6syAWNzoPRGk9DpNewK6UWvQqxBkZJBTWS1uwr2cNl6gxD7Pym32igMR+SAg0Dva5i6EMX3gv3sBXRFJbHBpMzBh0IjJIb/AS9Ab7hH/cASeB6BfxwEDiMgC5HDUhwXuIrAm3IXAnpZbFApMyQL2kHC5bmXQO9zl/KoDcIoRD5FgFBLIGIJVJhLsWzFKZuRCPBZeordcCq9oTSnsYElxGQGnINdMFK+s8qj1kPdYAQ2ItBtFzA3o0mxzcjcjicgcMZBwHE7ljCQK54FuebfLtpxgmuFkQisQ+AqArRqKQIN3P74dpzQkCxDoDtVoLchWSINyUNaXawh8U9rTUKaEpDzwBSa0lYEOhGgO7YLKCeReATiDYnUbbRkxwhfTks2nZbMb2vJXkIggsA5sy2HFAEWI2V2ZpRXE4HeIvjuNqXOAteYdCsRGISImZxQBFtt+QQ+/19bnipwGYE1nui2obGZn65E4K4dTPoEOhDIZ0W8R5blmxZXjsBdOpqp9bsRmEQ31M/DonRb5XA4PYSAHE57biCQdDhFYCgivB0N5qh3UPHjebEczx9A4GkEijmeNyPwBQJHEUg8ns82j+eDbu147nL9BzHV9JE6K7fwAAAAAElFTkSuQmCC" InformativeScreenshot="82a22d96cceed69ace0097dee65c8bef.png" IsExactTitleEnabled="True" Selector="&lt;wnd app='sureprep.applicationloader.exe' cls='HwndWrapper*' title='SurePrep Updates' /&gt;" Title="SurePrep Updates" />
+            </uix:NApplicationCard.TargetApp>
+            <sap:WorkflowViewStateService.ViewState>
+              <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                <x:Boolean x:Key="IsPinned">False</x:Boolean>
+              </scg:Dictionary>
+            </sap:WorkflowViewStateService.ViewState>
+          </uix:NApplicationCard>
+        </Sequence>
+      </ui:CommentOut.Body>
+      <sap:WorkflowViewStateService.ViewState>
+        <scg:Dictionary x:TypeArguments="x:String, x:Object">
+          <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+          <x:Boolean x:Key="IsPinned">False</x:Boolean>
+        </scg:Dictionary>
+      </sap:WorkflowViewStateService.ViewState>
+    </ui:CommentOut>
+    <uix:NApplicationCard AttachMode="ByInstance" CloseMode="Never" DisplayName="Use Application: Create New Binder" sap:VirtualizedContainerService.HintSize="1048,4394.4" sap2010:WorkflowViewState.IdRef="NApplicationCard_4" OpenMode="Never" ScopeGuid="5e96cf71-c67e-4656-8150-7c72ac92f373" Timeout="180" Version="V2">
+      <uix:NApplicationCard.Body>
+        <ActivityAction x:TypeArguments="x:Object">
+          <ActivityAction.Argument>
+            <DelegateInArgument x:TypeArguments="x:Object" Name="WSSessionData" />
+          </ActivityAction.Argument>
+          <Sequence DisplayName="Selecting Binder options" sap:VirtualizedContainerService.HintSize="1014.4,4103.2" sap2010:WorkflowViewState.IdRef="Sequence_6">
+            <Sequence.Variables>
+              <Variable x:TypeArguments="x:String" Name="_7216Check" />
+            </Sequence.Variables>
+            <sap:WorkflowViewStateService.ViewState>
+              <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                <x:Boolean x:Key="IsPinned">False</x:Boolean>
+              </scg:Dictionary>
+            </sap:WorkflowViewStateService.ViewState>
+            <uix:NCheckState DisplayName="Check App State '7216'" sap:VirtualizedContainerService.HintSize="952,1207.2" sap2010:WorkflowViewState.IdRef="NCheckState_19" ScopeIdentifier="5e96cf71-c67e-4656-8150-7c72ac92f373" Timeout="[cint(in_Config(&quot;Wait_7216Consent&quot;))]" Version="V1">
+              <uix:NCheckState.IfExists>
+                <Sequence DisplayName="Target appears" sap:VirtualizedContainerService.HintSize="449.6,948.8" sap2010:WorkflowViewState.IdRef="Sequence_39">
+                  <Sequence.Variables>
+                    <Variable x:TypeArguments="x:String" Name="str_7216ConsentDropdown" />
+                    <Variable x:TypeArguments="scg:List(x:String)" Name="out_str_List" />
+                  </Sequence.Variables>
+                  <sap:WorkflowViewStateService.ViewState>
+                    <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                      <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                      <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                    </scg:Dictionary>
+                  </sap:WorkflowViewStateService.ViewState>
+                  <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="387.2,144" sap2010:WorkflowViewState.IdRef="LogMessage_13" Level="Info" Message="[&quot;7216 Dropdown combobox has appeared&quot;]">
+                    <sap:WorkflowViewStateService.ViewState>
+                      <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                        <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                        <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                      </scg:Dictionary>
+                    </sap:WorkflowViewStateService.ViewState>
+                  </ui:LogMessage>
+                  <uix:NHover DelayBefore="3" DisplayName="Hover '7216 Consent Received?'" sap:VirtualizedContainerService.HintSize="387.2,157.6" sap2010:WorkflowViewState.IdRef="NHover_3" ScopeIdentifier="5e96cf71-c67e-4656-8150-7c72ac92f373" Timeout="5" Version="V1">
+                    <uix:NHover.Target>
+                      <uix:TargetAnchorable DesignTimeRectangle="220, 100, 110, 22" DesignTimeScaleFactor="1" ElementType="DropDown" FriendlyName="'Yes'" FullSelectorArgument="&lt;ctrl automationid='4' /&gt;&lt;ctrl automationid='ConsentComboBox' /&gt;" FuzzySelectorArgument="&lt;ctrl automationid='4' /&gt;&lt;ctrl automationid='ConsentComboBox' role='combo box' /&gt;" Guid="76b9bbb8-fd39-4118-87c0-434d41d963e2" ImageBase64="iVBORw0KGgoAAAANSUhEUgAAAHIAAAAaCAYAAABreghKAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAJHSURBVGhD7da/a5pBHMdxJ/8CJ3FxcHFwcRQXpy4KibTFClI6dHB0kQoFJztIS0QMdCkUBCmlTrU/bCg4OEkFdRCE2BYRlGiKIg2I8Knf4x6NJiYam4Qc3xcceneP05s7Hx2YEjikIjikImYh6/U6jzs4NAshoZtOtcGuzekA2+CQt4xDKoJDKoJDKuJGQ3a7XfT7fbk7NxwO0W635YxdxY2GLBaL0w8dyuWyfAIYDAYwmUyIx+NyhV3FcsjPX79hL7mPn79+y5W5o6Mekvuv8e79B7kyt1ZIkkqlYLVaMR6PxTwYDCIQCKDT6cDlcsHtdsNms8Hj8cye8fv9MBqNsFgs4hl21nJIinjPvYud+4+QP/guV4HSjzIe+B+LvWfPo3J1bu2QxOl0ioC5XE6cxlarhUgkgnA4LPYpIMVOp9PiFFNALSo733LIvycneBF/JYLReLmXxJu36dmcIh4f/5FPz20UstfrwWAwQK/Xo1QqiTW73Y58Pi++k1gsJsJWq9XpT3WoVCpyh51nOaTm46cv8HgfzgLSoKCTyUQ+sWijkCSRSMDr9coZbevEdRoKhcSgU+vz+cQenVy6bil+NpsVa2zRqpDk8LCJJ0+D4kqlq/UiG4ek/0otFDl9Olep1WoieLPZlCtMc1FIMhqNxEvOZbYOSS882n/kKnQlU8hGoyFXmOaykOvaOiRFcjgc4vqklxsamUwGhUJhNjebzYhGz75psVsMyf4vDqkIDqmIaw/J4+4NDR89RXBIRXBIRXBIJQD/APt5htwcxcNlAAAAAElFTkSuQmCC" InformativeScreenshot="bfa322a6a87df36347b57f10d35da7f9.png" ScopeSelectorArgument="&lt;wnd app='submissionwizard.exe' cls='HwndWrapper*' title='Create New Binder' /&gt;" SearchSteps="Selector" Version="V1" Visibility="Visible" WaitForReadyArgument="Complete">
+                        <uix:TargetAnchorable.Anchors>
+                          <scg:List x:TypeArguments="uix:ITarget" Capacity="1">
+                            <uix:Target DesignTimeRectangle="40, 101, 135, 19" ElementType="Text" FriendlyName="'7216 Consent Received?'" FullSelectorArgument="&lt;ctrl automationid='4' /&gt;&lt;ctrl automationid='lblConsent' /&gt;" FuzzySelectorArgument="&lt;ctrl automationid='4' /&gt;&lt;ctrl automationid='lblConsent' role='text' check:text='7216 Consent Received?:' /&gt;" ImageBase64="iVBORw0KGgoAAAANSUhEUgAAAIsAAAAXCAYAAAA7vbzHAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAT5SURBVGhD7ZjPK3VbGMfv/2RgYGTAQIlSSjGQgZkQRTIgBopQJAMzJUIoBkoiCRGKIgYklJQMDIz27fPc892ts+yz3/12z6237vrW7py91rOeX+v7PGud81cUEJARgSwBmRHIEpAZgSwBmRHIEpAZgSz/Q3x8fESbm5v2+Tv4T8iytbUVlZeXRyUlJfaMjo7mZvJxeHgYNTc3x3I8Kysrudk/A9XV1dHJyUnuLR83Nzd5vvM0NjZGb29vOYniQHYWFhZyI/8O0ndwcBBtb2/HvpeVlaXaKDpZLi4uzPDIyEj09fVlY+/v7/bpAkeR6+npiR4fH23s+/s7+vz8tO9/AtykJsHfxMvLy6i0tDTq6uqy92KBvDw9PRUtN4XiGhsbs/G7u7vcSD5isrgMcx8S0dTUFL/Dvs7OTguATe7r67MEtba2mh5IUllZ+csW19/fnyo3Nzdn3amqqiqqqKiIN0SB1tXVxT7V1NSYP4Auxjo6AuuUkKGhIRvnQf7h4cHG5Yc6IbEsLS1ZwrDNGJ/oe35+tjWCTxbQ29trugD5odPgB3rJlcAaxUZO8TNNXnaGh4dj/QCfmFtdXY3Ozs4sNvSyfmZmJif1jz30MqdYfbKIA0dHR5YX1w4o2Fk2NjbM4OnpaV5n2N3dNYUknyCnpqai+vr6mCwNDQ2ZKgtHcCgJe3t7ZgPnwfLysr3jizZofX3dCPLy8mJ+Qi42mDmOQReK5erqytbg48DAgM3hA++KUdUFClWgUIgskA90d3dboWET28ju7OzE8bnrQCF5IHmtJReAMXIJ+Wtra+OckgPkyIm6vexJtx+XCocC5ujlXuOiIFkwnLTpBIIhOojaIskWWZiDRKpsvrOxPqQjCZOTk5YAbAGcRx5CJG0g9tGFHKQgaLdls4EtLS25tyianZ21NQBZ+Q5UXVTs75KFysY+RFSe5ufnbQ5QVMSg+NyumiYPZAc51lKkoKOjI2pvb48JAJmA9BEP8br2/LiQxWeIcnx8bGNJSCTL2tqaKRN7BZSKfTgn+GShVQoEg6M+GFMV+GDcX4NeCJFGFkBFQVJkaOn4zDybCIF50C39xSAL9mST2Lngag47sosP+JkUX5o8YE6kxAbFrOLgCJLf+KH1WuPb8+PSkU+XTsMPspBcHIGtLlDELxfOPJ99LlmoBpcEOIJj/nmPvJ8wgcpjjaAq+VVncXF7e2v6qUBsuZ3FRTHIooqniNSNdZdwO4XgxwfS5IHsAB1F2mSOIHxkTJ3FBblx7flxcdQNDg7a9zT8IIu6ipsglHGctLW1JbLPJQsXTNhO8gCdBfL5QCd22Cx+NfFwTl5fX8fJ0N3D7XRZyYJ9qguyTE9P25r7+/t4TneUNLKIpFRuElyyAPmJDkDckFS54GgkTtnQOo0XkgeuPPOQhDyrqNVldBcDxIgsdzZ3/f7+vr0rh+Tcv5+wF9xPXeSRBcU47CYPoNh/XBmXLLRgfi1BLgKiGxU6B90jg0DpSouLizanqlGLV8WlkYU59EAS2ea4JC75pBY9Pj5ua9PIAiYmJkwnHVVjgk8WgC8qDmwTk+zyXRdWiopx9DLHeJq8b4ejiDGXyBSZfu2wnvjPz8/j+JHn0X9bymFS9ycv6HGRRxZVhhwMCHCRR5bX11f78ycgIAk/7iwBAYUQyBKQGYEsAZkRyBKQGYEsAZkRyBKQEVH0NwFo4HoKaDVCAAAAAElFTkSuQmCC" SearchSteps="Selector" />
+                          </scg:List>
+                        </uix:TargetAnchorable.Anchors>
+                      </uix:TargetAnchorable>
+                    </uix:NHover.Target>
+                    <sap:WorkflowViewStateService.ViewState>
+                      <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                        <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                        <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                      </scg:Dictionary>
+                    </sap:WorkflowViewStateService.ViewState>
+                  </uix:NHover>
+                  <uix:NClick ActivateBefore="True" ClickType="Single" DisplayName="Click '7216 Consent Received?'" sap:VirtualizedContainerService.HintSize="387.2,193.6" sap2010:WorkflowViewState.IdRef="NClick_7" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="5e96cf71-c67e-4656-8150-7c72ac92f373" Timeout="5" Version="V1">
+                    <uix:NClick.Target>
+                      <uix:TargetAnchorable DesignTimeRectangle="220, 100, 110, 22" DesignTimeScaleFactor="1" ElementType="DropDown" FriendlyName="'Yes'" FullSelectorArgument="&lt;ctrl automationid='4' /&gt;&lt;ctrl automationid='ConsentComboBox' /&gt;" FuzzySelectorArgument="&lt;ctrl automationid='4' /&gt;&lt;ctrl automationid='ConsentComboBox' role='combo box' /&gt;" Guid="8611890c-48a5-46f8-bb3f-c3a0c52c7853" ImageBase64="iVBORw0KGgoAAAANSUhEUgAAAHIAAAAaCAYAAABreghKAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAJHSURBVGhD7da/a5pBHMdxJ/8CJ3FxcHFwcRQXpy4KibTFClI6dHB0kQoFJztIS0QMdCkUBCmlTrU/bCg4OEkFdRCE2BYRlGiKIg2I8Knf4x6NJiYam4Qc3xcceneP05s7Hx2YEjikIjikImYh6/U6jzs4NAshoZtOtcGuzekA2+CQt4xDKoJDKoJDKuJGQ3a7XfT7fbk7NxwO0W635YxdxY2GLBaL0w8dyuWyfAIYDAYwmUyIx+NyhV3FcsjPX79hL7mPn79+y5W5o6Mekvuv8e79B7kyt1ZIkkqlYLVaMR6PxTwYDCIQCKDT6cDlcsHtdsNms8Hj8cye8fv9MBqNsFgs4hl21nJIinjPvYud+4+QP/guV4HSjzIe+B+LvWfPo3J1bu2QxOl0ioC5XE6cxlarhUgkgnA4LPYpIMVOp9PiFFNALSo733LIvycneBF/JYLReLmXxJu36dmcIh4f/5FPz20UstfrwWAwQK/Xo1QqiTW73Y58Pi++k1gsJsJWq9XpT3WoVCpyh51nOaTm46cv8HgfzgLSoKCTyUQ+sWijkCSRSMDr9coZbevEdRoKhcSgU+vz+cQenVy6bil+NpsVa2zRqpDk8LCJJ0+D4kqlq/UiG4ek/0otFDl9Olep1WoieLPZlCtMc1FIMhqNxEvOZbYOSS882n/kKnQlU8hGoyFXmOaykOvaOiRFcjgc4vqklxsamUwGhUJhNjebzYhGz75psVsMyf4vDqkIDqmIaw/J4+4NDR89RXBIRXBIRXBIJQD/APt5htwcxcNlAAAAAElFTkSuQmCC" InformativeScreenshot="bfa322a6a87df36347b57f10d35da7f9.png" ScopeSelectorArgument="&lt;wnd app='submissionwizard.exe' cls='HwndWrapper*' title='Create New Binder' /&gt;" SearchSteps="Selector" Version="V1" Visibility="Interactive">
+                        <uix:TargetAnchorable.Anchors>
+                          <scg:List x:TypeArguments="uix:ITarget" Capacity="1">
+                            <uix:Target DesignTimeRectangle="40, 101, 135, 19" ElementType="Text" FriendlyName="'7216 Consent Received?'" FullSelectorArgument="&lt;ctrl automationid='4' /&gt;&lt;ctrl automationid='lblConsent' /&gt;" FuzzySelectorArgument="&lt;ctrl automationid='4' /&gt;&lt;ctrl automationid='lblConsent' role='text' check:text='7216 Consent Received?:' /&gt;" ImageBase64="iVBORw0KGgoAAAANSUhEUgAAAIsAAAAXCAYAAAA7vbzHAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAT5SURBVGhD7ZjPK3VbGMfv/2RgYGTAQIlSSjGQgZkQRTIgBopQJAMzJUIoBkoiCRGKIgYklJQMDIz27fPc892ts+yz3/12z6237vrW7py91rOeX+v7PGud81cUEJARgSwBmRHIEpAZgSwBmRHIEpAZgSz/Q3x8fESbm5v2+Tv4T8iytbUVlZeXRyUlJfaMjo7mZvJxeHgYNTc3x3I8Kysrudk/A9XV1dHJyUnuLR83Nzd5vvM0NjZGb29vOYniQHYWFhZyI/8O0ndwcBBtb2/HvpeVlaXaKDpZLi4uzPDIyEj09fVlY+/v7/bpAkeR6+npiR4fH23s+/s7+vz8tO9/AtykJsHfxMvLy6i0tDTq6uqy92KBvDw9PRUtN4XiGhsbs/G7u7vcSD5isrgMcx8S0dTUFL/Dvs7OTguATe7r67MEtba2mh5IUllZ+csW19/fnyo3Nzdn3amqqiqqqKiIN0SB1tXVxT7V1NSYP4Auxjo6AuuUkKGhIRvnQf7h4cHG5Yc6IbEsLS1ZwrDNGJ/oe35+tjWCTxbQ29trugD5odPgB3rJlcAaxUZO8TNNXnaGh4dj/QCfmFtdXY3Ozs4sNvSyfmZmJif1jz30MqdYfbKIA0dHR5YX1w4o2Fk2NjbM4OnpaV5n2N3dNYUknyCnpqai+vr6mCwNDQ2ZKgtHcCgJe3t7ZgPnwfLysr3jizZofX3dCPLy8mJ+Qi42mDmOQReK5erqytbg48DAgM3hA++KUdUFClWgUIgskA90d3dboWET28ju7OzE8bnrQCF5IHmtJReAMXIJ+Wtra+OckgPkyIm6vexJtx+XCocC5ujlXuOiIFkwnLTpBIIhOojaIskWWZiDRKpsvrOxPqQjCZOTk5YAbAGcRx5CJG0g9tGFHKQgaLdls4EtLS25tyianZ21NQBZ+Q5UXVTs75KFysY+RFSe5ufnbQ5QVMSg+NyumiYPZAc51lKkoKOjI2pvb48JAJmA9BEP8br2/LiQxWeIcnx8bGNJSCTL2tqaKRN7BZSKfTgn+GShVQoEg6M+GFMV+GDcX4NeCJFGFkBFQVJkaOn4zDybCIF50C39xSAL9mST2Lngag47sosP+JkUX5o8YE6kxAbFrOLgCJLf+KH1WuPb8+PSkU+XTsMPspBcHIGtLlDELxfOPJ99LlmoBpcEOIJj/nmPvJ8wgcpjjaAq+VVncXF7e2v6qUBsuZ3FRTHIooqniNSNdZdwO4XgxwfS5IHsAB1F2mSOIHxkTJ3FBblx7flxcdQNDg7a9zT8IIu6ipsglHGctLW1JbLPJQsXTNhO8gCdBfL5QCd22Cx+NfFwTl5fX8fJ0N3D7XRZyYJ9qguyTE9P25r7+/t4TneUNLKIpFRuElyyAPmJDkDckFS54GgkTtnQOo0XkgeuPPOQhDyrqNVldBcDxIgsdzZ3/f7+vr0rh+Tcv5+wF9xPXeSRBcU47CYPoNh/XBmXLLRgfi1BLgKiGxU6B90jg0DpSouLizanqlGLV8WlkYU59EAS2ea4JC75pBY9Pj5ua9PIAiYmJkwnHVVjgk8WgC8qDmwTk+zyXRdWiopx9DLHeJq8b4ejiDGXyBSZfu2wnvjPz8/j+JHn0X9bymFS9ycv6HGRRxZVhhwMCHCRR5bX11f78ycgIAk/7iwBAYUQyBKQGYEsAZkRyBKQGYEsAZkRyBKQEVH0NwFo4HoKaDVCAAAAAElFTkSuQmCC" SearchSteps="Selector" />
+                          </scg:List>
+                        </uix:TargetAnchorable.Anchors>
+                      </uix:TargetAnchorable>
+                    </uix:NClick.Target>
+                    <uix:NClick.VerifyOptions>
+                      <uix:VerifyExecutionOptions DisplayName="{x:Null}" Mode="Appears" Retry="True">
+                        <uix:VerifyExecutionOptions.Timeout>
+                          <InArgument x:TypeArguments="x:Double" />
+                        </uix:VerifyExecutionOptions.Timeout>
+                      </uix:VerifyExecutionOptions>
+                    </uix:NClick.VerifyOptions>
+                    <sap:WorkflowViewStateService.ViewState>
+                      <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                        <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                        <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                      </scg:Dictionary>
+                    </sap:WorkflowViewStateService.ViewState>
+                  </uix:NClick>
+                  <uix:NTypeInto ActivateBefore="True" ClickBeforeMode="Single" DisplayName="Type Into '7216 Consent Received?'" EmptyFieldMode="SingleLine" sap:VirtualizedContainerService.HintSize="387.2,218.4" sap2010:WorkflowViewState.IdRef="NTypeInto_4" ScopeIdentifier="5e96cf71-c67e-4656-8150-7c72ac92f373" Text="%[k(down)][k(enter)]" Timeout="5" Version="V3">
+                    <uix:NTypeInto.Target>
+                      <uix:TargetAnchorable DesignTimeRectangle="220, 100, 110, 22" DesignTimeScaleFactor="1" ElementType="DropDown" FriendlyName="'Yes'" FullSelectorArgument="&lt;ctrl automationid='4' /&gt;&lt;ctrl automationid='ConsentComboBox' /&gt;" FuzzySelectorArgument="&lt;ctrl automationid='4' /&gt;&lt;ctrl automationid='ConsentComboBox' role='combo box' /&gt;" Guid="24e7c237-9c8c-4899-b371-664c19805a23" ImageBase64="iVBORw0KGgoAAAANSUhEUgAAAHIAAAAaCAYAAABreghKAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAJHSURBVGhD7da/a5pBHMdxJ/8CJ3FxcHFwcRQXpy4KibTFClI6dHB0kQoFJztIS0QMdCkUBCmlTrU/bCg4OEkFdRCE2BYRlGiKIg2I8Knf4x6NJiYam4Qc3xcceneP05s7Hx2YEjikIjikImYh6/U6jzs4NAshoZtOtcGuzekA2+CQt4xDKoJDKoJDKuJGQ3a7XfT7fbk7NxwO0W635YxdxY2GLBaL0w8dyuWyfAIYDAYwmUyIx+NyhV3FcsjPX79hL7mPn79+y5W5o6Mekvuv8e79B7kyt1ZIkkqlYLVaMR6PxTwYDCIQCKDT6cDlcsHtdsNms8Hj8cye8fv9MBqNsFgs4hl21nJIinjPvYud+4+QP/guV4HSjzIe+B+LvWfPo3J1bu2QxOl0ioC5XE6cxlarhUgkgnA4LPYpIMVOp9PiFFNALSo733LIvycneBF/JYLReLmXxJu36dmcIh4f/5FPz20UstfrwWAwQK/Xo1QqiTW73Y58Pi++k1gsJsJWq9XpT3WoVCpyh51nOaTm46cv8HgfzgLSoKCTyUQ+sWijkCSRSMDr9coZbevEdRoKhcSgU+vz+cQenVy6bil+NpsVa2zRqpDk8LCJJ0+D4kqlq/UiG4ek/0otFDl9Olep1WoieLPZlCtMc1FIMhqNxEvOZbYOSS882n/kKnQlU8hGoyFXmOaykOvaOiRFcjgc4vqklxsamUwGhUJhNjebzYhGz75psVsMyf4vDqkIDqmIaw/J4+4NDR89RXBIRXBIRXBIJQD/APt5htwcxcNlAAAAAElFTkSuQmCC" InformativeScreenshot="bfa322a6a87df36347b57f10d35da7f9.png" ScopeSelectorArgument="&lt;wnd app='submissionwizard.exe' cls='HwndWrapper*' title='Create New Binder' /&gt;" SearchSteps="Selector" Version="V1" Visibility="Interactive">
+                        <uix:TargetAnchorable.Anchors>
+                          <scg:List x:TypeArguments="uix:ITarget" Capacity="1">
+                            <uix:Target DesignTimeRectangle="40, 101, 135, 19" ElementType="Text" FriendlyName="'7216 Consent Received?'" FullSelectorArgument="&lt;ctrl automationid='4' /&gt;&lt;ctrl automationid='lblConsent' /&gt;" FuzzySelectorArgument="&lt;ctrl automationid='4' /&gt;&lt;ctrl automationid='lblConsent' role='text' check:text='7216 Consent Received?:' /&gt;" ImageBase64="iVBORw0KGgoAAAANSUhEUgAAAIsAAAAXCAYAAAA7vbzHAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAT5SURBVGhD7ZjPK3VbGMfv/2RgYGTAQIlSSjGQgZkQRTIgBopQJAMzJUIoBkoiCRGKIgYklJQMDIz27fPc892ts+yz3/12z6237vrW7py91rOeX+v7PGud81cUEJARgSwBmRHIEpAZgSwBmRHIEpAZgSz/Q3x8fESbm5v2+Tv4T8iytbUVlZeXRyUlJfaMjo7mZvJxeHgYNTc3x3I8Kysrudk/A9XV1dHJyUnuLR83Nzd5vvM0NjZGb29vOYniQHYWFhZyI/8O0ndwcBBtb2/HvpeVlaXaKDpZLi4uzPDIyEj09fVlY+/v7/bpAkeR6+npiR4fH23s+/s7+vz8tO9/AtykJsHfxMvLy6i0tDTq6uqy92KBvDw9PRUtN4XiGhsbs/G7u7vcSD5isrgMcx8S0dTUFL/Dvs7OTguATe7r67MEtba2mh5IUllZ+csW19/fnyo3Nzdn3amqqiqqqKiIN0SB1tXVxT7V1NSYP4Auxjo6AuuUkKGhIRvnQf7h4cHG5Yc6IbEsLS1ZwrDNGJ/oe35+tjWCTxbQ29trugD5odPgB3rJlcAaxUZO8TNNXnaGh4dj/QCfmFtdXY3Ozs4sNvSyfmZmJif1jz30MqdYfbKIA0dHR5YX1w4o2Fk2NjbM4OnpaV5n2N3dNYUknyCnpqai+vr6mCwNDQ2ZKgtHcCgJe3t7ZgPnwfLysr3jizZofX3dCPLy8mJ+Qi42mDmOQReK5erqytbg48DAgM3hA++KUdUFClWgUIgskA90d3dboWET28ju7OzE8bnrQCF5IHmtJReAMXIJ+Wtra+OckgPkyIm6vexJtx+XCocC5ujlXuOiIFkwnLTpBIIhOojaIskWWZiDRKpsvrOxPqQjCZOTk5YAbAGcRx5CJG0g9tGFHKQgaLdls4EtLS25tyianZ21NQBZ+Q5UXVTs75KFysY+RFSe5ufnbQ5QVMSg+NyumiYPZAc51lKkoKOjI2pvb48JAJmA9BEP8br2/LiQxWeIcnx8bGNJSCTL2tqaKRN7BZSKfTgn+GShVQoEg6M+GFMV+GDcX4NeCJFGFkBFQVJkaOn4zDybCIF50C39xSAL9mST2Lngag47sosP+JkUX5o8YE6kxAbFrOLgCJLf+KH1WuPb8+PSkU+XTsMPspBcHIGtLlDELxfOPJ99LlmoBpcEOIJj/nmPvJ8wgcpjjaAq+VVncXF7e2v6qUBsuZ3FRTHIooqniNSNdZdwO4XgxwfS5IHsAB1F2mSOIHxkTJ3FBblx7flxcdQNDg7a9zT8IIu6ipsglHGctLW1JbLPJQsXTNhO8gCdBfL5QCd22Cx+NfFwTl5fX8fJ0N3D7XRZyYJ9qguyTE9P25r7+/t4TneUNLKIpFRuElyyAPmJDkDckFS54GgkTtnQOo0XkgeuPPOQhDyrqNVldBcDxIgsdzZ3/f7+vr0rh+Tcv5+wF9xPXeSRBcU47CYPoNh/XBmXLLRgfi1BLgKiGxU6B90jg0DpSouLizanqlGLV8WlkYU59EAS2ea4JC75pBY9Pj5ua9PIAiYmJkwnHVVjgk8WgC8qDmwTk+zyXRdWiopx9DLHeJq8b4ejiDGXyBSZfu2wnvjPz8/j+JHn0X9bymFS9ycv6HGRRxZVhhwMCHCRR5bX11f78ycgIAk/7iwBAYUQyBKQGYEsAZkRyBKQGYEsAZkRyBKQEVH0NwFo4HoKaDVCAAAAAElFTkSuQmCC" SearchSteps="Selector, FuzzySelector, Image" />
+                          </scg:List>
+                        </uix:TargetAnchorable.Anchors>
+                      </uix:TargetAnchorable>
+                    </uix:NTypeInto.Target>
+                    <sap:WorkflowViewStateService.ViewState>
+                      <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                        <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                        <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                      </scg:Dictionary>
+                    </sap:WorkflowViewStateService.ViewState>
+                  </uix:NTypeInto>
+                </Sequence>
+              </uix:NCheckState.IfExists>
+              <uix:NCheckState.IfNotExists>
+                <Sequence DisplayName="Target does not appear" sap:VirtualizedContainerService.HintSize="449.6,83.2" sap2010:WorkflowViewState.IdRef="Sequence_40">
+                  <sap:WorkflowViewStateService.ViewState>
+                    <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                      <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+                      <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                    </scg:Dictionary>
+                  </sap:WorkflowViewStateService.ViewState>
+                  <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="387.2,144" sap2010:WorkflowViewState.IdRef="LogMessage_12" Level="Info" Message="[&quot;7216 Dropdown combobox has not appeared&quot;]" />
+                </Sequence>
+              </uix:NCheckState.IfNotExists>
+              <uix:NCheckState.Target>
+                <uix:TargetAnchorable DesignTimeRectangle="40, 101, 135, 19" DesignTimeScaleFactor="1" ElementType="Text" FriendlyName="'7216 Consent Received?'" FullSelectorArgument="&lt;ctrl automationid='lblConsent' name='7216 Consent Received?:' text='7216 Consent Received?:' /&gt;" FuzzySelectorArgument="&lt;ctrl automationid='lblConsent' name='7216 Consent Received?:' text='7216 Consent Received?:' role='text' check:text='7216 Consent Received?:' /&gt;" Guid="af56ab76-5a15-464c-841e-56f645f89da4" ImageBase64="iVBORw0KGgoAAAANSUhEUgAAAIsAAAAXCAYAAAA7vbzHAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAT5SURBVGhD7ZjPK3VbGMfv/2RgYGTAQIlSSjGQgZkQRTIgBopQJAMzJUIoBkoiCRGKIgYklJQMDIz27fPc892ts+yz3/12z6237vrW7py91rOeX+v7PGud81cUEJARgSwBmRHIEpAZgSwBmRHIEpAZgSz/Q3x8fESbm5v2+Tv4T8iytbUVlZeXRyUlJfaMjo7mZvJxeHgYNTc3x3I8Kysrudk/A9XV1dHJyUnuLR83Nzd5vvM0NjZGb29vOYniQHYWFhZyI/8O0ndwcBBtb2/HvpeVlaXaKDpZLi4uzPDIyEj09fVlY+/v7/bpAkeR6+npiR4fH23s+/s7+vz8tO9/AtykJsHfxMvLy6i0tDTq6uqy92KBvDw9PRUtN4XiGhsbs/G7u7vcSD5isrgMcx8S0dTUFL/Dvs7OTguATe7r67MEtba2mh5IUllZ+csW19/fnyo3Nzdn3amqqiqqqKiIN0SB1tXVxT7V1NSYP4Auxjo6AuuUkKGhIRvnQf7h4cHG5Yc6IbEsLS1ZwrDNGJ/oe35+tjWCTxbQ29trugD5odPgB3rJlcAaxUZO8TNNXnaGh4dj/QCfmFtdXY3Ozs4sNvSyfmZmJif1jz30MqdYfbKIA0dHR5YX1w4o2Fk2NjbM4OnpaV5n2N3dNYUknyCnpqai+vr6mCwNDQ2ZKgtHcCgJe3t7ZgPnwfLysr3jizZofX3dCPLy8mJ+Qi42mDmOQReK5erqytbg48DAgM3hA++KUdUFClWgUIgskA90d3dboWET28ju7OzE8bnrQCF5IHmtJReAMXIJ+Wtra+OckgPkyIm6vexJtx+XCocC5ujlXuOiIFkwnLTpBIIhOojaIskWWZiDRKpsvrOxPqQjCZOTk5YAbAGcRx5CJG0g9tGFHKQgaLdls4EtLS25tyianZ21NQBZ+Q5UXVTs75KFysY+RFSe5ufnbQ5QVMSg+NyumiYPZAc51lKkoKOjI2pvb48JAJmA9BEP8br2/LiQxWeIcnx8bGNJSCTL2tqaKRN7BZSKfTgn+GShVQoEg6M+GFMV+GDcX4NeCJFGFkBFQVJkaOn4zDybCIF50C39xSAL9mST2Lngag47sosP+JkUX5o8YE6kxAbFrOLgCJLf+KH1WuPb8+PSkU+XTsMPspBcHIGtLlDELxfOPJ99LlmoBpcEOIJj/nmPvJ8wgcpjjaAq+VVncXF7e2v6qUBsuZ3FRTHIooqniNSNdZdwO4XgxwfS5IHsAB1F2mSOIHxkTJ3FBblx7flxcdQNDg7a9zT8IIu6ipsglHGctLW1JbLPJQsXTNhO8gCdBfL5QCd22Cx+NfFwTl5fX8fJ0N3D7XRZyYJ9qguyTE9P25r7+/t4TneUNLKIpFRuElyyAPmJDkDckFS54GgkTtnQOo0XkgeuPPOQhDyrqNVldBcDxIgsdzZ3/f7+vr0rh+Tcv5+wF9xPXeSRBcU47CYPoNh/XBmXLLRgfi1BLgKiGxU6B90jg0DpSouLizanqlGLV8WlkYU59EAS2ea4JC75pBY9Pj5ua9PIAiYmJkwnHVVjgk8WgC8qDmwTk+zyXRdWiopx9DLHeJq8b4ejiDGXyBSZfu2wnvjPz8/j+JHn0X9bymFS9ycv6HGRRxZVhhwMCHCRR5bX11f78ycgIAk/7iwBAYUQyBKQGYEsAZkRyBKQGYEsAZkRyBKQEVH0NwFo4HoKaDVCAAAAAElFTkSuQmCC" InformativeScreenshot="6455901d4d56c7d15d3de48d17bcc471.png" ScopeSelectorArgument="&lt;wnd app='submissionwizard.exe' cls='HwndWrapper*' title='Create New Binder' /&gt;" SearchSteps="Selector" Version="V1" Visibility="Visible" WaitForReadyArgument="Complete">
+                  <uix:TargetAnchorable.Anchors>
+                    <scg:List x:TypeArguments="uix:ITarget" Capacity="1">
+                      <uix:Target DesignTimeRectangle="220, 100, 110, 22" FriendlyName="'None selected'" FullSelectorArgument="&lt;ctrl automationid='4' /&gt;&lt;ctrl automationid='ConsentComboBox' /&gt;" FuzzySelectorArgument="&lt;ctrl automationid='4' /&gt;&lt;ctrl automationid='ConsentComboBox' role='combo box' check:text='None selected' /&gt;" ImageBase64="iVBORw0KGgoAAAANSUhEUgAAAHIAAAAaCAYAAABreghKAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAP6SURBVGhD7Zc9SFtRFMednBwcHERcHAQRcXFxdjEoCbSxLSYgsWCRDAo6SIViXSxYWhSxkKVSrEMoFYTYjzRWEMQhNoODimCa4iBitAgSQYRT/4d34jX1JU2iNj7uDy6+e+7XOfefe+61iDSWQAtpEbSQFiEp5MbGhi53sAiXhKSi86oUzY2hCpAPWsj/jBbSImghLYIWskBZXV2lzc1No5aZWxfy4OCAi0oikaC9vT2jVljMzMxQKBQyatmxtbVFNpvNqGWH1+ulkZERo5aZWxcSDhadfyNIIRgMUnV1tVErLLLdUJV84spXyM9fv9HYxBv6GftlWC7Y34/TxBsf+T98NCwXZCVkcXExNTc3cx2kBjw6OkpVVVVsKysro3A4zHb0Q72uro7bSkpKyOfzcRuYnp5mu8vl4vHon8ry8jJVVFRwP5RAIMD2oaEhamhoILvdzmPX19fZrm4obOgj8/f397MdTE5O/jUv6ogV9Z6eHu5ntk48Hqempia2oWBcPkJCRJv9Pt174KJg6LthJQr/iNBDt4fbnj57blgvyErIgYEBqqysJL/fzzZVyLm5OaqtreXAANpwgo+OjpL9Tk9PuS0SiXDbzs4O7e7ucvCxWIzbZmdnqby8nL9VWltbk+sKEFddExuIjQaqkBg7NTXF3+iL9VZWVmhpaYnjkbUFNS6Qbp2Ojg4aHh7mb5DviUycnNCLl69ZMJRXYxP09t37ZB0iHh7+NnpfkJWQcHBhYYFFQFBqwIODgyy0CtrQJ3VjAOaAoPPz89TY2GhYiYUXkVWwYV1dXXwvC+Pj4+yXgPlKS0v5W/zFjwfzqVdCe3s7C4v2VJ9Bqr9m64iv6tz5CikEPn0hh/NRUkAUCHp2dmb0uEzWQso3NlYN+KoAIBBOWDohkdqQdvv6+pJF2lTww+nu7ua07HA4uI41cVJkXGdnJ4/FBos/2GTY0Cb9MAZtV/kMUv01Wwc+ynqC2ZxmmAkJtrej9PiJl1MqUms6chISm4iUBJsEnOuJxF3pdDoNa2ZwwnAye3t7uahpTUX8jUajvJakRZWrfAap/pqtg2sBc6vZ4zqFBMfHx/zIyUROQgKkRAQhAeOOxN0jGwaRcNJQTyfk2toaf6em0nRgU+EP1sR9KneviuovTpPckSrwCz5LusZfzIWHDHySedOtg7iQegWPx3OtQv4rOQsJcDJUgSRNwlZfX0+Li4tsTyckwKsVKRN9UPAKVNMVaGtrS7ZjbvmnG69Jdazb7Wa76i+EqampufQ6xQMGqOPxKpX7rqWlhWORbGG2Dh5M6IcXK+zwraCF1NwMWkiLoIW0CDcupC53rwj66FkELaRF0EJaBC2kJSD6A83+rtGlu3oMAAAAAElFTkSuQmCC" SearchSteps="Selector" />
+                    </scg:List>
+                  </uix:TargetAnchorable.Anchors>
+                </uix:TargetAnchorable>
+              </uix:NCheckState.Target>
+              <sap:WorkflowViewStateService.ViewState>
+                <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                  <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                  <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                </scg:Dictionary>
+              </sap:WorkflowViewStateService.ViewState>
+            </uix:NCheckState>
+            <If Condition="[in_str_ForeignTaxPaid=&quot;Yes&quot;]" DisplayName="Bifurcation to enable foreign tax field" sap:VirtualizedContainerService.HintSize="952,386.4" sap2010:WorkflowViewState.IdRef="If_2">
+              <sap:WorkflowViewStateService.ViewState>
+                <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                  <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                  <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                </scg:Dictionary>
+              </sap:WorkflowViewStateService.ViewState>
+              <If.Then>
+                <Sequence sap:VirtualizedContainerService.HintSize="376.8,203.2" sap2010:WorkflowViewState.IdRef="Sequence_34">
+                  <sap:WorkflowViewStateService.ViewState>
+                    <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                      <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                    </scg:Dictionary>
+                  </sap:WorkflowViewStateService.ViewState>
+                  <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" ContinueOnError="{x:Null}" DisplayName="Invoke Sequence Enable foreign tax field workflow" sap:VirtualizedContainerService.HintSize="333.6,113.6" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_2" UnSafe="False" WorkflowFileName="SubmissionWizard_Process\Settings_for_infinity\Sequence Enable foreign tax field.xaml">
+                    <ui:InvokeWorkflowFile.Arguments>
+                      <InArgument x:TypeArguments="scg:Dictionary(x:String, x:Object)" x:Key="in_Config">[in_Config]</InArgument>
+                    </ui:InvokeWorkflowFile.Arguments>
+                  </ui:InvokeWorkflowFile>
+                </Sequence>
+              </If.Then>
+              <If.Else>
+                <Sequence sap:VirtualizedContainerService.HintSize="400,104.8" sap2010:WorkflowViewState.IdRef="Sequence_35">
+                  <sap:WorkflowViewStateService.ViewState>
+                    <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                      <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                    </scg:Dictionary>
+                  </sap:WorkflowViewStateService.ViewState>
+                </Sequence>
+              </If.Else>
+            </If>
+            <ui:IfElseIf DisplayName="Else If" sap:VirtualizedContainerService.HintSize="952,772.8" sap2010:WorkflowViewState.IdRef="IfElseIf_3">
+              <ui:IfElseIf.ConditionBlocks>
+                <sc:BindingList x:TypeArguments="ui:IfElseIfBlock" AllowEdit="True" AllowNew="True" AllowRemove="True" RaiseListChangedEvents="True">
+                  <ui:IfElseIfBlock BlockType="If" Condition="[in_str_TaxExemptIncome=&quot;State taxable&quot;]">
+                    <ui:IfElseIfBlock.Then>
+                      <Sequence DisplayName="Body" sap:VirtualizedContainerService.HintSize="449.6,225.6" sap2010:WorkflowViewState.IdRef="Sequence_57">
+                        <sap:WorkflowViewStateService.ViewState>
+                          <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                            <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                          </scg:Dictionary>
+                        </sap:WorkflowViewStateService.ViewState>
+                        <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" ContinueOnError="{x:Null}" DisplayName="Invoke Sequence Enable state taxability workflow" sap:VirtualizedContainerService.HintSize="387.2,113.6" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_7" UnSafe="False" WorkflowFileName="SubmissionWizard_Process\Sequence Enable state taxability.xaml">
+                          <ui:InvokeWorkflowFile.Arguments>
+                            <InArgument x:TypeArguments="scg:Dictionary(x:String, x:Object)" x:Key="in_Config">[in_Config]</InArgument>
+                            <InArgument x:TypeArguments="x:String" x:Key="in_TaxExemptIncome">[in_str_TaxExemptIncome]</InArgument>
+                            <InArgument x:TypeArguments="x:String" x:Key="in_AutoTaxExemptIncome">[in_AutoTaxExemptIncome]</InArgument>
+                          </ui:InvokeWorkflowFile.Arguments>
+                        </ui:InvokeWorkflowFile>
+                      </Sequence>
+                    </ui:IfElseIfBlock.Then>
+                  </ui:IfElseIfBlock>
+                  <ui:IfElseIfBlock BlockType="ElseIf" Condition="[in_str_TaxExemptIncome=&quot;Automatically determine state taxability&quot;]">
+                    <ui:IfElseIfBlock.Then>
+                      <Sequence DisplayName="Body" sap:VirtualizedContainerService.HintSize="449.6,225.6" sap2010:WorkflowViewState.IdRef="Sequence_58">
+                        <sap:WorkflowViewStateService.ViewState>
+                          <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                            <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                          </scg:Dictionary>
+                        </sap:WorkflowViewStateService.ViewState>
+                        <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" ContinueOnError="{x:Null}" DisplayName="Invoke Sequence Enable state taxability workflow" sap:VirtualizedContainerService.HintSize="387.2,113.6" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_8" UnSafe="False" WorkflowFileName="SubmissionWizard_Process\Sequence Enable state taxability.xaml">
+                          <ui:InvokeWorkflowFile.Arguments>
+                            <InArgument x:TypeArguments="scg:Dictionary(x:String, x:Object)" x:Key="in_Config">[in_Config]</InArgument>
+                            <InArgument x:TypeArguments="x:String" x:Key="in_TaxExemptIncome">[in_str_TaxExemptIncome]</InArgument>
+                            <InArgument x:TypeArguments="x:String" x:Key="in_AutoTaxExemptIncome">[in_AutoTaxExemptIncome]</InArgument>
+                          </ui:InvokeWorkflowFile.Arguments>
+                        </ui:InvokeWorkflowFile>
+                      </Sequence>
+                    </ui:IfElseIfBlock.Then>
+                  </ui:IfElseIfBlock>
+                </sc:BindingList>
+              </ui:IfElseIf.ConditionBlocks>
+            </ui:IfElseIf>
+            <ui:CommentOut DisplayName="Comment Out" sap:VirtualizedContainerService.HintSize="952,52.8" sap2010:WorkflowViewState.IdRef="CommentOut_13">
+              <ui:CommentOut.Body>
+                <Sequence DisplayName="Ignored Activities" sap:VirtualizedContainerService.HintSize="449.6,164.8" sap2010:WorkflowViewState.IdRef="Sequence_59">
+                  <sap:WorkflowViewStateService.ViewState>
+                    <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                      <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                    </scg:Dictionary>
+                  </sap:WorkflowViewStateService.ViewState>
+                  <ui:IfElseIf DisplayName="Bifurcation to enable State taxability" sap:VirtualizedContainerService.HintSize="387.2,52.8" sap2010:WorkflowViewState.IdRef="IfElseIf_2">
+                    <ui:IfElseIf.ConditionBlocks>
+                      <sc:BindingList x:TypeArguments="ui:IfElseIfBlock" AllowEdit="True" AllowNew="True" AllowRemove="True" RaiseListChangedEvents="True">
+                        <ui:IfElseIfBlock BlockType="If" Condition="[in_str_TaxExemptIncome=&quot;State taxable&quot;]">
+                          <ui:IfElseIfBlock.Then>
+                            <Sequence DisplayName="Body" sap:VirtualizedContainerService.HintSize="449.6,225.6" sap2010:WorkflowViewState.IdRef="Sequence_41">
+                              <sap:WorkflowViewStateService.ViewState>
+                                <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                  <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                                </scg:Dictionary>
+                              </sap:WorkflowViewStateService.ViewState>
+                              <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" ContinueOnError="{x:Null}" DisplayName="Invoke Sequence Enable state taxability workflow" sap:VirtualizedContainerService.HintSize="387.2,113.6" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_4" UnSafe="False" WorkflowFileName="SubmissionWizard_Process\Sequence Enable state taxability.xaml">
+                                <ui:InvokeWorkflowFile.Arguments>
+                                  <InArgument x:TypeArguments="scg:Dictionary(x:String, x:Object)" x:Key="in_Config">[in_Config]</InArgument>
+                                  <InArgument x:TypeArguments="x:String" x:Key="in_TaxExemptIncome">[in_str_TaxExemptIncome]</InArgument>
+                                  <InArgument x:TypeArguments="x:String" x:Key="in_AutoTaxExemptIncome">[in_AutoTaxExemptIncome]</InArgument>
+                                </ui:InvokeWorkflowFile.Arguments>
+                              </ui:InvokeWorkflowFile>
+                            </Sequence>
+                          </ui:IfElseIfBlock.Then>
+                        </ui:IfElseIfBlock>
+                        <ui:IfElseIfBlock BlockType="ElseIf" Condition="[in_TaxExemptIncome=&quot;Automatically determine state taxability&quot;]">
+                          <ui:IfElseIfBlock.Then>
+                            <Sequence DisplayName="Body" sap:VirtualizedContainerService.HintSize="449.6,225.6" sap2010:WorkflowViewState.IdRef="Sequence_42">
+                              <sap:WorkflowViewStateService.ViewState>
+                                <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                  <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                                </scg:Dictionary>
+                              </sap:WorkflowViewStateService.ViewState>
+                              <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" ContinueOnError="{x:Null}" DisplayName="Invoke Sequence Enable state taxability workflow" sap:VirtualizedContainerService.HintSize="387.2,113.6" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_5" UnSafe="False" WorkflowFileName="SubmissionWizard_Process\Sequence Enable state taxability.xaml">
+                                <ui:InvokeWorkflowFile.Arguments>
+                                  <InArgument x:TypeArguments="scg:Dictionary(x:String, x:Object)" x:Key="in_Config">[in_Config]</InArgument>
+                                  <InArgument x:TypeArguments="x:String" x:Key="in_TaxExemptIncome">[in_str_TaxExemptIncome]</InArgument>
+                                  <InArgument x:TypeArguments="x:String" x:Key="in_AutoTaxExemptIncome">[in_AutoTaxExemptIncome]</InArgument>
+                                </ui:InvokeWorkflowFile.Arguments>
+                              </ui:InvokeWorkflowFile>
+                            </Sequence>
+                          </ui:IfElseIfBlock.Then>
+                        </ui:IfElseIfBlock>
+                      </sc:BindingList>
+                    </ui:IfElseIf.ConditionBlocks>
+                    <sap:WorkflowViewStateService.ViewState>
+                      <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                        <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+                        <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                      </scg:Dictionary>
+                    </sap:WorkflowViewStateService.ViewState>
+                  </ui:IfElseIf>
+                </Sequence>
+              </ui:CommentOut.Body>
+              <sap:WorkflowViewStateService.ViewState>
+                <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                  <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+                  <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                </scg:Dictionary>
+              </sap:WorkflowViewStateService.ViewState>
+            </ui:CommentOut>
+            <If Condition="[in_str_ServiceType=&quot;1040SCANverify Offshore&quot;]" DisplayName="If_1040ScanVerify" sap:VirtualizedContainerService.HintSize="952,52.8" sap2010:WorkflowViewState.IdRef="If_6">
+              <sap:WorkflowViewStateService.ViewState>
+                <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                  <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+                  <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                </scg:Dictionary>
+              </sap:WorkflowViewStateService.ViewState>
+              <If.Then>
+                <Sequence sap:VirtualizedContainerService.HintSize="376.8,203.2" sap2010:WorkflowViewState.IdRef="Sequence_55">
+                  <sap:WorkflowViewStateService.ViewState>
+                    <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                      <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                    </scg:Dictionary>
+                  </sap:WorkflowViewStateService.ViewState>
+                  <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" ContinueOnError="{x:Null}" DisplayName="SubmissionWizard_Process\ProcessingOptions.xaml - Invoke Workflow File" sap:VirtualizedContainerService.HintSize="333.6,113.6" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_6" UnSafe="False" WorkflowFileName="SubmissionWizard_Process\ProcessingOptions.xaml">
+                    <ui:InvokeWorkflowFile.Arguments>
+                      <scg:Dictionary x:TypeArguments="x:String, Argument" />
+                    </ui:InvokeWorkflowFile.Arguments>
+                  </ui:InvokeWorkflowFile>
+                </Sequence>
+              </If.Then>
+              <If.Else>
+                <Sequence sap:VirtualizedContainerService.HintSize="300,82.4" sap2010:WorkflowViewState.IdRef="Sequence_56">
+                  <sap:WorkflowViewStateService.ViewState>
+                    <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                      <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                    </scg:Dictionary>
+                  </sap:WorkflowViewStateService.ViewState>
+                </Sequence>
+              </If.Else>
+            </If>
+            <uix:NTypeInto ActivateBefore="True" ClickBeforeMode="Single" DisplayName="Type Into 'Owner'" EmptyFieldMode="SingleLine" sap:VirtualizedContainerService.HintSize="952,218.4" sap2010:WorkflowViewState.IdRef="NTypeInto_5" ScopeIdentifier="5e96cf71-c67e-4656-8150-7c72ac92f373" Text="[In_Str_Owner + &quot;[k(tab)]&quot;]" Timeout="60" Version="V1">
+              <uix:NTypeInto.Target>
+                <uix:TargetAnchorable DesignTimeRectangle="299, 123, 128, 22" DesignTimeScaleFactor="1" ElementType="InputBox" FriendlyName="'Naik, Akshay'" FullSelectorArgument="&lt;ctrl automationid='4' /&gt;&lt;ctrl automationid='PART_EditableTextBox' /&gt;" FuzzySelectorArgument="&lt;ctrl automationid='4' /&gt;&lt;ctrl automationid='PART_EditableTextBox' role='editable text' /&gt;" Guid="29cb716b-9c92-4270-9a8d-deceff6b9036" ImageBase64="iVBORw0KGgoAAAANSUhEUgAAAIQAAAAaCAYAAAB2KPSUAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAANcSURBVGhD7ZgxSHJRFMedmhwaGkJaHFyiTQJBXFoEoxanljYXB4ckhKLAxcXJwS0UrKUlSGwRXAQnI8jBRKShAhFycGlwufU/vSPv+T3fe30ffYWeHxy45753z73e83/nXnQpQdAhghAMiCAEAyIIwYDr4eFBiYmxuZTro0jAhIUGYgAiCIEQQQgG/psgDg4OVL/f17x/4yuxbm9vVafT0TzBDktBDIdDMj1vb29qMBho3myq1epHOJcajUbko313d0dtpxwdHdG4brer9XzylVjxeFxlMhnNE+ywFAQ2czohSLTP59M85/yNIFZWVmiufD6v9Xwigvg+bAWxtLSkwuGw1vOnIE5PT8n3er2UwHa7Tf0QERI3XSFeX1/pvaurK+qfRaPRmIghEAhovZ+YxcI8wWCQ1oFxiUSC3sVvcLvd1OfxeOh9jAOPj4/UD8M7yWSS+g8PD2kc02q1aB943DxjK4hUKqXW1tbU5eUl9VlVCGzk/v4+tc0E0Ww2VSgUcvTFclI4DgsNmMU6Pz9X0WiU2noQ4+TkRPOU2tvbo980zdPTE8VF8iE2tMfjMT3LZrMqFotRe96xFQQ2vFar0QbhC7EShP6ZmSDW19dJMLzRs8BzfMk3Nzfko0LkcjlqA7NY19fXanV1Vb28vJDP8G9gUHEgCjMwD1cuxL+4uJi0eS3zjiNBcBsJmBbE/f09HRu4+e/u7loKAuakOtTrdUOJxhi/309tMCtWoVCgYwGGCgKsBIELcrFYpLXD9EcZYu3s7FDF0B8z845jQWBDcHSgj5POm9Xr9ci3qxD44pBouwshjgvERSwY7gUYz8eGXaxyuUzPgJUgIPB0Oj2pMvoKgXVjHryDGIuCY0EAlE1sEicdR8ny8vJkQ+0EgeQhISjtPKZSqRj+U5g+LhiUbT42ZsViUB0QA3NbCQJ3kLOzM2oDvSAAxIC58LsWhS8JAuByxUlHIiKRCN3QNzY21NbWlq0gwPb2NiUF/nQ5ZlHxOAYlnGObxSqVSvQchorC57+VIDAX1o73cSRBdHpBoNKYrWWesRTEd4NE/ebbO4RzfHyseYvBjwmCjwb+0n8TqDaoGpubm+r5+VnrXQx+tEIIvw8RhGBgIgg0xMTYpDQIBkQQggERhKBDqXd0MG66JdiNTwAAAABJRU5ErkJggg==" InformativeScreenshot="50192b02b10c59a4bc649ad660b64fc6.png" IsResponsive="True" ScopeSelectorArgument="&lt;wnd app='submissionwizard.exe' cls='HwndWrapper*' title='Create New Binder' /&gt;" SearchSteps="Selector" Version="V1" Visibility="Interactive">
+                  <uix:TargetAnchorable.Anchors>
+                    <scg:List x:TypeArguments="uix:ITarget" Capacity="1">
+                      <uix:Target DesignTimeRectangle="220, 125, 75, 19" ElementType="Text" FriendlyName="'Owner'" FullSelectorArgument="&lt;ctrl automationid='4' /&gt;&lt;ctrl automationid='lbluser' /&gt;" FuzzySelectorArgument="&lt;ctrl automationid='4' /&gt;&lt;ctrl automationid='lbluser' role='text' check:text='Owner:' /&gt;" ImageBase64="iVBORw0KGgoAAAANSUhEUgAAAE8AAAAXCAYAAABK6RIcAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAI4SURBVFhH7Zax60FRFMf9TwaDycAmSinFZJCyGAySP0AxKEZlUDYxMCiJTEoWYVEMFosog+n8+p7fu8/rPX7pveX96nzq5r5z7n3cT+fey0OCbUSeA0SeDXa7HTeRZwOII49H5NnhrbzL5UKlUon8fj95vV7y+XyUzWY5Lrx4Ky+VSlEsFqP5fM7P2+2WQqEQN+GFRd5qteJq6/V6WuSX2WzG8fF4TMVikaLRqJYhCofDnLvf7/ycz+cpnU5zH/FIJMLVi34gEKDj8ci50+lEyWSSgsEg51HtCuO8SqVC5XKZ57oJi7x2u80/XC1Qcb1eOd5oNKjb7XL/fD7Tfr/nPhrEAiwS4wDizWaTHo8HN0iHCFAoFLjKn88nbTYbHjuZTDiHfq1W4zlguVzScDjkvluwyGu1WvzDIcYM4qgCJQyy+v0+b+dEIkHValXPLRYLfQ5kKyAuk8mwMOQ6nY6WIYrH4/z9wDzPjVjkqaqCBCNqsaqisFUhCzLQ6vU6C4RMVB4qFXySpyRjLN6FprYo+JfyvjnzABYJWVj8YDDgSkM+l8txU5glKHmobOSMlWfEPM+NWOQBnEOoAogEuG1x+6KpihqNRrxAjMP5iMpEHzG19cAneQDnHy4WzAW3200/48zzcOZNp1PtyR28lWf+n4dP3KCHw0EbQXrloPoUGIPYer3WIn/LwyWBcw7vx7ZF33hhmOe5/rYVvkfkOUDkOUDkOUDkOUDkOUDkOQDy0ESeA0SebYh+AA5U5zVzyzUNAAAAAElFTkSuQmCC" SearchSteps="Selector" />
+                    </scg:List>
+                  </uix:TargetAnchorable.Anchors>
+                </uix:TargetAnchorable>
+              </uix:NTypeInto.Target>
+              <sap:WorkflowViewStateService.ViewState>
+                <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                  <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                  <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                </scg:Dictionary>
+              </sap:WorkflowViewStateService.ViewState>
+            </uix:NTypeInto>
+            <uix:NTypeInto ActivateBefore="True" ClickBeforeMode="Single" DisplayName="Type Into 'Office Location'" EmptyFieldMode="SingleLine" sap:VirtualizedContainerService.HintSize="952,254.4" sap2010:WorkflowViewState.IdRef="NTypeInto_2" ScopeIdentifier="5e96cf71-c67e-4656-8150-7c72ac92f373" Text="[In_Str_OfficeLocation + &quot;[k(tab)]&quot;]" Timeout="2" Version="V1">
+              <uix:NTypeInto.Target>
+                <uix:TargetAnchorable DesignTimeRectangle="324, 145, 103, 22" DesignTimeScaleFactor="1" ElementType="InputBox" FriendlyName="'MUMBAI'" FullSelectorArgument="&lt;ctrl automationid='4' /&gt;&lt;ctrl automationid='PART_EditableTextBox' idx='2' role='editable text' /&gt;" FuzzySelectorArgument="&lt;ctrl automationid='4' /&gt;&lt;ctrl automationid='PART_EditableTextBox' role='editable text' /&gt;" Guid="daf34c65-b411-4a86-9631-d55b71f6bb2e" ImageBase64="iVBORw0KGgoAAAANSUhEUgAAAGsAAAAaCAYAAACwwaJoAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAJ8SURBVGhD7Zavq0IxFMdvMhkNIhaDxWqxWAQxiMFosVmMggj+ARaTwarFLAhaBItiUgwGFbtosFgt5/k97uje5fl+pbd394HBdna3O87nbnfOdrslW8woDlmMwcoyCCvLIOw/y6DikHPbXCiWPwtEASvLAKwsg7CyDOJTWeVy+RZy6Hq9qsiTWCxGhUJBtYiGwyFdLhfVurNcLmm323F9PB7zXKPRiNs6zWaT+2Q83hsIBCgajVIkEuH6bDbjPh3EE4mEat3BWg+Hg2r9L74ly53g1WrFcV0W2ojrYHyj0eC6yCqVStzWgRS3LBkH+v0+BYNB1bozn88f4/b7vYoS1/W5/hNfysLXm8vlVOROvV7n+E9lYQyeOx6PHANIusRfyfpIANZQq9Uom81Su91WUY/LQkL0BOOYQXIR/6ks7ASM6fV6HAPVavXxjleyICOZTKrWcw2YE33xeFz1eFwWklYsFqnb7XJsOp3yTkOSfiNrMBhQJpPhGJIeDof5f+SW5ff7+flQKMR9k8mE+wDWAFnn8/khZ7PZcJ/nZSHB8vUihp3xW1lIos/n4+QiBvHuBOvjgMiU3Y3dqL8b87ZaLa57XpYcO4vFgr94fNFuWRCAfh1cJnDTAyILINlILnYsLg9fyQK49eFZWQtuiZgPBW35mDwvCyDBOLLkNueWlc/nqVKpqBbR6XRigXJ86bJwjOF2h/n0o+yVLDyDubBz9SNQWK/XPB671cq6gVsbkiDXeLcsyEmlUpxISMG/ptPpqN73sgCeE/EfyZJ/lswlOxR9uJC4SafTvFbPyrL8Lawsg7CyDMLKMoiHLFRsMaPYLWUQVpZBWFnGQPQGkiygj/SzgSgAAAAASUVORK5CYII=" InformativeScreenshot="bb6d7a20cc3b2846b9327a8d883771fb.png" IsResponsive="True" ScopeSelectorArgument="&lt;wnd app='submissionwizard.exe' cls='HwndWrapper*' title='Create New Binder' /&gt;" SearchSteps="Selector" Version="V1" Visibility="Visible">
+                  <uix:TargetAnchorable.Anchors>
+                    <scg:List x:TypeArguments="uix:ITarget" Capacity="1">
+                      <uix:Target DesignTimeRectangle="220, 147, 110, 19" ElementType="Text" FriendlyName="'Office Location'" FullSelectorArgument="&lt;ctrl automationid='4' /&gt;&lt;ctrl automationid='lblofficelocation' /&gt;" FuzzySelectorArgument="&lt;ctrl automationid='4' /&gt;&lt;ctrl automationid='lblofficelocation' role='text' check:text='Office Location:' /&gt;" ImageBase64="iVBORw0KGgoAAAANSUhEUgAAAHIAAAAXCAYAAADX5BuUAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAPgSURBVGhD7ZfBK3xRFMfnj7D0X1hYWFmwIFFKKZQsxM5CklhJCQthYSGS2InCQknEYshOKBRJSkkWFmzObz7n986483rzvJn5+Zmm963bu/fc++4993zPOe+8hMQoCcRElghiIosUl5eXObWYyCIF5EgiRY+1bxATWaQoiMjn52cZGhqSqqoqqaiokMrKSunp6VG54eDgQGpqaqSurk5GRkZkZ2dHGhoaVMazu7vbW1kY3t7e5OHhwRv9HFZXV2VwcNAbiezu7urdj46OPMnvoCAi29vbpbm5WQ4PD3V8cXEhtbW12gzV1dUyPz+v/cfHR7301taWjv8lFhYWdG/O+EkMDw9nON/7+7s6EM/fRN5Enp2dqeHW19c9yV8QgcjxVCKOvkUfUcmYpzs2b+Zd5JBPW1tbk/v7e2lra9M9iHgyQBCyEfnx8SGjo6O6n2UGzjFwBjLmyCzocn19rXrQOLOzs1P3mZiY0DU05mZmZuTq6irjDmQcO4czJycnVQ5Y19jYqHvSZ/7u7k7ncBDG+SKMyN7e3pQoIZ+fn57EIXJpaUmVMUUMr6+vKp+dndUxfYwF/Jd2x+xDf3x8XOcM/f39GvkY8vz8XNfs7e15s1/IRuTKyooajnfB1NSUrnt5eUk7nekXhJubm4w1/ogMugO6gGQyqWNzdvpzc3MavbSmpibdD5ycnMj29rb280EUIt390yvCUhlyI4R+FCI3Nja0j8wAecggw9DS0pI2lIts+vT19UlXV5c3+sokZIzp6WmNApwvDK2tren7hBFpd3Cdm8g1sphznca/VyH4jsiysjLVxZBegUIo5hoemPFzjcggImweY7upzh+1IBuRkBBkeHTCkEHp7Pb2Vou2oDPDiAzSwT3fzjX8TyIHBgZS4oQ8PT2pLL0iyjcSuMqHERkUkRgEmRuR2RAWkRjTYOnZIpK+H6RzDGwFTK4R6d6BDMI7gLnfInJsbEw6OjpkcXFRZRkr+HbhrZAKqFqpYmmWrlzlw4i0vhkMI/JLwXeE1EikA2RBFWI2InEC5PaNtHRK+rNfB9PP9uZe7i+GSyQVeH19vfaBewf7RlqV7nd29yzgEsk3cn9/X/v5IAqRm5ubqgPIWOH/j+RJBJCaDK7yYUQC1mFkq3KXl5eVALzaKkX6YcWOv5EhqFp5n31xMipLA1Ulc1ZJszcE23pkOJMRic5UnsyHVa007sL+5oSsy0Yk/aA0HxVRiKRq5Vt5enqaSWSM4kEUIgGfjfLy8pjIYkVUIo+Pj1PTiZjIYkUYkUGIiSxSxESWCGIiSwQxkSUCiMylxUSWCGIiSwIifwB6UphnS9dF3QAAAABJRU5ErkJggg==" SearchSteps="Selector" />
+                    </scg:List>
+                  </uix:TargetAnchorable.Anchors>
+                </uix:TargetAnchorable>
+              </uix:NTypeInto.Target>
+              <uix:NTypeInto.VerifyOptions>
+                <uix:VerifyExecutionTypeIntoOptions DisplayName="{x:Null}" ExpectedText="[In_Str_OfficeLocation]" Mode="Appears" Retry="False">
+                  <uix:VerifyExecutionTypeIntoOptions.Timeout>
+                    <InArgument x:TypeArguments="x:Double" />
+                  </uix:VerifyExecutionTypeIntoOptions.Timeout>
+                </uix:VerifyExecutionTypeIntoOptions>
+              </uix:NTypeInto.VerifyOptions>
+              <sap:WorkflowViewStateService.ViewState>
+                <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                  <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                  <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                </scg:Dictionary>
+              </sap:WorkflowViewStateService.ViewState>
+            </uix:NTypeInto>
+            <ui:CommentOut DisplayName="Comment Out" sap:VirtualizedContainerService.HintSize="952,52.8" sap2010:WorkflowViewState.IdRef="CommentOut_12">
+              <ui:CommentOut.Body>
+                <Sequence DisplayName="Ignored Activities" sap:VirtualizedContainerService.HintSize="540,862.4" sap2010:WorkflowViewState.IdRef="Sequence_53">
+                  <sap:WorkflowViewStateService.ViewState>
+                    <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                      <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                    </scg:Dictionary>
+                  </sap:WorkflowViewStateService.ViewState>
+                  <If Condition="[In_Str_LeadsheetOption=&quot;NA&quot;]" sap:VirtualizedContainerService.HintSize="337.6,52.8" sap2010:WorkflowViewState.IdRef="If_4">
+                    <sap:WorkflowViewStateService.ViewState>
+                      <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                        <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+                        <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                      </scg:Dictionary>
+                    </sap:WorkflowViewStateService.ViewState>
+                    <If.Then>
+                      <Sequence sap:VirtualizedContainerService.HintSize="400,104.8" sap2010:WorkflowViewState.IdRef="Sequence_45">
+                        <sap:WorkflowViewStateService.ViewState>
+                          <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                            <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                          </scg:Dictionary>
+                        </sap:WorkflowViewStateService.ViewState>
+                      </Sequence>
+                    </If.Then>
+                    <If.Else>
+                      <Sequence sap:VirtualizedContainerService.HintSize="400,467.2" sap2010:WorkflowViewState.IdRef="Sequence_46">
+                        <sap:WorkflowViewStateService.ViewState>
+                          <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                            <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                          </scg:Dictionary>
+                        </sap:WorkflowViewStateService.ViewState>
+                        <uix:NClick ActivateBefore="True" ClickType="Single" ContinueOnError="True" DisplayName="Click 'Leadsheets'" sap:VirtualizedContainerService.HintSize="337.6,157.6" sap2010:WorkflowViewState.IdRef="NClick_4" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="5e96cf71-c67e-4656-8150-7c72ac92f373" Timeout="2" Version="V1">
+                          <uix:NClick.Target>
+                            <uix:TargetAnchorable DesignTimeRectangle="295, 167, 152, 22" DesignTimeScaleFactor="1" FriendlyName="'Classic Leadsheets'" FullSelectorArgument="&lt;ctrl automationid='4' /&gt;&lt;ctrl automationid='LeadsRadComboBox' /&gt;" FuzzySelectorArgument="&lt;ctrl automationid='4' /&gt;&lt;ctrl automationid='LeadsRadComboBox' role='combo box' check:text='Classic Leadsheets' /&gt;" Guid="e23c2e56-5c77-48fc-a4fa-fe33042927ee" ImageBase64="iVBORw0KGgoAAAANSUhEUgAAAJwAAAAaCAYAAABCUTWIAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAATDSURBVHhe7ZhPKO5ZGMetrCwsrCyUhZJkoySysXEjFsMGZTFlQU2KJDSMkg1qNNzSXVgg6XaVf01cSmSlFAtKFhpT6HInkls2z/R95jzve36/e35/bvd11NzzqdN7/p/n95zv+femkUVOT09d+EGDYFVwDocTnMMqTnAOqyQEZzp3XXAhVUHwCM7h0EmVJpzgHLFwgnNYxQnOIpeXl7Szs6NSZlCOev9XrAvu+fmZurq6KDs7m/Ly8jhUVlZy2dbWFs3Pz3M8VaSlpdHS0pJKRXN3d0cPDw8qlVo2Nzf5e8MoLS39Jnuj6O3tpY2NDZV6fawLrqOjgyoqKuj6+lrlJJmamqLGxkaVeh3a29tpZGREpVLLawgu1f19L35N/LnxkX7/4y19/vyPykny9OULvZ1+R4vvP6icJLEEd39/zzvOycmJyvHiF5zsgFlZWVRdXc27I1hYWPDskMfHx3R2dkb5+fmJvMnJSa6rO/zg4MBTZ21tjfN1ggR3e3vLO3FtbS0VFRVRXV1dwp6BgQHuLzc3l23Vv29wcJDzUZ6RkcG/IMxe9IE8/JaUlCTG2d3d5fympibuc3p6mvNR3tzczPaVl5dTcXEx29vQ0EDp6ekJX8FPJt/ZxK8JiO1N7U/U2vaLR3QQW1dPP5f1/vqbyk0SS3D7+/v8kRCeiaAdDg6F85eXlzmNOMSj09fXR0NDQyqVRAQnfUSt9iDBof+enh6Oo6+CggKam5vjtE53dze1tLRwHPZifEw+0He4MHulXxlnZmaG07B/b2+P44eHh7x4r66uaHZ2lhcC6gP4sL+/n+P6ggMm39nErwmIDGLTRaeLrbHlZ/rr8m9VO0kswUUdKWFHqi4ETML4+HjCwWB0dJTKysq+un+JwzFBYWIXggSHXQP2C6gjAtTRvxHfgm8S9LIoewWxB7smxKLbj74gwNbWVs84aF9VVcVxf38m39nErwngF12U2EAswW1vb1NmZqZKfY0uODhkdXWVOjs7OcBRIoSLiwte0Tii2trauC4Cji9MCo481AHi8CixC0GCw26CY1TswT1UbD06OuJjFfmoI+P4J1u3IcpeQexBW9gg4yOgLeqiDeyR/DAbTL6ziUlwQBedCO/Tp/9OBhOxBIftP+4dDjsA4k9PT5w2CQFlcKjcZYSxsTGeACAOx3EeJnYhSHC4C5mOItyBMPHn5+ec1kVVU1OTOA5BkOhN9gpiDxZrTk6OyvWCtouLiyrlxd+fEOS7lyZIcEBEh4B4GLEEB3C/gZD0lXVzc8O/uuDwmsVqFYKEUF9f7zlOAJwPZwJxOMaDaNbX1zkfmP7+CBoHdpuOUNm15Xt0UaEfjC9lKysrRsGZ7BXEHhylsF/ucDpYnHKE+sFxOzExoVJeTL57acIEBx4fHyPFBmILDhdovKjkxYaAVxccqgtO7ix4UeH+hGNHhCDt8FLD8YE/SuWlKPkyMfoE4pWHPuXViBebH0ywbhsC/jeE3XgBor3koz3EhBc02hQWFvJLEWXA3wZxKYtjL9AXgN9++AWvXdjg9+nw8DC3wYKQfPypLOW672wSJbi4xBac48fGCc5hFSc4h1Wc4BxWeXHBueDCSwUhITiHwwZOcA6rOME5LEL0L3D3EIhBH1WhAAAAAElFTkSuQmCC" InformativeScreenshot="e8b0d03cf3ae597aa55173d527f0739d.png" ScopeSelectorArgument="&lt;wnd app='submissionwizard.exe' cls='HwndWrapper*' title='Create New Binder' /&gt;" SearchSteps="Selector" Version="V1" Visibility="Interactive">
+                              <uix:TargetAnchorable.Anchors>
+                                <scg:List x:TypeArguments="uix:ITarget" Capacity="1">
+                                  <uix:Target DesignTimeRectangle="220, 169, 75, 19" ElementType="Text" FriendlyName="'Leadsheets'" FullSelectorArgument="&lt;ctrl automationid='4' /&gt;&lt;ctrl automationid='lblleadsheet' /&gt;" FuzzySelectorArgument="&lt;ctrl automationid='4' /&gt;&lt;ctrl automationid='lblleadsheet' role='text' check:text='Leadsheets:' /&gt;" ImageBase64="iVBORw0KGgoAAAANSUhEUgAAAE8AAAAXCAYAAABK6RIcAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAALkSURBVFhH7ZY9aypBFIbvf0qRwspCC0UiBARBC7EQm0AECwuLgI2oWKiIhWAVOyGCFnaCTYKFRYKKH2ghNkJIYZFqwnvunNxls66uK+QW88DgnPk88+45M/4RirNR4tlAiXcG4/GYihLvDCAcUOKdwa+I1+l0xHq9ltZP3t/faQx+/2cMxdvtdmK73Urr8lxdXYlmsymtn0wmExozGAxki30eHx9FKpWS1mUwFC+dTgun0ymty/Mb4uFMsVhMWpfBsniZTIb6UG5ubsRqtaJ2fFmfzydcLhf1VatVagf9fl94PB7qQ9GKl8/naTzPhWAsHo9Fubu7o/Gg1+vRHKzpcDjE09OT7DH2L5fL0TgU7FMqlcgnrI810JbNZmk+9uL6MSyJ1263xfX1tXh9fRWfn58iGAyKh4cH2fuPRqNBTmw2G7q3MIcdwjz0QbzZbEb1brdLfQyLx6I8Pz+TDdF4vXq9Tn21Wo1sYOafPvLC4bBhGuOufXl5kZY5lsTDZtFoVFp/HYeDerRpB2FQRxsDG+KxENjv4+ND9hqnLc/h9TjiIRSvb+afXrxkMincbrdYLpeyxTqWxIMjOCzCHIXTA+BQgUCA2pEKfHhECOqIQoaFAJjH6RkKhShizMTj9TjdtHuZ+acXb7FYiEgkQnMxZjgcyp7TsSQeNtd+WYYjCOkKtIfHgVE3ijwt0+mU9iyXy6bi8XoceVoO+Qf04jH7/V7c398Lv98vW07HkniVSoUcn8/nZCNK8LdGf3dpDz8ajajOdx7+38HWi4e1EC3HxOP1+EMB/lt1yD+AFPZ6vVTXUygUvsXDnff29kb1YxwUD07oC752IpH4frVQisUizcErhzFo43Tgw+NFRWSi7fb2lj4MhIBInGZowzzcYWbiAfwi1VEwNx6P07UAsQ75hzXx+qIPry1SHCnPL26r1aJx2MfWa6s4DSWeDZR4NlDi2UCJZwMlng0gHooSzwZKvLMR4gvrFULCyTswaAAAAABJRU5ErkJggg==" SearchSteps="Selector" />
+                                </scg:List>
+                              </uix:TargetAnchorable.Anchors>
+                            </uix:TargetAnchorable>
+                          </uix:NClick.Target>
+                          <sap:WorkflowViewStateService.ViewState>
+                            <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                              <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                              <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                            </scg:Dictionary>
+                          </sap:WorkflowViewStateService.ViewState>
+                        </uix:NClick>
+                        <uix:NClick ActivateBefore="True" ClickType="Single" ContinueOnError="True" DisplayName="Click 'Classic Leadsheets'" sap:VirtualizedContainerService.HintSize="337.6,157.6" sap2010:WorkflowViewState.IdRef="NClick_5" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="5e96cf71-c67e-4656-8150-7c72ac92f373" Timeout="2" Version="V1">
+                          <uix:NClick.Target>
+                            <uix:TargetAnchorable DesignTimeRectangle="299, 220, 102, 15" DesignTimeScaleFactor="1" ElementType="Text" FriendlyName="'Classic Leadsheets'" FullSelectorArgument="[string.Format(&quot;&lt;ctrl automationid='4' name='BASIC INFORMATION' role='page tab' /&gt;&lt;ctrl name='{0}' role='list item' /&gt;&lt;ctrl name='{0}' role='text' /&gt;&quot;, In_Str_LeadsheetOption)]" FuzzySelectorArgument="[string.Format(&quot;&lt;ctrl automationid='4' name='BASIC INFORMATION' role='page tab' /&gt;&lt;ctrl name='{0}' role='list item' /&gt;&lt;ctrl name='{0}' role='text' automationid='' check:text='{0}' /&gt;&quot;, In_Str_LeadsheetOption)]" Guid="e867bec0-df94-41db-8416-f13573421998" ImageBase64="iVBORw0KGgoAAAANSUhEUgAAAGoAAAATCAYAAAB4DJieAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAQfSURBVGhD7VdbSFVBFPUnf4yKCgrpgYilvTAsM6Mie5hGGmiRRQaVlGkpapkpVmgP0EArAy0z0FIrDDVLI0kMpSgtiwTtjUFGBdVHH/1MrE17mHPu3HsVe3jhfCzuOXvv2bNmr5l95rq9+yqEheEPSygXgSWUi8ASykVgCeUisIT6jfvdfaK6oUXrY8CPOJ3vb8Mg1KtPP0VcYqqYMNFTeHn7EIKXhJDvcu0dcercJRn7J+Dm5iZKKmq0Ph263nwR3e+/a31DRcX127RenY8xd37QoPg6Q0JKhiivadL6zDAItW1XkghcuFh09PYbgoCc/CIRGR1jY/+XiN2xW+zPPqb1DRX/Q6jB5JNCPe/7Rju8+UG3TRBgFopP3Nhx48WyVeF0GmE/XVppOJFN7U9FS0ev8J7mK205eWcoViVaf/ehIaas+oaci2FPqCevP9PJX7F6rfCbOUesDIuQfJLSsynf5KlexFVdX/KBQ2SH38NjJP3C7ogvcsCGX/+AQDnP1VutZI9cv4lyHi8oJjv86zZsJn7zghaJ2f4BxDc8MlqMcHeXtUKddLVDDkAKVdPURk4IxjYV9k4UiID0+cpaescziq7GJKYeFCkZRww2gIXiHM52lz2hkD8+OZ2ekcvHd4YoLKmwidu5d5+I2hhLz+CL+VE0vKsnyhFfzsvz5J8to3fwv9Z4j55vtnbSpn/U80EUFJfTBkI8fKjhnrRMmU9ds652DCmUs6PvqPWpBQT5rKMnJTEgMydPBCwItvm+MFEszNEmYdgTCrsU/PkdMSycCnWNWAvWpPM548vvzAenFEVW+SMXhIvZGmeYB+OXLg+lZ3M+Xe0YUqjKumYxavQYmwCGKhQSXaiqF3EJKQRMwAVsf/aWdhBayZbt8RQLoM1gMWhNiEEsE3W2SRj2hMLuRbtjPvjOMtfGti5qf7AjhucxF0nl4Iwvj2E+GAsOPD+AsYjFGPBhuyMOutqxTwqFYzrQbxR2HJ57+n/Qu66A8IEI92pGVm4+EcczE0XbdbRJGPaEQq/XtQz0eBSs9fFLelfFCAldI9uW2adCx5d9zAeb3HPSFGlXgbFFZdVanzkfQ1c7KRSA/g0BVCU7X3ykX1Uo3A6xOzjGXgHDIqIMxx4AaZDAMxPFfCj2xSsNMk53Dbc3D3jrWh13CV6PKgbyYH72lVbVaYXS8WUf80HLA3/+RqnApuZWZwba4uEThVqfuXYGofBhxQ2Fb0AAbjEgogrFPRk3FHwf0B64gDwONx8cc/xB5JsX23lB6sJxa0JOvoXhBgS7ChRG5Qbgfx9440aF8WzHeIiAGynGTPebRTcv+JDLPAbP7BsIX+bD6zbzR11wewQHc03TsnJpDDYS2/Fnmv1q7Xgug1AWhi8soVwEllAuAksol4AQvwC+uicF4J6oiAAAAABJRU5ErkJggg==" InformativeScreenshot="e4189514bc5bbe4ef63f785463e4749b.png" ScopeSelectorArgument="&lt;wnd app='submissionwizard.exe' cls='HwndWrapper*' idx='*' /&gt;" SearchSteps="Selector" Version="V1" Visibility="Interactive" />
+                          </uix:NClick.Target>
+                          <sap:WorkflowViewStateService.ViewState>
+                            <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                              <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                              <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                            </scg:Dictionary>
+                          </sap:WorkflowViewStateService.ViewState>
+                        </uix:NClick>
+                      </Sequence>
+                    </If.Else>
+                  </If>
+                </Sequence>
+              </ui:CommentOut.Body>
+              <sap:WorkflowViewStateService.ViewState>
+                <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                  <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+                  <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                </scg:Dictionary>
+              </sap:WorkflowViewStateService.ViewState>
+            </ui:CommentOut>
+            <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" ContinueOnError="{x:Null}" DisplayName="Invoke Sequence Assign members workflow" sap:VirtualizedContainerService.HintSize="952,113.6" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_1" UnSafe="False" WorkflowFileName="SubmissionWizard_Process\Sequence Assign members.xaml">
+              <ui:InvokeWorkflowFile.Arguments>
+                <InArgument x:TypeArguments="x:String" x:Key="in_str_Assignmembers">[in_str_Assignmembers]</InArgument>
+                <InArgument x:TypeArguments="x:String" x:Key="in_str_Membername" />
+                <InArgument x:TypeArguments="ui:QueueItem" x:Key="in_TransactionItem">[in_TransactionItem]</InArgument>
+                <InArgument x:TypeArguments="scg:Dictionary(x:String, x:Object)" x:Key="in_Config">[in_Config]</InArgument>
+              </ui:InvokeWorkflowFile.Arguments>
+              <sap:WorkflowViewStateService.ViewState>
+                <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                  <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                  <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                </scg:Dictionary>
+              </sap:WorkflowViewStateService.ViewState>
+            </ui:InvokeWorkflowFile>
+            <ui:CommentOut DisplayName="Comment Out" sap:VirtualizedContainerService.HintSize="952,52.8" sap2010:WorkflowViewState.IdRef="CommentOut_4">
+              <ui:CommentOut.Body>
+                <Sequence DisplayName="Ignored Activities" sap:VirtualizedContainerService.HintSize="400,269.6" sap2010:WorkflowViewState.IdRef="Sequence_8">
+                  <sap:WorkflowViewStateService.ViewState>
+                    <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                      <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                    </scg:Dictionary>
+                  </sap:WorkflowViewStateService.ViewState>
+                  <uix:NCheck Action="Check" DisplayName="Check/Uncheck 'Create PBFX file'" sap:VirtualizedContainerService.HintSize="337.6,157.6" sap2010:WorkflowViewState.IdRef="NCheck_1" ScopeIdentifier="5e96cf71-c67e-4656-8150-7c72ac92f373" Version="V1">
+                    <uix:NCheck.Target>
+                      <uix:TargetAnchorable DesignTimeRectangle="220, 212, 110, 15" DesignTimeScaleFactor="1" ElementType="CheckBox" FriendlyName="'Create PBFX file'" FullSelectorArgument="&lt;ctrl automationid='4' /&gt;&lt;ctrl automationid='chkcreatPBFfile' /&gt;" FuzzySelectorArgument="&lt;ctrl automationid='4' /&gt;&lt;ctrl automationid='chkcreatPBFfile' role='check box' check:fulltext='Create PBFX file' /&gt;" Guid="d5a921d5-5ffe-46aa-b047-c0bb64423f2f" ImageBase64="" InformativeScreenshot="6062cafaed75e2ab8b92c8a79e26ef5c.png" ScopeSelectorArgument="&lt;wnd app='submissionwizard.exe' cls='HwndWrapper*' title='Create New Binder' /&gt;" SearchSteps="Selector" Version="V1" Visibility="Interactive" />
+                    </uix:NCheck.Target>
+                  </uix:NCheck>
+                </Sequence>
+              </ui:CommentOut.Body>
+              <sap:WorkflowViewStateService.ViewState>
+                <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                  <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+                  <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                </scg:Dictionary>
+              </sap:WorkflowViewStateService.ViewState>
+            </ui:CommentOut>
+            <ui:CommentOut DisplayName="Comment Out" sap:VirtualizedContainerService.HintSize="952,52.8" sap2010:WorkflowViewState.IdRef="CommentOut_11">
+              <ui:CommentOut.Body>
+                <Sequence DisplayName="Ignored Activities" sap:VirtualizedContainerService.HintSize="540,560" sap2010:WorkflowViewState.IdRef="Sequence_52">
+                  <sap:WorkflowViewStateService.ViewState>
+                    <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                      <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                    </scg:Dictionary>
+                  </sap:WorkflowViewStateService.ViewState>
+                  <If Condition="[in_str_Taxsoftware = &quot;CCH Axcess Tax&quot; OR in_str_Taxsoftware = &quot;GoSystem Tax RS&quot;]" DisplayName="If (Scan Verify + Options)" sap:VirtualizedContainerService.HintSize="337.6,52.8" sap2010:WorkflowViewState.IdRef="If_5">
+                    <sap:WorkflowViewStateService.ViewState>
+                      <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                        <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+                        <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                      </scg:Dictionary>
+                    </sap:WorkflowViewStateService.ViewState>
+                    <If.Then>
+                      <Sequence sap:VirtualizedContainerService.HintSize="400,164.8" sap2010:WorkflowViewState.IdRef="Sequence_47">
+                        <sap:WorkflowViewStateService.ViewState>
+                          <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                            <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                          </scg:Dictionary>
+                        </sap:WorkflowViewStateService.ViewState>
+                        <ui:IfElseIf DisplayName="Else If (Scan Verify + Options)" sap:VirtualizedContainerService.HintSize="337.6,52.8" sap2010:WorkflowViewState.IdRef="IfElseIf_1">
+                          <ui:IfElseIf.ConditionBlocks>
+                            <sc:BindingList x:TypeArguments="ui:IfElseIfBlock" AllowEdit="True" AllowNew="True" AllowRemove="True" RaiseListChangedEvents="True">
+                              <ui:IfElseIfBlock BlockType="If" Condition="[In_ScanVerifyPlus=&quot;Yes&quot;]">
+                                <ui:IfElseIfBlock.Then>
+                                  <Sequence DisplayName="Body" sap:VirtualizedContainerService.HintSize="400,83.2" sap2010:WorkflowViewState.IdRef="Sequence_32">
+                                    <sap:WorkflowViewStateService.ViewState>
+                                      <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                        <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+                                        <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                                      </scg:Dictionary>
+                                    </sap:WorkflowViewStateService.ViewState>
+                                    <uix:NCheckState DisplayName="Check App State 'Select these'" Exists="[bool_ScanVerifyPlus]" sap:VirtualizedContainerService.HintSize="854,581" sap2010:WorkflowViewState.IdRef="NCheckState_8" ScopeIdentifier="5e96cf71-c67e-4656-8150-7c72ac92f373" Timeout="2" Version="V3">
+                                      <uix:NCheckState.IfExists>
+                                        <Sequence DisplayName="Target appears" sap:VirtualizedContainerService.HintSize="400,364" sap2010:WorkflowViewState.IdRef="Sequence_27">
+                                          <sap:WorkflowViewStateService.ViewState>
+                                            <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                              <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                                            </scg:Dictionary>
+                                          </sap:WorkflowViewStateService.ViewState>
+                                          <uix:NCheck Action="Check" DisplayName="Check/Uncheck 'Select these'" sap:VirtualizedContainerService.HintSize="338,157" sap2010:WorkflowViewState.IdRef="NCheck_6" ScopeIdentifier="5e96cf71-c67e-4656-8150-7c72ac92f373" Version="V3">
+                                            <uix:NCheck.Target>
+                                              <uix:TargetAnchorable DesignTimeRectangle="220, 191, 300, 15" DesignTimeScaleFactor="1" ElementType="CheckBox" FriendlyName="'1040SCANverify+'" FullSelectorArgument="&lt;ctrl automationid='4' /&gt;&lt;ctrl name=' 1040SCANverify+ ' role='check box' /&gt;" FuzzySelectorArgument="&lt;ctrl automationid='4' /&gt;&lt;ctrl name=' 1040SCANverify+ ' role='check box' automationid='' check:fulltext='1040SCANverify+' /&gt;" Guid="abd30960-349f-432a-96bb-f8382b1f9010" InformativeScreenshot="8f6980159ac434d09e45eb41b4951b91.png" ScopeSelectorArgument="&lt;wnd app='submissionwizard.exe' cls='HwndWrapper*' title='Create New Binder' /&gt;" SearchSteps="Selector, FuzzySelector" Version="V1" Visibility="Interactive">
+                                                <uix:TargetAnchorable.Anchors>
+                                                  <scg:List x:TypeArguments="uix:ITarget" Capacity="1">
+                                                    <uix:Target DesignTimeRectangle="40, 189, 163, 19" ElementType="Text" FriendlyName="'Select these'" FullSelectorArgument="&lt;ctrl automationid='4' /&gt;&lt;ctrl automationid='lblselectservice' /&gt;" FuzzySelectorArgument="&lt;ctrl automationid='4' /&gt;&lt;ctrl automationid='lblselectservice' role='text' check:text='Select these service options:' /&gt;" ImageBase64="iVBORw0KGgoAAAANSUhEUgAAAKcAAAAXCAYAAABu3F+ZAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAVfSURBVGhD7ZjPKz9dFMef/8nGhoWFlEhSFmIhCxaUHyvJAlkIofxIKcqCREIWFpJSfseCRBRFRMTCwuY+vc53zjz3M2bGx/Mow3NfNX3m3nvm3nPPfd9zZz5/GYcjoThxOhKLE6cjsThxOhKLE6cjsfw4cR4fH5u1tTWv5PjNpIhzfX3d5ObmmoyMDLkyMzPN3d2d1xrOwcGBaW9vNy8vL17N5+ju7jbDw8Ne6T11dXVmYWHBKxkzNjZmcnJyvNLPp6yszFRXV3ul76GwsNDs7Ox4pWT4BL44397eRIytra1yny4rKysi5Ovra6/mcxCIrq4ur/Qe+p6amvJKv0+ct7e3cn0XJycnEuONjQ2v5vt9UnxxqpOTk5NeTSqIEFHk5+ebrKwsP5sFxTk+Pi52ZGB+d3d3pf7+/t5UVlb6fbAzyYpsCOrYvXNzc2KrUEff9MX95uamiFPr+OX5mZkZ7wljOjo6pD+uoqIic3l5KfU9PT3+ODyrixFlb8Pm0GfxXTdLVEx0A6mPxcXFKZmIsaknNiQDbSMpNDY2+mPxC1ExteFZnQt2+MRJCLpGJSUlfsxGRkbM2dmZ2FHHL2OyjrZPrJv6xFVaWmqOjo6kLThPrv7+fmmz11vjBvRNXTqkHOt5eXlyMSk7ez49PcmEcAZGR0elDLY4Dw8P5Z46aG5uNhUVFXJfVVUlwcFpm3+bOa+urqTc29srNrC4uCh+ETz8p++2tjZZBGyWl5fFTomyD4INc7aJi4n6yPsxsOEZ//HxUcrMF8Eypi2Ezs5Oib8uPsTF1IYxdC6gcWFMXaP9/X1pw1fKbJKwzBnmE+uGvw0NDaagoEDadJ4XFxdSnp2dlb7oUzdUcL23t7ffrUMUKeK8ubkxLS0tMkkusg3QGYNqViEA6oQtTiaNQypsfY6F5FcX0ua/Huv2+Cwcm0DBH/pXIRH05+dnr/XPQofZB0FICOLh4cGriY9J0EdsaNPMSiYZGBiQe1sI1FO2iYppEERjz2Vvb0/siI8dI7DX4yNx4hMCVebn58U+bJ52X2x87peWlnzfP0uKOJXX11d/d3HU4gT3mvr1KMAJe+JMintsuDTdY8evLTLlK8VJX4hQx8dObVlU9ae8vFwCFmdvs7W15R+JevTHxSToIyCcpqYmPxPq0WwLgfpgLKJiqkJTmIv2AyoUYhcUJ+hYH4lT7RTtK2yedl/El9cMXneIMa8RnyVUnIo6xgS5D3sfsyeObXZ2ttfyD/ZODfKV4iSgdvYI4/T0VJ4fHBxMy96GkwV/EVlcTMLEqUc7bXqkQzBLUbaJimkQMie+KZrJiU9QnLoe+PSROIM+aebmuThx2kxPT0s9/+x8Bl+cBIuMqagTHEW62ycmJrzWP190YE9cU/nq6qq0gdoRON5ddFG0nqO1vr5e7sPgBVyPQIgT59DQkNyfn59LG2PZRzFQR8ARZzr2QWpra1MyYFhMwsSpRztZxJ6PLQTuaVfB019cTG1U/PrOyRj4QF8aI+0X/xgHMTFn2uyPUdsnjnRsVRtsAt1c6YqTk4d6xMk7Z7r/U/vi1I71YlDeOXECyBQcKVwsbk1NjQgiuCv1q1iPO770gKBxNDJRJsfzwESw5wp+rQNf4hwNjKtf63ZA7PHxlfGwZ2yuvr4+mRvjUuZZviLxJ8o+CP3rs2wW/QqOikmYOIEsTV/217YtBP3CxYYYcU9/UTG1YS56jOIPsSbBgMZIfaUfO9Z8YRMf6hkv6JPGSGOH2CBOnNqmceNbBh/p234mjthj3fE7CCaQn4IT5/8AJ06H44tx4nQkFidOR2Jx4nQkFidOR2Jx4nQkFGP+BsQuWEE8zXMMAAAAAElFTkSuQmCC" SearchSteps="Selector, FuzzySelector, Image" />
+                                                  </scg:List>
+                                                </uix:TargetAnchorable.Anchors>
+                                              </uix:TargetAnchorable>
+                                            </uix:NCheck.Target>
+                                            <sap:WorkflowViewStateService.ViewState>
+                                              <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                                <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                                                <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                                              </scg:Dictionary>
+                                            </sap:WorkflowViewStateService.ViewState>
+                                          </uix:NCheck>
+                                          <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="338,52" sap2010:WorkflowViewState.IdRef="LogMessage_14" Level="[UiPath.Core.Activities.LogLevel.Info]" Message="[&quot;Scan Verify+ Field Check&quot;]">
+                                            <sap:WorkflowViewStateService.ViewState>
+                                              <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                                <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+                                                <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                                              </scg:Dictionary>
+                                            </sap:WorkflowViewStateService.ViewState>
+                                          </ui:LogMessage>
+                                        </Sequence>
+                                      </uix:NCheckState.IfExists>
+                                      <uix:NCheckState.IfNotExists>
+                                        <Sequence DisplayName="Target does not appear" sap:VirtualizedContainerService.HintSize="400,105" sap2010:WorkflowViewState.IdRef="Sequence_28">
+                                          <sap:WorkflowViewStateService.ViewState>
+                                            <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                              <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                                            </scg:Dictionary>
+                                          </sap:WorkflowViewStateService.ViewState>
+                                        </Sequence>
+                                      </uix:NCheckState.IfNotExists>
+                                      <uix:NCheckState.Target>
+                                        <uix:TargetAnchorable DesignTimeRectangle="220, 191, 300, 15" DesignTimeScaleFactor="1" ElementType="CheckBox" FriendlyName="'1040SCANverify+'" FullSelectorArgument="&lt;ctrl automationid='4' /&gt;&lt;ctrl name=' 1040SCANverify+ ' role='check box' /&gt;" FuzzySelectorArgument="&lt;ctrl automationid='4' /&gt;&lt;ctrl name=' 1040SCANverify+ ' role='check box' automationid='' check:fulltext='1040SCANverify+' /&gt;" Guid="2e8b0e57-f5d6-4e99-a1d0-c357d82ba9b8" ImageBase64="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" InformativeScreenshot="8f6980159ac434d09e45eb41b4951b91.png" ScopeSelectorArgument="&lt;wnd app='submissionwizard.exe' cls='HwndWrapper*' title='Create New Binder' /&gt;" SearchSteps="Selector, FuzzySelector, Image" Version="V1" Visibility="Interactive">
+                                          <uix:TargetAnchorable.Anchors>
+                                            <scg:List x:TypeArguments="uix:ITarget" Capacity="1">
+                                              <uix:Target DesignTimeRectangle="40, 189, 163, 19" ElementType="Text" FriendlyName="'Select these'" FullSelectorArgument="&lt;ctrl automationid='4' /&gt;&lt;ctrl automationid='lblselectservice' /&gt;" FuzzySelectorArgument="&lt;ctrl automationid='4' /&gt;&lt;ctrl automationid='lblselectservice' role='text' check:text='Select these service options:' /&gt;" ImageBase64="iVBORw0KGgoAAAANSUhEUgAAAKcAAAAXCAYAAABu3F+ZAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAVfSURBVGhD7ZjPKz9dFMef/8nGhoWFlEhSFmIhCxaUHyvJAlkIofxIKcqCREIWFpJSfseCRBRFRMTCwuY+vc53zjz3M2bGx/Mow3NfNX3m3nvm3nPPfd9zZz5/GYcjoThxOhKLE6cjsThxOhKLE6cjsfw4cR4fH5u1tTWv5PjNpIhzfX3d5ObmmoyMDLkyMzPN3d2d1xrOwcGBaW9vNy8vL17N5+ju7jbDw8Ne6T11dXVmYWHBKxkzNjZmcnJyvNLPp6yszFRXV3ul76GwsNDs7Ox4pWT4BL44397eRIytra1yny4rKysi5Ovra6/mcxCIrq4ur/Qe+p6amvJKv0+ct7e3cn0XJycnEuONjQ2v5vt9UnxxqpOTk5NeTSqIEFHk5+ebrKwsP5sFxTk+Pi52ZGB+d3d3pf7+/t5UVlb6fbAzyYpsCOrYvXNzc2KrUEff9MX95uamiFPr+OX5mZkZ7wljOjo6pD+uoqIic3l5KfU9PT3+ODyrixFlb8Pm0GfxXTdLVEx0A6mPxcXFKZmIsaknNiQDbSMpNDY2+mPxC1ExteFZnQt2+MRJCLpGJSUlfsxGRkbM2dmZ2FHHL2OyjrZPrJv6xFVaWmqOjo6kLThPrv7+fmmz11vjBvRNXTqkHOt5eXlyMSk7ez49PcmEcAZGR0elDLY4Dw8P5Z46aG5uNhUVFXJfVVUlwcFpm3+bOa+urqTc29srNrC4uCh+ETz8p++2tjZZBGyWl5fFTomyD4INc7aJi4n6yPsxsOEZ//HxUcrMF8Eypi2Ezs5Oib8uPsTF1IYxdC6gcWFMXaP9/X1pw1fKbJKwzBnmE+uGvw0NDaagoEDadJ4XFxdSnp2dlb7oUzdUcL23t7ffrUMUKeK8ubkxLS0tMkkusg3QGYNqViEA6oQtTiaNQypsfY6F5FcX0ua/Huv2+Cwcm0DBH/pXIRH05+dnr/XPQofZB0FICOLh4cGriY9J0EdsaNPMSiYZGBiQe1sI1FO2iYppEERjz2Vvb0/siI8dI7DX4yNx4hMCVebn58U+bJ52X2x87peWlnzfP0uKOJXX11d/d3HU4gT3mvr1KMAJe+JMintsuDTdY8evLTLlK8VJX4hQx8dObVlU9ae8vFwCFmdvs7W15R+JevTHxSToIyCcpqYmPxPq0WwLgfpgLKJiqkJTmIv2AyoUYhcUJ+hYH4lT7RTtK2yedl/El9cMXneIMa8RnyVUnIo6xgS5D3sfsyeObXZ2ttfyD/ZODfKV4iSgdvYI4/T0VJ4fHBxMy96GkwV/EVlcTMLEqUc7bXqkQzBLUbaJimkQMie+KZrJiU9QnLoe+PSROIM+aebmuThx2kxPT0s9/+x8Bl+cBIuMqagTHEW62ycmJrzWP190YE9cU/nq6qq0gdoRON5ddFG0nqO1vr5e7sPgBVyPQIgT59DQkNyfn59LG2PZRzFQR8ARZzr2QWpra1MyYFhMwsSpRztZxJ6PLQTuaVfB019cTG1U/PrOyRj4QF8aI+0X/xgHMTFn2uyPUdsnjnRsVRtsAt1c6YqTk4d6xMk7Z7r/U/vi1I71YlDeOXECyBQcKVwsbk1NjQgiuCv1q1iPO770gKBxNDJRJsfzwESw5wp+rQNf4hwNjKtf63ZA7PHxlfGwZ2yuvr4+mRvjUuZZviLxJ8o+CP3rs2wW/QqOikmYOIEsTV/217YtBP3CxYYYcU9/UTG1YS56jOIPsSbBgMZIfaUfO9Z8YRMf6hkv6JPGSGOH2CBOnNqmceNbBh/p234mjthj3fE7CCaQn4IT5/8AJ06H44tx4nQkFidOR2Jx4nQkFidOR2Jx4nQkFGP+BsQuWEE8zXMMAAAAAElFTkSuQmCC" SearchSteps="Selector, FuzzySelector" />
+                                            </scg:List>
+                                          </uix:TargetAnchorable.Anchors>
+                                        </uix:TargetAnchorable>
+                                      </uix:NCheckState.Target>
+                                      <sap:WorkflowViewStateService.ViewState>
+                                        <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                          <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                                          <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                                        </scg:Dictionary>
+                                      </sap:WorkflowViewStateService.ViewState>
+                                    </uix:NCheckState>
+                                  </Sequence>
+                                </ui:IfElseIfBlock.Then>
+                              </ui:IfElseIfBlock>
+                              <ui:IfElseIfBlock BlockType="ElseIf" Condition="[In_ScanVerifyPlus=&quot;No&quot;]">
+                                <ui:IfElseIfBlock.Then>
+                                  <Sequence DisplayName="Body" sap:VirtualizedContainerService.HintSize="400,83.2" sap2010:WorkflowViewState.IdRef="Sequence_33">
+                                    <sap:WorkflowViewStateService.ViewState>
+                                      <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                        <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+                                        <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                                      </scg:Dictionary>
+                                    </sap:WorkflowViewStateService.ViewState>
+                                    <uix:NCheckState DisplayName="Check App State 'Select these'" sap:VirtualizedContainerService.HintSize="338,52" sap2010:WorkflowViewState.IdRef="NCheckState_9" ScopeIdentifier="5e96cf71-c67e-4656-8150-7c72ac92f373" Timeout="2" Version="V3">
+                                      <uix:NCheckState.IfExists>
+                                        <Sequence DisplayName="Target appears" sap:VirtualizedContainerService.HintSize="400,455" sap2010:WorkflowViewState.IdRef="Sequence_30">
+                                          <sap:WorkflowViewStateService.ViewState>
+                                            <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                              <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                                            </scg:Dictionary>
+                                          </sap:WorkflowViewStateService.ViewState>
+                                          <uix:NCheck Action="Uncheck" DisplayName="Check/Uncheck 'Select these'" sap:VirtualizedContainerService.HintSize="338,157" sap2010:WorkflowViewState.IdRef="NCheck_7" ScopeIdentifier="5e96cf71-c67e-4656-8150-7c72ac92f373" Version="V3">
+                                            <uix:NCheck.Target>
+                                              <uix:TargetAnchorable DesignTimeRectangle="220, 191, 300, 15" DesignTimeScaleFactor="1" ElementType="CheckBox" FriendlyName="'1040SCANverify+'" FullSelectorArgument="&lt;ctrl automationid='4' /&gt;&lt;ctrl name=' 1040SCANverify+ ' role='check box' /&gt;" FuzzySelectorArgument="&lt;ctrl automationid='4' /&gt;&lt;ctrl name=' 1040SCANverify+ ' role='check box' automationid='' check:fulltext='1040SCANverify+' /&gt;" Guid="abd30960-349f-432a-96bb-f8382b1f9010" InformativeScreenshot="8f6980159ac434d09e45eb41b4951b91.png" ScopeSelectorArgument="&lt;wnd app='submissionwizard.exe' cls='HwndWrapper*' title='Create New Binder' /&gt;" SearchSteps="Selector, FuzzySelector" Version="V1" Visibility="Interactive">
+                                                <uix:TargetAnchorable.Anchors>
+                                                  <scg:List x:TypeArguments="uix:ITarget" Capacity="1">
+                                                    <uix:Target DesignTimeRectangle="40, 189, 163, 19" ElementType="Text" FriendlyName="'Select these'" FullSelectorArgument="&lt;ctrl automationid='4' /&gt;&lt;ctrl automationid='lblselectservice' /&gt;" FuzzySelectorArgument="&lt;ctrl automationid='4' /&gt;&lt;ctrl automationid='lblselectservice' role='text' check:text='Select these service options:' /&gt;" ImageBase64="iVBORw0KGgoAAAANSUhEUgAAAKcAAAAXCAYAAABu3F+ZAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAVfSURBVGhD7ZjPKz9dFMef/8nGhoWFlEhSFmIhCxaUHyvJAlkIofxIKcqCREIWFpJSfseCRBRFRMTCwuY+vc53zjz3M2bGx/Mow3NfNX3m3nvm3nPPfd9zZz5/GYcjoThxOhKLE6cjsThxOhKLE6cjsfw4cR4fH5u1tTWv5PjNpIhzfX3d5ObmmoyMDLkyMzPN3d2d1xrOwcGBaW9vNy8vL17N5+ju7jbDw8Ne6T11dXVmYWHBKxkzNjZmcnJyvNLPp6yszFRXV3ul76GwsNDs7Ox4pWT4BL44397eRIytra1yny4rKysi5Ovra6/mcxCIrq4ur/Qe+p6amvJKv0+ct7e3cn0XJycnEuONjQ2v5vt9UnxxqpOTk5NeTSqIEFHk5+ebrKwsP5sFxTk+Pi52ZGB+d3d3pf7+/t5UVlb6fbAzyYpsCOrYvXNzc2KrUEff9MX95uamiFPr+OX5mZkZ7wljOjo6pD+uoqIic3l5KfU9PT3+ODyrixFlb8Pm0GfxXTdLVEx0A6mPxcXFKZmIsaknNiQDbSMpNDY2+mPxC1ExteFZnQt2+MRJCLpGJSUlfsxGRkbM2dmZ2FHHL2OyjrZPrJv6xFVaWmqOjo6kLThPrv7+fmmz11vjBvRNXTqkHOt5eXlyMSk7ez49PcmEcAZGR0elDLY4Dw8P5Z46aG5uNhUVFXJfVVUlwcFpm3+bOa+urqTc29srNrC4uCh+ETz8p++2tjZZBGyWl5fFTomyD4INc7aJi4n6yPsxsOEZ//HxUcrMF8Eypi2Ezs5Oib8uPsTF1IYxdC6gcWFMXaP9/X1pw1fKbJKwzBnmE+uGvw0NDaagoEDadJ4XFxdSnp2dlb7oUzdUcL23t7ffrUMUKeK8ubkxLS0tMkkusg3QGYNqViEA6oQtTiaNQypsfY6F5FcX0ua/Huv2+Cwcm0DBH/pXIRH05+dnr/XPQofZB0FICOLh4cGriY9J0EdsaNPMSiYZGBiQe1sI1FO2iYppEERjz2Vvb0/siI8dI7DX4yNx4hMCVebn58U+bJ52X2x87peWlnzfP0uKOJXX11d/d3HU4gT3mvr1KMAJe+JMintsuDTdY8evLTLlK8VJX4hQx8dObVlU9ae8vFwCFmdvs7W15R+JevTHxSToIyCcpqYmPxPq0WwLgfpgLKJiqkJTmIv2AyoUYhcUJ+hYH4lT7RTtK2yedl/El9cMXneIMa8RnyVUnIo6xgS5D3sfsyeObXZ2ttfyD/ZODfKV4iSgdvYI4/T0VJ4fHBxMy96GkwV/EVlcTMLEqUc7bXqkQzBLUbaJimkQMie+KZrJiU9QnLoe+PSROIM+aebmuThx2kxPT0s9/+x8Bl+cBIuMqagTHEW62ycmJrzWP190YE9cU/nq6qq0gdoRON5ddFG0nqO1vr5e7sPgBVyPQIgT59DQkNyfn59LG2PZRzFQR8ARZzr2QWpra1MyYFhMwsSpRztZxJ6PLQTuaVfB019cTG1U/PrOyRj4QF8aI+0X/xgHMTFn2uyPUdsnjnRsVRtsAt1c6YqTk4d6xMk7Z7r/U/vi1I71YlDeOXECyBQcKVwsbk1NjQgiuCv1q1iPO770gKBxNDJRJsfzwESw5wp+rQNf4hwNjKtf63ZA7PHxlfGwZ2yuvr4+mRvjUuZZviLxJ8o+CP3rs2wW/QqOikmYOIEsTV/217YtBP3CxYYYcU9/UTG1YS56jOIPsSbBgMZIfaUfO9Z8YRMf6hkv6JPGSGOH2CBOnNqmceNbBh/p234mjthj3fE7CCaQn4IT5/8AJ06H44tx4nQkFidOR2Jx4nQkFidOR2Jx4nQkFGP+BsQuWEE8zXMMAAAAAElFTkSuQmCC" SearchSteps="Selector, FuzzySelector, Image" />
+                                                  </scg:List>
+                                                </uix:TargetAnchorable.Anchors>
+                                              </uix:TargetAnchorable>
+                                            </uix:NCheck.Target>
+                                            <sap:WorkflowViewStateService.ViewState>
+                                              <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                                <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                                                <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                                              </scg:Dictionary>
+                                            </sap:WorkflowViewStateService.ViewState>
+                                          </uix:NCheck>
+                                          <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="338,143" sap2010:WorkflowViewState.IdRef="LogMessage_15" Level="[UiPath.Core.Activities.LogLevel.Info]" Message="[&quot;Scan Verify+ Field Uncheck&quot;]">
+                                            <sap:WorkflowViewStateService.ViewState>
+                                              <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                                <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                                                <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                                              </scg:Dictionary>
+                                            </sap:WorkflowViewStateService.ViewState>
+                                          </ui:LogMessage>
+                                        </Sequence>
+                                      </uix:NCheckState.IfExists>
+                                      <uix:NCheckState.IfNotExists>
+                                        <Sequence DisplayName="Target does not appear" sap:VirtualizedContainerService.HintSize="400,105" sap2010:WorkflowViewState.IdRef="Sequence_31">
+                                          <sap:WorkflowViewStateService.ViewState>
+                                            <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                              <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                                            </scg:Dictionary>
+                                          </sap:WorkflowViewStateService.ViewState>
+                                        </Sequence>
+                                      </uix:NCheckState.IfNotExists>
+                                      <uix:NCheckState.Target>
+                                        <uix:TargetAnchorable DesignTimeRectangle="220, 191, 300, 15" DesignTimeScaleFactor="1" ElementType="CheckBox" FriendlyName="'1040SCANverify+'" FullSelectorArgument="&lt;ctrl automationid='4' /&gt;&lt;ctrl name=' 1040SCANverify+ ' role='check box' /&gt;" FuzzySelectorArgument="&lt;ctrl automationid='4' /&gt;&lt;ctrl name=' 1040SCANverify+ ' role='check box' automationid='' check:fulltext='1040SCANverify+' /&gt;" Guid="2e8b0e57-f5d6-4e99-a1d0-c357d82ba9b8" ImageBase64="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" InformativeScreenshot="8f6980159ac434d09e45eb41b4951b91.png" ScopeSelectorArgument="&lt;wnd app='submissionwizard.exe' cls='HwndWrapper*' title='Create New Binder' /&gt;" SearchSteps="Selector, FuzzySelector, Image" Version="V1" Visibility="Interactive">
+                                          <uix:TargetAnchorable.Anchors>
+                                            <scg:List x:TypeArguments="uix:ITarget" Capacity="1">
+                                              <uix:Target DesignTimeRectangle="40, 189, 163, 19" ElementType="Text" FriendlyName="'Select these'" FullSelectorArgument="&lt;ctrl automationid='4' /&gt;&lt;ctrl automationid='lblselectservice' /&gt;" FuzzySelectorArgument="&lt;ctrl automationid='4' /&gt;&lt;ctrl automationid='lblselectservice' role='text' check:text='Select these service options:' /&gt;" ImageBase64="iVBORw0KGgoAAAANSUhEUgAAAKcAAAAXCAYAAABu3F+ZAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAVfSURBVGhD7ZjPKz9dFMef/8nGhoWFlEhSFmIhCxaUHyvJAlkIofxIKcqCREIWFpJSfseCRBRFRMTCwuY+vc53zjz3M2bGx/Mow3NfNX3m3nvm3nPPfd9zZz5/GYcjoThxOhKLE6cjsThxOhKLE6cjsfw4cR4fH5u1tTWv5PjNpIhzfX3d5ObmmoyMDLkyMzPN3d2d1xrOwcGBaW9vNy8vL17N5+ju7jbDw8Ne6T11dXVmYWHBKxkzNjZmcnJyvNLPp6yszFRXV3ul76GwsNDs7Ox4pWT4BL44397eRIytra1yny4rKysi5Ovra6/mcxCIrq4ur/Qe+p6amvJKv0+ct7e3cn0XJycnEuONjQ2v5vt9UnxxqpOTk5NeTSqIEFHk5+ebrKwsP5sFxTk+Pi52ZGB+d3d3pf7+/t5UVlb6fbAzyYpsCOrYvXNzc2KrUEff9MX95uamiFPr+OX5mZkZ7wljOjo6pD+uoqIic3l5KfU9PT3+ODyrixFlb8Pm0GfxXTdLVEx0A6mPxcXFKZmIsaknNiQDbSMpNDY2+mPxC1ExteFZnQt2+MRJCLpGJSUlfsxGRkbM2dmZ2FHHL2OyjrZPrJv6xFVaWmqOjo6kLThPrv7+fmmz11vjBvRNXTqkHOt5eXlyMSk7ez49PcmEcAZGR0elDLY4Dw8P5Z46aG5uNhUVFXJfVVUlwcFpm3+bOa+urqTc29srNrC4uCh+ETz8p++2tjZZBGyWl5fFTomyD4INc7aJi4n6yPsxsOEZ//HxUcrMF8Eypi2Ezs5Oib8uPsTF1IYxdC6gcWFMXaP9/X1pw1fKbJKwzBnmE+uGvw0NDaagoEDadJ4XFxdSnp2dlb7oUzdUcL23t7ffrUMUKeK8ubkxLS0tMkkusg3QGYNqViEA6oQtTiaNQypsfY6F5FcX0ua/Huv2+Cwcm0DBH/pXIRH05+dnr/XPQofZB0FICOLh4cGriY9J0EdsaNPMSiYZGBiQe1sI1FO2iYppEERjz2Vvb0/siI8dI7DX4yNx4hMCVebn58U+bJ52X2x87peWlnzfP0uKOJXX11d/d3HU4gT3mvr1KMAJe+JMintsuDTdY8evLTLlK8VJX4hQx8dObVlU9ae8vFwCFmdvs7W15R+JevTHxSToIyCcpqYmPxPq0WwLgfpgLKJiqkJTmIv2AyoUYhcUJ+hYH4lT7RTtK2yedl/El9cMXneIMa8RnyVUnIo6xgS5D3sfsyeObXZ2ttfyD/ZODfKV4iSgdvYI4/T0VJ4fHBxMy96GkwV/EVlcTMLEqUc7bXqkQzBLUbaJimkQMie+KZrJiU9QnLoe+PSROIM+aebmuThx2kxPT0s9/+x8Bl+cBIuMqagTHEW62ycmJrzWP190YE9cU/nq6qq0gdoRON5ddFG0nqO1vr5e7sPgBVyPQIgT59DQkNyfn59LG2PZRzFQR8ARZzr2QWpra1MyYFhMwsSpRztZxJ6PLQTuaVfB019cTG1U/PrOyRj4QF8aI+0X/xgHMTFn2uyPUdsnjnRsVRtsAt1c6YqTk4d6xMk7Z7r/U/vi1I71YlDeOXECyBQcKVwsbk1NjQgiuCv1q1iPO770gKBxNDJRJsfzwESw5wp+rQNf4hwNjKtf63ZA7PHxlfGwZ2yuvr4+mRvjUuZZviLxJ8o+CP3rs2wW/QqOikmYOIEsTV/217YtBP3CxYYYcU9/UTG1YS56jOIPsSbBgMZIfaUfO9Z8YRMf6hkv6JPGSGOH2CBOnNqmceNbBh/p234mjthj3fE7CCaQn4IT5/8AJ06H44tx4nQkFidOR2Jx4nQkFidOR2Jx4nQkFGP+BsQuWEE8zXMMAAAAAElFTkSuQmCC" SearchSteps="Selector, FuzzySelector" />
+                                            </scg:List>
+                                          </uix:TargetAnchorable.Anchors>
+                                        </uix:TargetAnchorable>
+                                      </uix:NCheckState.Target>
+                                      <sap:WorkflowViewStateService.ViewState>
+                                        <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                          <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+                                          <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                                        </scg:Dictionary>
+                                      </sap:WorkflowViewStateService.ViewState>
+                                    </uix:NCheckState>
+                                  </Sequence>
+                                </ui:IfElseIfBlock.Then>
+                              </ui:IfElseIfBlock>
+                              <ui:IfElseIfBlock BlockType="ElseIf" Condition="[In_ScanVerifyPlus=&quot;NA&quot;]">
+                                <ui:IfElseIfBlock.Then>
+                                  <Sequence DisplayName="Body" sap:VirtualizedContainerService.HintSize="400,83.2" sap2010:WorkflowViewState.IdRef="Sequence_38">
+                                    <sap:WorkflowViewStateService.ViewState>
+                                      <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                        <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+                                        <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                                      </scg:Dictionary>
+                                    </sap:WorkflowViewStateService.ViewState>
+                                  </Sequence>
+                                </ui:IfElseIfBlock.Then>
+                              </ui:IfElseIfBlock>
+                            </sc:BindingList>
+                          </ui:IfElseIf.ConditionBlocks>
+                          <sap:WorkflowViewStateService.ViewState>
+                            <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                              <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+                              <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                            </scg:Dictionary>
+                          </sap:WorkflowViewStateService.ViewState>
+                        </ui:IfElseIf>
+                      </Sequence>
+                    </If.Then>
+                    <If.Else>
+                      <Sequence sap:VirtualizedContainerService.HintSize="400,104.8" sap2010:WorkflowViewState.IdRef="Sequence_48">
+                        <sap:WorkflowViewStateService.ViewState>
+                          <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                            <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                          </scg:Dictionary>
+                        </sap:WorkflowViewStateService.ViewState>
+                      </Sequence>
+                    </If.Else>
+                  </If>
+                </Sequence>
+              </ui:CommentOut.Body>
+              <sap:WorkflowViewStateService.ViewState>
+                <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                  <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+                  <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                </scg:Dictionary>
+              </sap:WorkflowViewStateService.ViewState>
+            </ui:CommentOut>
+            <uix:NCheck Action="Uncheck" ContinueOnError="True" DisplayName="Check/Uncheck 'Pre-verification Review'" sap:VirtualizedContainerService.HintSize="952,52.8" sap2010:WorkflowViewState.IdRef="NCheck_3" ScopeIdentifier="5e96cf71-c67e-4656-8150-7c72ac92f373" Timeout="1" Version="V1">
+              <uix:NCheck.Target>
+                <uix:TargetAnchorable DesignTimeRectangle="220, 166, 145, 15" DesignTimeScaleFactor="1" ElementType="CheckBox" FriendlyName="'Pre-verification Review'" FullSelectorArgument="&lt;ctrl automationid='4' /&gt;&lt;ctrl automationid='chkepreverificationreview' /&gt;" FuzzyAccuracy="0.96" FuzzySelectorArgument="&lt;ctrl automationid='4' /&gt;&lt;ctrl automationid='chkepreverificationreview' role='check box' check:fulltext='Pre-verification Review' /&gt;" Guid="cbcd93ba-2eb6-4335-b801-dedcc55002ad" ImageBase64="" InformativeScreenshot="38d5cce03045473f3c98ef7e1f40731f.png" ScopeSelectorArgument="&lt;wnd app='submissionwizard.exe' cls='HwndWrapper*' title='Create New Binder' /&gt;" SearchSteps="FuzzySelector" Version="V1" Visibility="Interactive" />
+              </uix:NCheck.Target>
+              <sap:WorkflowViewStateService.ViewState>
+                <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                  <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+                  <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                </scg:Dictionary>
+              </sap:WorkflowViewStateService.ViewState>
+            </uix:NCheck>
+            <uix:NCheck Action="Uncheck" ContinueOnError="True" DisplayName="Check/Uncheck 'Create PBFX file'" sap:VirtualizedContainerService.HintSize="952,52.8" sap2010:WorkflowViewState.IdRef="NCheck_2" ScopeIdentifier="5e96cf71-c67e-4656-8150-7c72ac92f373" Timeout="1" Version="V1">
+              <uix:NCheck.Target>
+                <uix:TargetAnchorable DesignTimeRectangle="220, 212, 110, 15" DesignTimeScaleFactor="1" ElementType="CheckBox" FriendlyName="'Create PBFX file'" FullSelectorArgument="&lt;ctrl automationid='4' /&gt;&lt;ctrl automationid='chkcreatPBFfile' /&gt;" FuzzySelectorArgument="&lt;ctrl automationid='4' /&gt;&lt;ctrl automationid='chkcreatPBFfile' role='check box' check:fulltext='Create PBFX file' /&gt;" Guid="2d03cf35-d5ce-415e-9625-65be53176d7c" ImageBase64="" InformativeScreenshot="2c5575de5208cc7b689991d08c3634b3.png" ScopeSelectorArgument="&lt;wnd app='submissionwizard.exe' cls='HwndWrapper*' title='Create New Binder' /&gt;" SearchSteps="Selector" Version="V1" Visibility="Interactive" />
+              </uix:NCheck.Target>
+              <sap:WorkflowViewStateService.ViewState>
+                <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                  <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+                  <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                </scg:Dictionary>
+              </sap:WorkflowViewStateService.ViewState>
+            </uix:NCheck>
+            <ui:CommentOut DisplayName="Comment Out" sap:VirtualizedContainerService.HintSize="952,52.8" sap2010:WorkflowViewState.IdRef="CommentOut_7">
+              <ui:CommentOut.Body>
+                <Sequence DisplayName="Ignored Activities" sap:VirtualizedContainerService.HintSize="1055.2,164.8" sap2010:WorkflowViewState.IdRef="Sequence_44">
+                  <sap:WorkflowViewStateService.ViewState>
+                    <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                      <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                    </scg:Dictionary>
+                  </sap:WorkflowViewStateService.ViewState>
+                  <uix:NCheckState DisplayName="Check App State '1040SCANverify+'" sap:VirtualizedContainerService.HintSize="337.6,52.8" sap2010:WorkflowViewState.IdRef="NCheckState_2" ScopeIdentifier="5e96cf71-c67e-4656-8150-7c72ac92f373" Timeout="3" Version="V3">
+                    <uix:NCheckState.IfExists>
+                      <Sequence DisplayName="Target appears" sap:VirtualizedContainerService.HintSize="540,1014.4" sap2010:WorkflowViewState.IdRef="Sequence_9">
+                        <Sequence.Variables>
+                          <Variable x:TypeArguments="x:String" Name="str_Checkboxstate" />
+                        </Sequence.Variables>
+                        <sap:WorkflowViewStateService.ViewState>
+                          <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                            <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                          </scg:Dictionary>
+                        </sap:WorkflowViewStateService.ViewState>
+                        <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="477.6,144" sap2010:WorkflowViewState.IdRef="LogMessage_9" Level="Info" Message="[&quot; Scan very+ checkbox exists &quot;]" />
+                        <If Condition="[in_str_Scanverify=&quot;Yes&quot;]" sap:VirtualizedContainerService.HintSize="477.6,715.2" sap2010:WorkflowViewState.IdRef="If_1">
+                          <sap:WorkflowViewStateService.ViewState>
+                            <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                              <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                              <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                            </scg:Dictionary>
+                          </sap:WorkflowViewStateService.ViewState>
+                          <If.Then>
+                            <Sequence sap:VirtualizedContainerService.HintSize="400,268.8" sap2010:WorkflowViewState.IdRef="Sequence_11">
+                              <sap:WorkflowViewStateService.ViewState>
+                                <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                  <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                                </scg:Dictionary>
+                              </sap:WorkflowViewStateService.ViewState>
+                              <uix:NCheck Action="Check" ContinueOnError="True" DisplayName="Check/Uncheck '1040SCANverify+'" sap:VirtualizedContainerService.HintSize="338,157" sap2010:WorkflowViewState.IdRef="NCheck_4" ScopeIdentifier="5e96cf71-c67e-4656-8150-7c72ac92f373" Timeout="3" Version="V3">
+                                <uix:NCheck.Target>
+                                  <uix:TargetAnchorable DesignTimeRectangle="220, 166, 300, 15" DesignTimeScaleFactor="1" ElementType="CheckBox" FriendlyName="'1040SCANverify+'" FullSelectorArgument="&lt;ctrl automationid='4' /&gt;&lt;ctrl name=' 1040SCANverify+ ' role='check box' /&gt;" FuzzyAccuracy="0.76" FuzzySelectorArgument="&lt;ctrl automationid='4' /&gt;&lt;ctrl name=' 1040SCANverify+ ' role='check box' automationid='' check:fulltext='1040SCANverify+' /&gt;" Guid="148cc58d-bed5-42cb-84eb-f4e08b520eb5" ImageBase64="" InformativeScreenshot="2968fc082fef80a8487e2995a32f6935.png" ScopeSelectorArgument="&lt;wnd app='submissionwizard.exe' cls='HwndWrapper*' title='Create New Binder' /&gt;" SearchSteps="Selector, FuzzySelector" Version="V1" Visibility="Visible" />
+                                </uix:NCheck.Target>
+                                <sap:WorkflowViewStateService.ViewState>
+                                  <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                    <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                                    <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                                  </scg:Dictionary>
+                                </sap:WorkflowViewStateService.ViewState>
+                              </uix:NCheck>
+                            </Sequence>
+                          </If.Then>
+                          <If.Else>
+                            <Sequence sap:VirtualizedContainerService.HintSize="400,268" sap2010:WorkflowViewState.IdRef="Sequence_12">
+                              <sap:WorkflowViewStateService.ViewState>
+                                <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                  <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                                </scg:Dictionary>
+                              </sap:WorkflowViewStateService.ViewState>
+                              <uix:NCheck Action="Uncheck" ContinueOnError="True" DisplayName="Check/Uncheck '1040SCANverify+'" sap:VirtualizedContainerService.HintSize="338,157" sap2010:WorkflowViewState.IdRef="NCheck_5" ScopeIdentifier="5e96cf71-c67e-4656-8150-7c72ac92f373" Timeout="3" Version="V3">
+                                <uix:NCheck.Target>
+                                  <uix:TargetAnchorable DesignTimeRectangle="220, 166, 300, 15" DesignTimeScaleFactor="1" ElementType="CheckBox" FriendlyName="'1040SCANverify+'" FullSelectorArgument="&lt;ctrl automationid='4' /&gt;&lt;ctrl name=' 1040SCANverify+ ' role='check box' /&gt;" FuzzyAccuracy="0.76" FuzzySelectorArgument="&lt;ctrl automationid='4' /&gt;&lt;ctrl name=' 1040SCANverify+ ' role='check box' automationid='' check:fulltext='1040SCANverify+' /&gt;" Guid="148cc58d-bed5-42cb-84eb-f4e08b520eb5" ImageBase64="" InformativeScreenshot="2968fc082fef80a8487e2995a32f6935.png" ScopeSelectorArgument="&lt;wnd app='submissionwizard.exe' cls='HwndWrapper*' title='Create New Binder' /&gt;" SearchSteps="Selector, FuzzySelector" Version="V1" Visibility="Visible" />
+                                </uix:NCheck.Target>
+                                <sap:WorkflowViewStateService.ViewState>
+                                  <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                    <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                                    <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                                  </scg:Dictionary>
+                                </sap:WorkflowViewStateService.ViewState>
+                              </uix:NCheck>
+                            </Sequence>
+                          </If.Else>
+                        </If>
+                      </Sequence>
+                    </uix:NCheckState.IfExists>
+                    <uix:NCheckState.IfNotExists>
+                      <Sequence DisplayName="Target does not appear" sap:VirtualizedContainerService.HintSize="400,259.2" sap2010:WorkflowViewState.IdRef="Sequence_10">
+                        <sap:WorkflowViewStateService.ViewState>
+                          <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                            <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                          </scg:Dictionary>
+                        </sap:WorkflowViewStateService.ViewState>
+                        <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="337.6,144" sap2010:WorkflowViewState.IdRef="LogMessage_10" Level="Info" Message="[&quot; Scan very+ checkbox does not exist &quot;]" />
+                      </Sequence>
+                    </uix:NCheckState.IfNotExists>
+                    <uix:NCheckState.Target>
+                      <uix:TargetAnchorable DesignTimeRectangle="220, 166, 300, 15" DesignTimeScaleFactor="1" ElementType="CheckBox" FriendlyName="'1040SCANverify+'" FullSelectorArgument="&lt;ctrl automationid='4' /&gt;&lt;ctrl name=' 1040SCANverify+ ' role='check box' /&gt;" FuzzyAccuracy="0.88" FuzzySelectorArgument="&lt;ctrl automationid='4' /&gt;&lt;ctrl name=' 1040SCANverify+ ' role='check box' automationid='' check:fulltext='1040SCANverify+' /&gt;" Guid="b0f8c426-5265-4434-9a1a-bb4212483f4c" ImageBase64="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" InformativeScreenshot="2968fc082fef80a8487e2995a32f6935.png" ScopeSelectorArgument="&lt;wnd app='submissionwizard.exe' cls='HwndWrapper*' title='Create New Binder' /&gt;" SearchSteps="Selector, FuzzySelector" Version="V1" Visibility="Interactive" />
+                    </uix:NCheckState.Target>
+                    <sap:WorkflowViewStateService.ViewState>
+                      <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                        <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+                        <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                      </scg:Dictionary>
+                    </sap:WorkflowViewStateService.ViewState>
+                  </uix:NCheckState>
+                </Sequence>
+              </ui:CommentOut.Body>
+              <sap:WorkflowViewStateService.ViewState>
+                <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                  <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+                  <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                </scg:Dictionary>
+              </sap:WorkflowViewStateService.ViewState>
+            </ui:CommentOut>
+            <ui:CommentOut DisplayName="Comment Out" sap:VirtualizedContainerService.HintSize="952,52.8" sap2010:WorkflowViewState.IdRef="CommentOut_10">
+              <ui:CommentOut.Body>
+                <Sequence DisplayName="Ignored Activities" sap:VirtualizedContainerService.HintSize="915.2,552.8" sap2010:WorkflowViewState.IdRef="Sequence_51">
+                  <sap:WorkflowViewStateService.ViewState>
+                    <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                      <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                    </scg:Dictionary>
+                  </sap:WorkflowViewStateService.ViewState>
+                  <uix:NCheckState DisplayName="Check App State 'OK'" sap:VirtualizedContainerService.HintSize="852.8,440.8" sap2010:WorkflowViewState.IdRef="NCheckState_7" ScopeIdentifier="5e96cf71-c67e-4656-8150-7c72ac92f373" Timeout="1" Version="V3">
+                    <uix:NCheckState.IfExists>
+                      <Sequence DisplayName="Target appears" sap:VirtualizedContainerService.HintSize="400,222.4" sap2010:WorkflowViewState.IdRef="Sequence_23">
+                        <sap:WorkflowViewStateService.ViewState>
+                          <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                            <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                          </scg:Dictionary>
+                        </sap:WorkflowViewStateService.ViewState>
+                        <ui:Click AlterIfDisabled="{x:Null}" DelayBefore="{x:Null}" DelayMS="{x:Null}" SendWindowMessages="{x:Null}" SimulateClick="{x:Null}" ClickType="CLICK_SINGLE" DisplayName="Click 'push button  OK'" sap:VirtualizedContainerService.HintSize="337.6,107.2" sap2010:WorkflowViewState.IdRef="Click_5" KeyModifiers="None" MouseButton="BTN_LEFT">
+                          <ui:Click.CursorPosition>
+                            <ui:CursorPosition Position="Center">
+                              <ui:CursorPosition.OffsetX>
+                                <InArgument x:TypeArguments="x:Int32" />
+                              </ui:CursorPosition.OffsetX>
+                              <ui:CursorPosition.OffsetY>
+                                <InArgument x:TypeArguments="x:Int32" />
+                              </ui:CursorPosition.OffsetY>
+                            </ui:CursorPosition>
+                          </ui:Click.CursorPosition>
+                          <ui:Click.Target>
+                            <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="80df46ac-9a39-4ebf-b8cf-35e96d0452da" InformativeScreenshot="23fc87bcb6753ccfd65c23f64da855c7" Selector="&lt;wnd app='submissionwizard.exe' cls='HwndWrapper*' title='SPbinder' /&gt;&lt;ctrl name='OK' role='push button' /&gt;">
+                              <ui:Target.TimeoutMS>
+                                <InArgument x:TypeArguments="x:Int32" />
+                              </ui:Target.TimeoutMS>
+                              <ui:Target.WaitForReady>
+                                <InArgument x:TypeArguments="ui:WaitForReady" />
+                              </ui:Target.WaitForReady>
+                            </ui:Target>
+                          </ui:Click.Target>
+                        </ui:Click>
+                      </Sequence>
+                    </uix:NCheckState.IfExists>
+                    <uix:NCheckState.IfNotExists>
+                      <Sequence DisplayName="Target does not appear" sap:VirtualizedContainerService.HintSize="400,106.4" sap2010:WorkflowViewState.IdRef="Sequence_24">
+                        <sap:WorkflowViewStateService.ViewState>
+                          <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                            <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                          </scg:Dictionary>
+                        </sap:WorkflowViewStateService.ViewState>
+                      </Sequence>
+                    </uix:NCheckState.IfNotExists>
+                    <uix:NCheckState.Target>
+                      <uix:TargetAnchorable DesignTimeRectangle="327, 109, 80, 25" DesignTimeScaleFactor="1" ElementType="Button" FriendlyName="'OK'" FullSelectorArgument="&lt;ctrl name='OK' role='push button' /&gt;" FuzzySelectorArgument="&lt;ctrl name='OK' role='push button' automationid='' check:text='OK' /&gt;" Guid="34202869-3e02-4d04-98db-edf039e8f07d" ImageBase64="iVBORw0KGgoAAAANSUhEUgAAAFQAAAAdCAYAAAA0PEtlAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAICSURBVGhD7ZdLS8NAEID9GZ4EQRC8Sk/qb1AE/4MgFBHx5APxXkUEb0IvHkQQwVe1+KqKiOALsUoNWK3WtlaNTdKnY2ewoW3spSzNCjPwQXcmG8LX3dmkDjiEhin09F2Bw7c7pkqSuTR5NIU69kahfqOPqZKgHiOPLFQQLFQwLFQwLFQwLFQwLFQwLFQwUgqdVbwQTam/TwSgZVOwH/Ob9WbvIPScTEPT1oCZ6/BNWHJ2IJ3QCf8SZL9z4FdD0HXsIkHb0Wt6NvwSwWsmA+s0dgd9NO49n6MvFP/XM7R4h0ruV2ukE3qtPsFXxoDOvMzifCARBi2TpN/FQlGmnl/BL8Y7tO4Ml8yxA6mE4laOpxLwoEUtta3IFWRyWXBeuk2hy8+n8JHWSGb7/rhljh1IJRS3KwpSEhFLDeVhKxi7WTSF4hjDFVizXG8XUglt3OyHaFKFkBG31FZeziwrVM3o1B5wy7fxCv0b7KFGNg2O3ZGSPPbQz7ROfbIgdP7x0DyQwsYH/SHFc+xAOqGFU/5Jj5M8POVXw2eUO6pwys8om1T3Fb1a2YV0QpHy91Dc1gexW2jwOKleLhTxvF5CLi8VV20hZwdSCv3P/DuhC6FjULRIRabvPX/OqxW8QgXDQgXDQgXDQgXDQgVjEdp7MQfdJ1NMlbwmP8mjKZRDTLBQoQHwA31SwBYgF1EfAAAAAElFTkSuQmCC" InformativeScreenshot="313f67f74842553a9092494c3ce7944d.png" ScopeSelectorArgument="&lt;wnd app='submissionwizard.exe' cls='HwndWrapper*' title='SPbinder' /&gt;" SearchSteps="Selector" Version="V1" Visibility="Visible">
+                        <uix:TargetAnchorable.Anchors>
+                          <scg:List x:TypeArguments="uix:ITarget" Capacity="1">
+                            <uix:Target DesignTimeRectangle="74, 42, 338, 46" ElementType="Text" FriendlyName="'Please keep'" FullSelectorArgument="&lt;ctrl name='Please keep CCH Axcess Tax Manager open and the tax return close*' role='text' /&gt;" FuzzySelectorArgument="&lt;ctrl name='Please keep CCH Axcess Tax Manager open and the tax return close*' role='text' automationid='' check:text='Please keep CCH Axcess Tax Manager open and the tax return closed; do not use your mouse or' /&gt;" ImageBase64="iVBORw0KGgoAAAANSUhEUgAAAVYAAAAyCAYAAAAHvfN7AAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAABRLSURBVHhe7Z1bqH3TF8e9+b/woHhAFEUuyQvhlyiKiBQp4hcelMsDUST3Bx74KYpQbrkkIbkVRS6FCIXcc4ncolAoHta/z/zt7/bd48y5ztr77N+5OONTu7Muc4455phjjjXXWnPNs1WXJEmSzJUMrEmSJHMmA2uSJMmcycCaJEkyZzKwJkmSzJk1E1g3bdrUvffee6O9JEnmzbffftu9/PLLo71+3n777e7jjz8e7SWRicB6/vnndzvssEO35557drvvvnvZfvXVV8u577//vrvooovK9kpw8MEHd48//vhob3n45ZdfutNPP73beeedi034XXDBBYuew+FwPOe3337rnnnmmdFeneOOO67baqvVc6374osvxnWjnltvvfWCus7Kc889V+r67LPPjo78y4033ljOYbNk+Xj++edL29Y44YQTug8//HC0tzlWXH/99aO92Ygyl4t//vmn1POPP/4YHZk/CwKrG+upp54ad/TPPvtsRZ39kEMOWfbAethhh3VnnHFG99dff42O/Evfudtuu6079dRTR3ubWcx+XLg4T4Pj4KuNvk43C8ijvmefffboyL9Qzkr62nqlr41pj3fffXe0N5/AGmUuF8sRy3oDK5EdBd5///0Fylx99dXdAQcc0B1//PFldPvRRx+V49xK0Dj8tt122+7OO+8sx8FHeEceeWQ5Rj7knHbaaUXOxRdfXI5HFFjRiW3p2dKjJVf14Jx0rDkIDc6InZFppO8czBJYH3jgge7oo4/uLr/88tIOAlnoSb2B8wR09jnnI2Zkc4fBtuot+7/22msTaTV6rrVJjdjpWu2sgCnbUC8uQtFWpMOGpP3hhx9GRzfrqeOy1f333z9RFnkF6fbff/9uv/32K/mOPfbYsa36fBG9VG/O8RfIi02wxaGHHlr8RLrjd3vvvXex66233lqOCdLIB5GLHspHO+2yyy4Turz++uvlHGkoi7zUg1Gc9O+rW0SyYzp8CZ2QwV/Oq48A/Yfj0ou/EY6hi9LRLshVeuqLXNV3SJ+uyVyqT8nOyMSmNT24C2MbeZQjn2ffg7wP5KJc9eUNGzaMdY11nCmw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" SearchSteps="Selector, FuzzySelector" />
+                          </scg:List>
+                        </uix:TargetAnchorable.Anchors>
+                      </uix:TargetAnchorable>
+                    </uix:NCheckState.Target>
+                    <sap:WorkflowViewStateService.ViewState>
+                      <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                        <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                        <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                      </scg:Dictionary>
+                    </sap:WorkflowViewStateService.ViewState>
+                  </uix:NCheckState>
+                </Sequence>
+              </ui:CommentOut.Body>
+              <sap:WorkflowViewStateService.ViewState>
+                <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                  <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+                  <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                </scg:Dictionary>
+              </sap:WorkflowViewStateService.ViewState>
+            </ui:CommentOut>
+          </Sequence>
+        </ActivityAction>
+      </uix:NApplicationCard.Body>
+      <uix:NApplicationCard.TargetApp>
+        <uix:TargetApp Area="1662, 81, 968, 714" FilePath="[in_Config(&quot;App_File_Path&quot;).ToString]" IconBase64="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" InformativeScreenshot="bbcae916df7f34ae3bea7ab3fe9e4e55.png" IsExactTitleEnabled="True" Selector="&lt;wnd app='submissionwizard.exe' cls='HwndWrapper*' title='Create New Binder' /&gt;" Title="Create New Binder" />
+      </uix:NApplicationCard.TargetApp>
+      <sap:WorkflowViewStateService.ViewState>
+        <scg:Dictionary x:TypeArguments="x:String, x:Object">
+          <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+          <x:Boolean x:Key="IsPinned">False</x:Boolean>
+        </scg:Dictionary>
+      </sap:WorkflowViewStateService.ViewState>
+    </uix:NApplicationCard>
+    <uix:NApplicationCard AttachMode="ByInstance" CloseMode="Never" DisplayName="Move Submission Wizard Window" sap:VirtualizedContainerService.HintSize="1048,431.2" sap2010:WorkflowViewState.IdRef="NApplicationCard_5" OpenMode="Never" ScopeGuid="ab3580b8-a05c-4a24-afc3-89032fa070e7" Version="V2">
+      <uix:NApplicationCard.Body>
+        <ActivityAction x:TypeArguments="x:Object">
+          <ActivityAction.Argument>
+            <DelegateInArgument x:TypeArguments="x:Object" Name="WSSessionData" />
+          </ActivityAction.Argument>
+          <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="449.6,140" sap2010:WorkflowViewState.IdRef="Sequence_54">
+            <sap:WorkflowViewStateService.ViewState>
+              <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+              </scg:Dictionary>
+            </sap:WorkflowViewStateService.ViewState>
+            <ui:MoveWindow Height="{x:Null}" Width="{x:Null}" Window="{x:Null}" X="{x:Null}" DisplayName="Move Window" sap:VirtualizedContainerService.HintSize="387.2,24.8" sap2010:WorkflowViewState.IdRef="MoveWindow_1" Y="20" />
+          </Sequence>
+        </ActivityAction>
+      </uix:NApplicationCard.Body>
+      <uix:NApplicationCard.TargetApp>
+        <uix:TargetApp Area="1676, 73, 968, 714" FilePath="[in_Config(&quot;App_File_Path&quot;).ToString]" IconBase64="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" InformativeScreenshot="ff9a58f4f2a2e973e8b4684f2db656e3.png" Selector="&lt;wnd app='submissionwizard.exe' cls='HwndWrapper*' title='Create New Binder' /&gt;" Title="Create New Binder" />
+      </uix:NApplicationCard.TargetApp>
+      <sap:WorkflowViewStateService.ViewState>
+        <scg:Dictionary x:TypeArguments="x:String, x:Object">
+          <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+          <x:Boolean x:Key="IsPinned">False</x:Boolean>
+        </scg:Dictionary>
+      </sap:WorkflowViewStateService.ViewState>
+    </uix:NApplicationCard>
+    <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="1048,142.4" sap2010:WorkflowViewState.IdRef="LogMessage_5" Level="Info" Message="[&quot;Binder Options Selected&quot;]" />
+    <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="1048,142.4" sap2010:WorkflowViewState.IdRef="LogMessage_6" Level="Trace" Message="[&quot;--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------&quot;]" />
+  </Sequence>
+</Activity>

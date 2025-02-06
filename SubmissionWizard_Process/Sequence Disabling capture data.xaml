@@ -1,0 +1,195 @@
+<Activity mc:Ignorable="sap sap2010" x:Class="Sequence_Disabling_capture_data" xmlns="http://schemas.microsoft.com/netfx/2009/xaml/activities" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:sap="http://schemas.microsoft.com/netfx/2009/xaml/activities/presentation" xmlns:sap2010="http://schemas.microsoft.com/netfx/2010/xaml/activities/presentation" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=System.Private.CoreLib" xmlns:sco="clr-namespace:System.Collections.ObjectModel;assembly=System.Private.CoreLib" xmlns:ui="http://schemas.uipath.com/workflow/activities" xmlns:uix="http://schemas.uipath.com/workflow/activities/uix" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+  <x:Members>
+    <x:Property sap2010:Annotation.AnnotationText="Dictionary structure to store configuration data of the process (settings, constants and assets)." Name="in_Config" Type="InArgument(scg:Dictionary(x:String, x:Object))" />
+  </x:Members>
+  <VisualBasic.Settings>
+    <x:Null />
+  </VisualBasic.Settings>
+  <sap:VirtualizedContainerService.HintSize>1004,2080</sap:VirtualizedContainerService.HintSize>
+  <sap2010:WorkflowViewState.IdRef>Sequence_Disabling_capture_data_1</sap2010:WorkflowViewState.IdRef>
+  <TextExpression.NamespacesForImplementation>
+    <sco:Collection x:TypeArguments="x:String">
+      <x:String>System.Activities</x:String>
+      <x:String>System.Activities.Statements</x:String>
+      <x:String>System.Activities.Expressions</x:String>
+      <x:String>System.Activities.Validation</x:String>
+      <x:String>System.Activities.XamlIntegration</x:String>
+      <x:String>Microsoft.VisualBasic</x:String>
+      <x:String>Microsoft.VisualBasic.Activities</x:String>
+      <x:String>System</x:String>
+      <x:String>System.Collections</x:String>
+      <x:String>System.Collections.Generic</x:String>
+      <x:String>System.Data</x:String>
+      <x:String>System.Diagnostics</x:String>
+      <x:String>System.Drawing</x:String>
+      <x:String>System.IO</x:String>
+      <x:String>System.Linq</x:String>
+      <x:String>System.Net.Mail</x:String>
+      <x:String>System.Xml</x:String>
+      <x:String>System.Xml.Linq</x:String>
+      <x:String>UiPath.Core</x:String>
+      <x:String>UiPath.Core.Activities</x:String>
+      <x:String>System.Windows.Markup</x:String>
+      <x:String>GlobalVariablesNamespace</x:String>
+      <x:String>GlobalConstantsNamespace</x:String>
+      <x:String>UiPath.UIAutomationNext.Enums</x:String>
+      <x:String>UiPath.UIAutomationCore.Contracts</x:String>
+      <x:String>System.Collections.ObjectModel</x:String>
+      <x:String>UiPath.UIAutomationNext.Activities</x:String>
+      <x:String>UiPath.Platform.ObjectLibrary</x:String>
+      <x:String>UiPath.Shared.Activities</x:String>
+      <x:String>System.Reflection</x:String>
+    </sco:Collection>
+  </TextExpression.NamespacesForImplementation>
+  <TextExpression.ReferencesForImplementation>
+    <scg:List x:TypeArguments="AssemblyReference" Capacity="68">
+      <AssemblyReference>Microsoft.VisualBasic</AssemblyReference>
+      <AssemblyReference>NPOI</AssemblyReference>
+      <AssemblyReference>System</AssemblyReference>
+      <AssemblyReference>System.Activities</AssemblyReference>
+      <AssemblyReference>System.Collections</AssemblyReference>
+      <AssemblyReference>System.ComponentModel</AssemblyReference>
+      <AssemblyReference>System.ComponentModel.TypeConverter</AssemblyReference>
+      <AssemblyReference>System.Configuration.ConfigurationManager</AssemblyReference>
+      <AssemblyReference>System.Console</AssemblyReference>
+      <AssemblyReference>System.Core</AssemblyReference>
+      <AssemblyReference>System.Data</AssemblyReference>
+      <AssemblyReference>System.Data.DataSetExtensions</AssemblyReference>
+      <AssemblyReference>System.Drawing</AssemblyReference>
+      <AssemblyReference>System.Linq</AssemblyReference>
+      <AssemblyReference>System.Memory</AssemblyReference>
+      <AssemblyReference>System.ObjectModel</AssemblyReference>
+      <AssemblyReference>System.Private.CoreLib</AssemblyReference>
+      <AssemblyReference>System.Private.Uri</AssemblyReference>
+      <AssemblyReference>System.Reflection.DispatchProxy</AssemblyReference>
+      <AssemblyReference>System.Reflection.Metadata</AssemblyReference>
+      <AssemblyReference>System.Reflection.TypeExtensions</AssemblyReference>
+      <AssemblyReference>System.Security.Permissions</AssemblyReference>
+      <AssemblyReference>System.Xaml</AssemblyReference>
+      <AssemblyReference>System.Xml</AssemblyReference>
+      <AssemblyReference>System.Xml.Linq</AssemblyReference>
+      <AssemblyReference>UiPath.Excel.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.OCR.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.Platform</AssemblyReference>
+      <AssemblyReference>UiPath.Studio.Constants</AssemblyReference>
+      <AssemblyReference>UiPath.System.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.Testing.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.UiAutomation.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.UIAutomationCore</AssemblyReference>
+      <AssemblyReference>UiPath.UIAutomationNext</AssemblyReference>
+      <AssemblyReference>UiPath.UIAutomationNext.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.Workflow</AssemblyReference>
+    </scg:List>
+  </TextExpression.ReferencesForImplementation>
+  <Sequence sap2010:Annotation.AnnotationText="Sequence to navigate to admin settings change the capture data and navigate back to fileroom." DisplayName="Sequence_Disabling_capture_data" sap:VirtualizedContainerService.HintSize="496,2015.2" sap2010:WorkflowViewState.IdRef="Sequence_1">
+    <sap:WorkflowViewStateService.ViewState>
+      <scg:Dictionary x:TypeArguments="x:String, x:Object">
+        <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+        <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
+      </scg:Dictionary>
+    </sap:WorkflowViewStateService.ViewState>
+    <uix:NApplicationCard AttachMode="ByInstance" CloseMode="Never" DisplayName="Use Browser Chrome: FileRoom" sap:VirtualizedContainerService.HintSize="433.6,1859.2" sap2010:WorkflowViewState.IdRef="NApplicationCard_1" InteractionMode="DebuggerApi" OpenMode="Never" ScopeGuid="2311ed28-216c-4530-a509-ef4c96b9c5b8" Version="V2">
+      <uix:NApplicationCard.Body>
+        <ActivityAction x:TypeArguments="x:Object">
+          <ActivityAction.Argument>
+            <DelegateInArgument x:TypeArguments="x:Object" Name="WSSessionData" />
+          </ActivityAction.Argument>
+          <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="400,1642.4" sap2010:WorkflowViewState.IdRef="Sequence_2">
+            <sap:WorkflowViewStateService.ViewState>
+              <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+              </scg:Dictionary>
+            </sap:WorkflowViewStateService.ViewState>
+            <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="337.6,144" sap2010:WorkflowViewState.IdRef="LogMessage_1" Level="[UiPath.Core.Activities.LogLevel.Info]" Message="[&quot;Disabling capture data&quot;]" />
+            <uix:NHover DisplayName="Hover 'FileRoom'" sap:VirtualizedContainerService.HintSize="337.6,157.6" sap2010:WorkflowViewState.IdRef="NHover_1" ScopeIdentifier="2311ed28-216c-4530-a509-ef4c96b9c5b8" Version="V3">
+              <uix:NHover.Target>
+                <uix:TargetAnchorable BrowserURL="https://production.sureprep.com/Fileroom/Fileroom/Listing" DesignTimeRectangle="1348, 122, 87, 29" DesignTimeScaleFactor="1" FriendlyName="'FileRoom'" FullSelectorArgument="&lt;webctrl tableRow='1' tag='TABLE' /&gt;&lt;webctrl class='inner-div' tableRow='1' tag='DIV' /&gt;" FuzzySelectorArgument="&lt;webctrl tag='TABLE' /&gt;&lt;webctrl class='inner-div' type='' tag='DIV' aaname='                                                           ' check:innerText='FileRoom' /&gt;" Guid="60df4e62-22cc-4d91-a1d6-f7bf54b246e5" ImageBase64="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" InformativeScreenshot="ebe87933729fb79b449ef55d8e9f882f.png" ScopeSelectorArgument="&lt;html app='chrome.exe' title='FileRoom' /&gt;" SearchSteps="Selector, FuzzySelector, Image" Version="V1" Visibility="Interactive" />
+              </uix:NHover.Target>
+              <sap:WorkflowViewStateService.ViewState>
+                <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                  <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                  <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                </scg:Dictionary>
+              </sap:WorkflowViewStateService.ViewState>
+            </uix:NHover>
+            <uix:NClick ClickType="Single" DisplayName="Click 'Admin'" sap:VirtualizedContainerService.HintSize="337.6,157.6" sap2010:WorkflowViewState.IdRef="NClick_1" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="2311ed28-216c-4530-a509-ef4c96b9c5b8" Version="V3">
+              <uix:NClick.Target>
+                <uix:TargetAnchorable BrowserURL="https://production.sureprep.com/Fileroom/Fileroom/Listing" DesignTimeRectangle="1358, 153, 37, 15" DesignTimeScaleFactor="1" ElementType="Text" FriendlyName="'Admin'" FullSelectorArgument="&lt;webctrl id='poptab' tableRow='1' tag='TABLE' /&gt;&lt;webctrl tableRow='2' tag='A' /&gt;" FuzzySelectorArgument="&lt;webctrl id='poptab' tag='TABLE' /&gt;&lt;webctrl type='' tag='A' class='' aaname='Admin' check:innerText='Admin' /&gt;" Guid="039afdea-ee26-4461-95e4-91617772fe56" ImageBase64="iVBORw0KGgoAAAANSUhEUgAAACkAAAATCAYAAAANgSQ9AAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAALDSURBVEhLzZNNTxNRFIbnZ1FaoJ+r8tGGmIku3PuJ1JD0Hxjd0ALVyFqaGIyCUWskJiKNyIKWQFlYNNaYtCzoZrqZrl7POffeaaslIbpwJjk5573n3Pc+c6e1UqkU0uk0/JwF0sTMzIxX+0lb09PTIvycBdLvYU1NTUkxLJv4332BnJyc9OKiOrv6Btvrixee/xdtJZNJEb28gW+gp3OI1YH1wfz4sAOc7iJ7Tv/8vIWfZH/6KXvB+SSsUCSBUDgOyRHK61+BbhcuOqgs6/X+vtb5KkG2yrh5Tn9o/su+FeSCIhiOSX56ArgnZVTagFMt0Lru2wV8bnXg8gtQyMOQ0n+LBkm3o3ou99o/0GjredEHyNt8TgEVer/mTkZ8c/yyNON4vl00SlmPh88nyBiCEzrsl6jTWKOUUZs7B8jp/sNjMiCoB7bS0hdI1gzZRX39ipgHF8poap9Z1nYRNdp+tnd/ANLzaZeR0QyZnRbtPMELrdnPGh2PiuA8u0nXiBa2FkgvVeHQJ99f4n4RR3QdfKiZz/FJBHlDtIKsrSmf4EQB+44CMfOv6ard4yLpFQX5cX6Ijzm3he3bWtO6QKq4jOd8jc0dzItWYE5lhWoFcfTEzEaVOc2y+Z/9FQVJIGZeIGsKsr836EPRB2n2WoGxiBSBS5vyqemHAdcEa6eK3PgzfKGyvhGBmV/U5tdFG0jTNyB3vPlXArlGutcbHY/85kP78xrylta0LpCBsTDSG+pTv7urtMSjY/mX7+fnsM0/suZ7XJV5G4VazzwwVtKQvI/1sgaZ0zo8BJJ74QFIOdOD1Ay0bo2EJqiwlUl9E9dEh6HW72H3TJmn8nto8tXqW3Yc+ieQuZov4buGVPt6kEr3IEdC/S/Qg/TO1ZAfbmpN61YikUA8Hoefs8UFh9+eYrEoXBxWLBaD38OKRqNS+DdH8Qur0AnQRdtGwwAAAABJRU5ErkJggg==" InformativeScreenshot="7eb79aaa35d1306d96d89917321dcd35.png" ScopeSelectorArgument="&lt;html app='chrome.exe' title='FileRoom' /&gt;" SearchSteps="Selector, FuzzySelector" Version="V1" Visibility="Interactive" />
+              </uix:NClick.Target>
+              <sap:WorkflowViewStateService.ViewState>
+                <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                  <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                  <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                </scg:Dictionary>
+              </sap:WorkflowViewStateService.ViewState>
+            </uix:NClick>
+            <uix:NClick ClickType="Single" DisplayName="Click 'Tax Return'" sap:VirtualizedContainerService.HintSize="337.6,157.6" sap2010:WorkflowViewState.IdRef="NClick_2" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="2311ed28-216c-4530-a509-ef4c96b9c5b8" Version="V3">
+              <uix:NClick.Target>
+                <uix:TargetAnchorable BrowserURL="https://production.sureprep.com/ManageUsers/UserManagement/Index/1" DesignTimeRectangle="340, 168, 72, 20" DesignTimeScaleFactor="1" ElementType="Text" FriendlyName="'Tax Return'" FullSelectorArgument="&lt;webctrl parentid='bodyContainer' tableCol='13' tableRow='1' tag='TABLE' /&gt;&lt;webctrl tableRow='1' tag='A' /&gt;" FuzzySelectorArgument="&lt;webctrl parentid='bodyContainer' tag='TABLE' /&gt;&lt;webctrl type='' tag='A' class='item-font' aaname='Tax Return' check:innerText='TAX RETURN' /&gt;" Guid="7cad4921-cd4c-4b85-baff-00b98d3297a8" ImageBase64="iVBORw0KGgoAAAANSUhEUgAAAEwAAAAYCAYAAABQiBvKAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAMUSURBVFhH7ZbNalpBFMf7LnkPn6BP4CqrdJddFkJXzaIQ3LgIQhbGhYJgughdCBcLhhBQEQMpwoVowBi4YJAqQVER/j3zde/MzaV1TJvVDPzB+Tr3zG/OOeOHvYMinLaXA2YpB8xSDpilHDBLOWCWCoGVHzdYroV4k7+X6wWa38SawiObWKFZiQx8zDVweFpDSvaFqkifNvApW9XGmFpoznXb7DfZr8h1lQAzGlJ+cE0DnJSeMNL36GuCB6TP7/C90ULa+NY18m0fx1nRvwjYLt3GCv0bT65N9jeV/YHD3KUxlhBh4lCj21psvIce/yAw81vheIofcoNePfrY/s2U1r3AKyUDi2xf4mSwAuYBjlmf26J98pCJIttYj5H/29jBPfrkV7cm+gzYcnAn56o4bL8QtCkueF9eJOtn1P4ijn3y7XloXMT2wOoTcmoCz19EB+SqCsPqY7kHjMjRUfva3M+VYFuH9G7ASBnhp5hXwGjNox9myxuAVSllyVpwjzQ/lJmWewcevGeafw7QJN9ngx72wzldCbZrYywZ7PcGlh0SMHUO6ddgTN+PsmV3YBmf0pHG2iznxbyellw8sqjNJyjktHFDpu1UtkWgqWZOn3DE5jkwamG92mDsd0wb/wLYl2uUWSmgjCnwy4n84pDYOGXLzsBSDUpHdvMSRH5AhzTSkurWLdWE9UrcUCNeu5SEbQWEtSU5lD+T6/9zhKmiz9t0gouSKujamTPi93LQ2RWYTEf5MSHWj9JSFP4VunVPgNPgmtJtV1+DfxMwigp9TNUo+cLrESZ81Au8eWZ1nn6wCzAjHdWaDrrqtZQ3MiNnhGGPnGNpNkyoYzHbWYoCshP2dwV2NsSY4PQbKmLoFeQRL2sjjZk1TPgR74d+hA8ZNVtgKXl75dghjn7Sa7n+BZ/BIaOftedYgWAOmf/P4o7RbbPnndln+zkwamEkM9Ghv2o2EtOPAFHZmLHIV/vmU1xRxKs18aIvomiBq3PWf+2XCoQtgDn9SQ6YpRwwSzlglnLALOWAWcoBs5QDZikHzEpF/AYgCz2LZ5lqtwAAAABJRU5ErkJggg==" InformativeScreenshot="809a83e248221843f706fc1710d4ad3e.png" ScopeSelectorArgument="&lt;html app='chrome.exe' title='User Management' /&gt;" SearchSteps="Selector, FuzzySelector, Image" Version="V1" Visibility="Interactive" />
+              </uix:NClick.Target>
+              <sap:WorkflowViewStateService.ViewState>
+                <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                  <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                  <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                </scg:Dictionary>
+              </sap:WorkflowViewStateService.ViewState>
+            </uix:NClick>
+            <uix:NClick ClickType="Single" DisplayName="Click 'None'" sap:VirtualizedContainerService.HintSize="337.6,157.6" sap2010:WorkflowViewState.IdRef="NClick_3" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="2311ed28-216c-4530-a509-ef4c96b9c5b8" Version="V3">
+              <uix:NClick.Target>
+                <uix:TargetAnchorable BrowserURL="https://production.sureprep.com/TaxReturn/TaxReturn" DesignTimeRectangle="90, 492, 13, 13" DesignTimeScaleFactor="1" ElementType="RadioButton" FriendlyName="'INPUT rdTaxNone'" FullSelectorArgument="&lt;webctrl parentid='PanelBar-1' tag='TABLE' /&gt;&lt;webctrl id='rdTaxNone' tableRow='4' tag='INPUT' /&gt;" FuzzySelectorArgument="&lt;webctrl parentid='PanelBar-1' tag='TABLE' /&gt;&lt;webctrl id='rdTaxNone' type='radio' tag='INPUT' class='' aaname='' /&gt;" Guid="abcf5cf3-2e4c-4984-9129-f602293a4c3c" ImageBase64="iVBORw0KGgoAAAANSUhEUgAAABEAAAARCAYAAAA7bUf6AAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAE0SURBVDhPtZJLSgQxEIa9gSIyeAzxBp5AmWsoPhYufeAFdOnOcSXMZnAEt7oXGREfG90pIiKCr+1nPjJpu3taQWg/CJVUJX9SlRqiBv5P5OEVZjswsQlT29HO78PjW39DiQGRzgWMb0D7HHr30adtn0FjHQ6uoi9PQUSB5m6cv3zC8S20TqJ1LTMt6F7GeSITMQVfIEc3MLISgsvfw7V+GVuDp/c4l0xkLtTAFLyxLJAXMr7Xg8VQo0QmYvHM3duqBNIwfnoHk1v9g4FMxF+QnVCDqsNpGJe0X+p9yULI0W805+EfaqL/15rYSPaBeFtZyLV+GV2F5484l0xEbCT7QLzRQ9ZA61qmQ/zwOs4TBRGxkewDn2zuonXtC8oCMiAiNpI5Wzx/QbvULaaQp1Lkr9QgAl9O4AN3Qadi5AAAAABJRU5ErkJggg==" InformativeScreenshot="e67c2681f47e0ca6aa85720e80e51d06.png" ScopeSelectorArgument="&lt;html app='chrome.exe' title='Tax Return' /&gt;" SearchSteps="Selector, FuzzySelector" Version="V1" Visibility="Interactive">
+                  <uix:TargetAnchorable.Anchors>
+                    <scg:List x:TypeArguments="uix:ITarget" Capacity="1">
+                      <uix:Target DesignTimeRectangle="109, 492, 29, 15" ElementType="Text" FriendlyName="'None'" FullSelectorArgument="&lt;webctrl parentid='PanelBar-1' tag='TABLE' /&gt;&lt;webctrl tableRow='4' tag='A' /&gt;" FuzzySelectorArgument="&lt;webctrl parentid='PanelBar-1' tag='TABLE' /&gt;&lt;webctrl type='' tag='A' class='' aaname='None ' check:innerText='None' /&gt;" ImageBase64="iVBORw0KGgoAAAANSUhEUgAAACEAAAATCAYAAAAeVmTJAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAGKSURBVEhL7ZOtlsMgEIX3iVC4VThUHQpXFbeKF8Ch8gRRcai4qrqquqi4qLiouLi7Q0Ia+pc1u2cres/hnAyTCx8z8IEX0Bti0Rti0etBjMOAYYzBovHB3C8rgehRZQyMO9RxJqivMjB7wl9y3EFwziGLJs7dQoxovIFWCkrtIISBbyNe7cCkgtZ6yotPAXPo5lzwlV9QewNrNHkNLinSHYT1HhlXKNs4m0CMZwuuCzRx35E23jGLU4gDhCoRbUDrodkXDgN9NwVk4mu9BjNHhFTQPQSt2B8y8LhgCtEUEoqqFNcitfCKwYX+TRB+haCmOqaoUkBX7SHpp4uPAJUgqBg+hCAbfXNo311B1I5BhVUvSjwbEMHHtEGe5/OwGeRSQdITCFJXUVsyOHddCZHcl7kSkirxA0TOsVv6+0DPIUhdqAKjU6R3gq8nmPouHc4h3oCYfHIt/602Iea2rBDhlreVhRaCbji9EG3h637KbEEEX1Nm04uZfDT29kg7zkog/k9viEUvAAF8A5TwCtwdnVa1AAAAAElFTkSuQmCC" SearchSteps="FuzzySelector, Image" />
+                    </scg:List>
+                  </uix:TargetAnchorable.Anchors>
+                </uix:TargetAnchorable>
+              </uix:NClick.Target>
+              <sap:WorkflowViewStateService.ViewState>
+                <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                  <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                  <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                </scg:Dictionary>
+              </sap:WorkflowViewStateService.ViewState>
+            </uix:NClick>
+            <uix:NCheck Action="Check" DisplayName="Check/Uncheck 'Checkbox'" sap:VirtualizedContainerService.HintSize="337.6,157.6" sap2010:WorkflowViewState.IdRef="NCheck_1" ScopeIdentifier="2311ed28-216c-4530-a509-ef4c96b9c5b8" Version="V3">
+              <uix:NCheck.Target>
+                <uix:TargetAnchorable BrowserURL="https://production.sureprep.com/TaxReturn/TaxReturn" DesignTimeRectangle="89, 526, 13, 13" DesignTimeScaleFactor="1" ElementType="CheckBox" FriendlyName="'Checkbox'" FullSelectorArgument="&lt;webctrl idx='5' parentid='PanelBar-1' tag='TABLE' /&gt;&lt;webctrl id='chkShowallorg' tableRow='1' tag='INPUT' /&gt;" FuzzySelectorArgument="&lt;webctrl parentid='PanelBar-1' tag='TABLE' /&gt;&lt;webctrl id='chkShowallorg' type='checkbox' tag='INPUT' class='' aaname='' /&gt;" Guid="e2e96305-c247-40d6-970b-f1b6bffea162" ImageBase64="" InformativeScreenshot="c794f424c6872d89542a5cbb4aa52702.png" ScopeSelectorArgument="&lt;html app='chrome.exe' title='Tax Return' /&gt;" SearchSteps="Selector, FuzzySelector" Version="V1" Visibility="Interactive" />
+              </uix:NCheck.Target>
+              <sap:WorkflowViewStateService.ViewState>
+                <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                  <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                  <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                </scg:Dictionary>
+              </sap:WorkflowViewStateService.ViewState>
+            </uix:NCheck>
+            <uix:NHover DisplayName="Hover 'Admin'" sap:VirtualizedContainerService.HintSize="337.6,157.6" sap2010:WorkflowViewState.IdRef="NHover_2" ScopeIdentifier="2311ed28-216c-4530-a509-ef4c96b9c5b8" Version="V3">
+              <uix:NHover.Target>
+                <uix:TargetAnchorable BrowserURL="https://production.sureprep.com/TaxReturn/TaxReturn" DesignTimeRectangle="1348, 122, 87, 29" DesignTimeScaleFactor="1" FriendlyName="'Admin'" FullSelectorArgument="&lt;webctrl tableRow='1' tag='TABLE' /&gt;&lt;webctrl class='inner-div' parentid='bodyContainer' tableRow='1' tag='DIV' /&gt;" FuzzySelectorArgument="&lt;webctrl tag='TABLE' /&gt;&lt;webctrl class='inner-div' parentid='bodyContainer' type='' tag='DIV' aaname='                                                           ' check:innerText='Admin' /&gt;" Guid="55c97803-1347-48a7-a61e-5f7d3f2d0693" ImageBase64="iVBORw0KGgoAAAANSUhEUgAAAFsAAAAhCAYAAAC2j9c+AAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAVJSURBVGhD7ZrdSxxnFMb3P/BSvAoIiZ8oEQRFMSBqoia1Wk0UJYKf2EratEn1ohe5K2jFKkvYXiTYSHtRba2NEj/IZrMqJNHVqCFoNTFbsmugerN6sSr69D1nPnbX3YlWJw0p88rD2fM+5z0z/PZ1YGfGBL+xu7uLra0teL1eQ8cUcSSe/kOFTabL5cKjR49gtVoxMjJi6IgifsSReBJXZTBsmlhYWMDw8DCampoQExMDk8lk6IgifsSReBJXBbiJtvrq6ip/I9HR0UhKSkJxcTFqa2tRV1fHUZGRHy4nfsQxKioKo6OjzJc4m7a3t+FwONDc3IzTp0+jqqrKkE4inrTDiS9xNtHF3GazITY2FgUFBbh8+TIqKyuNqEMknsSV+BJnhk1bna415eXlqKioMKKOkbgSXxU2Xa9psqysDKWlpUbUMRJX4hsEu6SkxJDO0oRdVFRkSGdpwqYLuiF9pQn7/PnzyM/P1zU2/zCIhz3th67/v0VN2OfOnVOVm5t7QN6HZfpZtDELS0hfyi2zG8CbCXx9YL/9+Qj+Eu3fTFzX8D+MXBN2dnY2KycnR/2smf8qUIufoVvYwNOb2vU3nwrYqxP4SsP/UPKuri4sLy/jxo0bQb7ZbMbm5iYGBgbUesXThJ2ZmXlo9S4J1ktjmFkXm3vG7PPKzHi8usH3A9SbMKtjuMr+EJwi3dqQPHbXnXCuy/Wcz8BcRrVmzND3NHaV+5opETUbat8tOIeafMd9x1pZWaGz45/dFouF57KystDX18fzNObn54PWacI+c+YMMjIyDo6X+vGnaO689zk6pz1EG52yb3nmZbjfXZRy9kV+hf17eAUvlnouSX2uj8Et97nIfX8CLV9//K3wOxm2237F12d9DNfk41yz08ol/C7nbz1fHWJhYSGcTtoq0qBd/OTJEzkD5ubmkJeXF7ROE3Z6ejorLS0tZFT0SR+hdmP0SzHfMQ2P+JvuIK+bYb0abFTXdRAk90M08tpBhv2sW+n7PSRbqicNvgK8z7rF5w7Jszf69bFzHz4fPq4b9sbg81Py/fG4/oULF/DixQuJrt+YnJzkXR5qvSbs1NRUpKSkHBA/xm+L4ghuG77g/EfMC8AeR7vwB7AiYM7f8dW3OyTYDZzv99sh2Z+q9QPiv9U7f0fksmdrCNFHrG93MGxbg5wr8+84nj17FouLBEAa4+PjvIO16jVhJycnH6yPesGHEutoLYtyzxTakn9mb7HXV982JSC5HqCe87sMe65L8dsg2fVq/V2CPdcV5AX2EWqbErBdeFCv9PrvRNdiumwQNwIaqkaRJmy6B0u3BSkq2p/n9SwInC4Mfebnd84JhB5MttbC6iJ7CKVcn4+OWYJkRS3nf+Alwb6t9GvFJNu1cp6E/pcE+7afV8PzrVKCGuV8WicZtrXm7ef7vnNN2ImJiSGVkJAgf86VYCz8guoA/xuM/y3mZ28ht2UcLtrqtOOFPB6RvL4v1/cz7NlbytoWBvr6fpXai/uLPornslbz8Vtk2OpxW2TY1f7nF1rv09eEHR8fj7i4OCPqGDVh02MxQ/pKE/apU6dw8uRJVUZ+/FwTdmRkpCGdpQn7xIkThnRWEGzlGWSoYkPHE3ENeAapPF2PiIgIucDQ0UQ8A56u+783EhYWFnKRoaOJeAa8N0K3DN1uN19XwsPDucDY4ccT8SOOxDPgjSjxW4/vDz9//tx4108nKe/60Qamm1a0q2mob7HSxNraGt8At9vt/I1QsaF/J+JG/Igj8VRA0wh4P3tvbw87Ozu80+mCbuhoIn7EkXj6BvAPAXWTYlXgyA4AAAAASUVORK5CYII=" InformativeScreenshot="142aefe4c30c5f8393cd3230d8efae6d.png" ScopeSelectorArgument="&lt;html app='chrome.exe' title='Tax Return' /&gt;" SearchSteps="Selector, FuzzySelector, Image" Version="V1" Visibility="Interactive" />
+              </uix:NHover.Target>
+              <sap:WorkflowViewStateService.ViewState>
+                <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                  <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                  <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                </scg:Dictionary>
+              </sap:WorkflowViewStateService.ViewState>
+            </uix:NHover>
+            <uix:NClick ClickType="Single" DisplayName="Click 'FileRoom'" sap:VirtualizedContainerService.HintSize="337.6,157.6" sap2010:WorkflowViewState.IdRef="NClick_4" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="2311ed28-216c-4530-a509-ef4c96b9c5b8" Version="V3">
+              <uix:NClick.Target>
+                <uix:TargetAnchorable BrowserURL="https://production.sureprep.com/TaxReturn/TaxReturn" DesignTimeRectangle="1358, 148, 62, 25" DesignTimeScaleFactor="1" FriendlyName="'FileRoom'" FullSelectorArgument="&lt;webctrl id='poptab' tableRow='1' tag='TABLE' /&gt;&lt;webctrl tableRow='2' tag='TD' /&gt;" FuzzySelectorArgument="&lt;webctrl id='poptab' tag='TABLE' /&gt;&lt;webctrl type='' tag='TD' class='item hidden' aaname='                                                                              ' check:innerText='FileRoom' /&gt;" Guid="cdf45f28-97c4-4ea1-ba85-e15468c592bf" ImageBase64="iVBORw0KGgoAAAANSUhEUgAAAEIAAAAdCAYAAAAejLrKAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAPESURBVFhH7VRLT1RJFK4f5QNuQ9MIrnj2wxBXZlaTEUccDOpOjToTdQHaMBNmFiYkaHQxiQ90IrqAJhpNFIMSIyzs1oR20bjo3txefZ5zqure6rYBV07ibZKTc77z1XnUd6tRmUwGTctApdNpCaLuRYimpaFSqRSaloJKJpNoWhJqcHBQgqh7EcLawMBAEEcNq/7+fklE3YsQTeuH6uvrk6CRtxYFXoTo7e0NLKpY9fT0SMB+/iPor4pqNbTPK9eIn8cHYj49PSXnLs6/xYcnnNd1jf00Virczvbi+DNWpn/aoe7/8aqtcz/aEt1gP1cA/NUbAf7Kd2p/ZZluWFzCkS14jf/ESzq2kTtu8M/4a5USlVe4Ul/XsP778irGgCyW6KoRgrH2zE+ZS40KdoWIjd3FWqWK8mYRJfL+Jl10iOvCmqBf9hXKKGJxpBvp7BLyfJ6eik+PxS8s4bLUdSPTgLs0xPvonn61EnCoFJEvGiyvroC5MTNP5ob32w6TEF2IdWjTQlwPsJjwrhBdmLBCEH9znWrW72CUzw5dxxtapvTsXG2N7TW7SsvToiP/mHPjSHP/IXNBnp1wOOnpcKZnKXdS9zPzystTOCQzTmKhSGLQPrX7O7YFVl58nwTsRYg3Wgg3zwu8KOtLMRYhNnIkhM7nH+g8n5/hzWgRLz6phVj8TfKpo5O0pNwQ588+RwmbePpHOGd4kW5AP5uJM88093s4/0iOuPIyJur2YH4ur0WyeIKH0kcaNtjmd/IihDVuSm8LPr0xbQXMH2VuUi9Al+JzMoyEGI7/By7xSwXk89o26JzmdA2/V+7Ffz7lZ84chHd1WX4iC9Lb2H15jpjZjqvbg02EoI9ncbibU/8NplrbOyVgr5vOBtiLdxpvFzgmOBz2gISoYu1W/XnGYY0XP6hfCn3VceaDrx6eP8wvgvnThrsQ9pPXwi/CEcLOu2eEsHjc7HbY4HCf7bEI0dqekIRuOmuwNeazZoERweGwETzcoJq120g6fbS3NSwe4V9JNPrvpvE0XlPMs3TdGBaoT/lllvDfDsd9ThhukrC7B3MJZ2c9N9xN8+E+9b6WVy1tHRKwd4Vw864QjN1hLaO38Y648CdVoXNZOle7NNcde0Rf1l/HvwcSGLz8GHmuMz+dcj6HqeP6XJK49/Xc6Nd7cF+7s8V2t18MtvmdvAjRtA6ovbG4BOJjxkcQixCBeU4cMaz2eO2UaEdjH98i/+Pxak8rJVvbJCHeWoCjwavdLTEJou5FiKbFoHbt9SSIuhchmubhC8NRJqnglR4dAAAAAElFTkSuQmCC" InformativeScreenshot="3b0b3fd8062a153a2b6f4d63c7dc5219.png" ScopeSelectorArgument="&lt;html app='chrome.exe' title='Tax Return' /&gt;" SearchSteps="Selector, FuzzySelector" Version="V1" Visibility="Interactive" />
+              </uix:NClick.Target>
+              <sap:WorkflowViewStateService.ViewState>
+                <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                  <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                  <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                </scg:Dictionary>
+              </sap:WorkflowViewStateService.ViewState>
+            </uix:NClick>
+          </Sequence>
+        </ActivityAction>
+      </uix:NApplicationCard.Body>
+      <uix:NApplicationCard.TargetApp>
+        <uix:TargetApp Area="0, 0, 0, 0" BrowserType="Chrome" IconBase64="iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAK3SURBVDhPbdNPSBRRHAfwZxRUhIcoIQhsf29mhDp36FJgRHRJqEMQQea6bgVqq61htqaVpSm2q2ttq+vu7B+16A87OzOrlB0ikMCLdK2Q6pAGgqCVkLy+M7v5Jzx8YQbe7/N+7/F7TDHqctG9yHUm6827ZL21Qs60paRMxwcp0zXFM4EwN4Jn+HC4kC6pBeRWt9FFO4X/Ay4A3wAIAAIA0iUACJ4NCh7tj1GV+hqFH5EvyJW1QAcAAQBZARYALHLDL7jWN03e2BtyqQIdCHKq75FCVmJ4kDoXAKEYAEyfkMduDsnmnSNStr1YGu3chw6O092BEFXGf9nFl9U5uh8/RN0JhuLaIiCzit4glEzTnDxyu0LqDjDue8x4b5DxwENGnugO7Gy1be38m/xqhkaTrxzm0BYANVUlpge7e2ektp5H5I6HyZkYwG5NCLNTpT6xi632m2PjpMc+k5YSjvTwMQDVL9CBUMbql6RA5ymqSM7ai3M5iZSt/FeqbykSLSczJihtASM+C/iEOxBK9uq8nGrZjg5KsXg5XzSD/LC/3eoCVasKPR8spkzsTx6IrQKGd17RrxVxb5iRKxHIA6txqh66FWNkDu4nbR1Q88w+gt6wrIw2HJRD9xiOYQ3J5EqxW32JMEoNMjIiZwH8O8INC6jMA+iiMaUYTYy34OadyQMoWkK+kjNexLsijJvhTaQNTKwBjgKo3Q3guw1Yg2T46mSjlUldQeso59BBKe8NMYxyAc+EAqRFBGnoKp2adKSHNgOwB+mCPUj/JtFofYpBKuXRB3ukpH8vz/rLMInjXAuh2AZwB8nDjnSSYYzrc9G9bYreuH6UzfZFyez8ab8FrQ+xgWUAbkonmJW1ANJYDmB6w8eUA6YAnABgF28EWM95J4DzAPoBTAB4B6AHwGkAWwGwVSDB/gI9JeCBjrDG4gAAAABJRU5ErkJggg==" InformativeScreenshot="81dd354ab211548a5180e72b3794e6a5.jpg" Selector="&lt;html app='chrome.exe' title='FileRoom' /&gt;" Url="https://production.sureprep.com/Fileroom/Fileroom/Listing" />
+      </uix:NApplicationCard.TargetApp>
+    </uix:NApplicationCard>
+  </Sequence>
+</Activity>
