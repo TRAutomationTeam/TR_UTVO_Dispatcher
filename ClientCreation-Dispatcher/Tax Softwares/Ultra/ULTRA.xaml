@@ -426,27 +426,27 @@
                           <av:Size x:Key="ShapeSize">110.4,70.4</av:Size>
                         </scg:Dictionary>
                       </sap:WorkflowViewStateService.ViewState>
-                      <uix:NApplicationCard AttachMode="ByInstance" CloseMode="Never" DisplayName="Use Application: 2023 UltraTax CS  (f9f3bb5e-86d1-4674-bc37-ad9f4637dbdd)" sap:VirtualizedContainerService.HintSize="1735.2,6916.8" sap2010:WorkflowViewState.IdRef="NApplicationCard_48" OpenMode="Never" ScopeGuid="10a2d4e3-a094-41c8-8413-864c06710377" Timeout="800" Version="V2">
+                      <uix:NApplicationCard AttachMode="ByInstance" CloseMode="Never" DisplayName="Use Application: 2023 UltraTax CS  (f9f3bb5e-86d1-4674-bc37-ad9f4637dbdd)" sap:VirtualizedContainerService.HintSize="1984.8,11568.8" sap2010:WorkflowViewState.IdRef="NApplicationCard_48" OpenMode="Never" ScopeGuid="10a2d4e3-a094-41c8-8413-864c06710377" Timeout="800" Version="V2">
                         <uix:NApplicationCard.Body>
                           <ActivityAction x:TypeArguments="x:Object">
                             <ActivityAction.Argument>
                               <DelegateInArgument x:TypeArguments="x:Object" Name="WSSessionData" />
                             </ActivityAction.Argument>
-                            <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="1701.6,6625.6" sap2010:WorkflowViewState.IdRef="Sequence_451">
+                            <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="1951.2,11277.6" sap2010:WorkflowViewState.IdRef="Sequence_451">
                               <sap:WorkflowViewStateService.ViewState>
                                 <scg:Dictionary x:TypeArguments="x:String, x:Object">
                                   <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                                   <x:Boolean x:Key="IsPinned">True</x:Boolean>
                                 </scg:Dictionary>
                               </sap:WorkflowViewStateService.ViewState>
-                              <Sequence DisplayName="Client Creation" sap:VirtualizedContainerService.HintSize="1639.2,6535.2" sap2010:WorkflowViewState.IdRef="Sequence_593">
+                              <Sequence DisplayName="Client Creation" sap:VirtualizedContainerService.HintSize="1888.8,11187.2" sap2010:WorkflowViewState.IdRef="Sequence_593">
                                 <sap:WorkflowViewStateService.ViewState>
                                   <scg:Dictionary x:TypeArguments="x:String, x:Object">
                                     <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                                     <x:Boolean x:Key="IsPinned">True</x:Boolean>
                                   </scg:Dictionary>
                                 </sap:WorkflowViewStateService.ViewState>
-                                <ui:CommentOut DisplayName="Comment Out" sap:VirtualizedContainerService.HintSize="1576.8,56.8" sap2010:WorkflowViewState.IdRef="CommentOut_88">
+                                <ui:CommentOut DisplayName="Comment Out" sap:VirtualizedContainerService.HintSize="1826.4,56.8" sap2010:WorkflowViewState.IdRef="CommentOut_88">
                                   <ui:CommentOut.Body>
                                     <Sequence DisplayName="Ignored Activities" sap:VirtualizedContainerService.HintSize="512,428" sap2010:WorkflowViewState.IdRef="Sequence_520">
                                       <sap:WorkflowViewStateService.ViewState>
@@ -567,7 +567,7 @@
                                     </scg:Dictionary>
                                   </sap:WorkflowViewStateService.ViewState>
                                 </ui:CommentOut>
-                                <uix:NApplicationCard AttachMode="ByInstance" CloseMode="Never" DisplayName="Use Application: 2023 UltraTax CS  (f9f3bb5e-86d1-4674-bc37-ad9f4637dbdd)" sap:VirtualizedContainerService.HintSize="1576.8,56.8" sap2010:WorkflowViewState.IdRef="NApplicationCard_65" OpenMode="Never" ScopeGuid="a99bd8ff-74df-47a3-b584-e082892358a2" Version="V2">
+                                <uix:NApplicationCard AttachMode="ByInstance" CloseMode="Never" DisplayName="Use Application: 2023 UltraTax CS  (f9f3bb5e-86d1-4674-bc37-ad9f4637dbdd)" sap:VirtualizedContainerService.HintSize="1826.4,56.8" sap2010:WorkflowViewState.IdRef="NApplicationCard_65" OpenMode="Never" ScopeGuid="a99bd8ff-74df-47a3-b584-e082892358a2" Version="V2">
                                   <uix:NApplicationCard.Body>
                                     <ActivityAction x:TypeArguments="x:Object">
                                       <ActivityAction.Argument>
@@ -680,7 +680,7 @@
                                     </scg:Dictionary>
                                   </sap:WorkflowViewStateService.ViewState>
                                 </uix:NApplicationCard>
-                                <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="1576.8,56.8" sap2010:WorkflowViewState.IdRef="LogMessage_87" Level="[UiPath.Core.Activities.LogLevel.Info]" Message="[&quot;Navigate to the New Client&quot;]">
+                                <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="1826.4,56.8" sap2010:WorkflowViewState.IdRef="LogMessage_87" Level="[UiPath.Core.Activities.LogLevel.Info]" Message="[&quot;Navigate to the New Client&quot;]">
                                   <sap:WorkflowViewStateService.ViewState>
                                     <scg:Dictionary x:TypeArguments="x:String, x:Object">
                                       <x:Boolean x:Key="IsExpanded">False</x:Boolean>
@@ -688,7 +688,7 @@
                                     </scg:Dictionary>
                                   </sap:WorkflowViewStateService.ViewState>
                                 </ui:LogMessage>
-                                <ui:InterruptibleDoWhile Condition="[bool_DuplicateClient]" CurrentIndex="[indx_Duplicate]" DisplayName="Do While" sap:VirtualizedContainerService.HintSize="1576.8,56.8" sap2010:WorkflowViewState.IdRef="InterruptibleDoWhile_7">
+                                <ui:InterruptibleDoWhile Condition="[bool_DuplicateClient]" CurrentIndex="[indx_Duplicate]" DisplayName="Do While" sap:VirtualizedContainerService.HintSize="1826.4,56.8" sap2010:WorkflowViewState.IdRef="InterruptibleDoWhile_7">
                                   <ui:InterruptibleDoWhile.Body>
                                     <Sequence DisplayName="Action" sap:VirtualizedContainerService.HintSize="532.8,424.8" sap2010:WorkflowViewState.IdRef="Sequence_524">
                                       <sap:WorkflowViewStateService.ViewState>
@@ -752,7 +752,7 @@
                                     </scg:Dictionary>
                                   </sap:WorkflowViewStateService.ViewState>
                                 </ui:InterruptibleDoWhile>
-                                <uix:NApplicationCard AttachMode="ByInstance" CloseMode="Never" DisplayName="Use Application: New Client (f9f3bb5e-86d1-4674-bc37-ad9f4637dbdd)" sap:VirtualizedContainerService.HintSize="1576.8,56.8" sap2010:WorkflowViewState.IdRef="NApplicationCard_66" OpenMode="Never" ScopeGuid="de85c3c6-6b9d-4e7d-bb23-924cdec5c8ca" Version="V2">
+                                <uix:NApplicationCard AttachMode="ByInstance" CloseMode="Never" DisplayName="Use Application: New Client (f9f3bb5e-86d1-4674-bc37-ad9f4637dbdd)" sap:VirtualizedContainerService.HintSize="1826.4,56.8" sap2010:WorkflowViewState.IdRef="NApplicationCard_66" OpenMode="Never" ScopeGuid="de85c3c6-6b9d-4e7d-bb23-924cdec5c8ca" Version="V2">
                                   <uix:NApplicationCard.Body>
                                     <ActivityAction x:TypeArguments="x:Object">
                                       <ActivityAction.Argument>
@@ -980,7 +980,7 @@
                                     </scg:Dictionary>
                                   </sap:WorkflowViewStateService.ViewState>
                                 </uix:NApplicationCard>
-                                <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="1576.8,56.8" sap2010:WorkflowViewState.IdRef="LogMessage_90" Level="[UiPath.Core.Activities.LogLevel.Info]" Message="[&quot;The client id is - &quot;+ out_ClientID]">
+                                <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="1826.4,56.8" sap2010:WorkflowViewState.IdRef="LogMessage_90" Level="[UiPath.Core.Activities.LogLevel.Info]" Message="[&quot;The client id is - &quot;+ out_ClientID]">
                                   <sap:WorkflowViewStateService.ViewState>
                                     <scg:Dictionary x:TypeArguments="x:String, x:Object">
                                       <x:Boolean x:Key="IsExpanded">False</x:Boolean>
@@ -988,7 +988,7 @@
                                     </scg:Dictionary>
                                   </sap:WorkflowViewStateService.ViewState>
                                 </ui:LogMessage>
-                                <TryCatch DisplayName="Try Catch" sap:VirtualizedContainerService.HintSize="1576.8,6079.2" sap2010:WorkflowViewState.IdRef="TryCatch_16">
+                                <TryCatch DisplayName="Try Catch" sap:VirtualizedContainerService.HintSize="1826.4,10731.2" sap2010:WorkflowViewState.IdRef="TryCatch_16">
                                   <sap:WorkflowViewStateService.ViewState>
                                     <scg:Dictionary x:TypeArguments="x:String, x:Object">
                                       <x:Boolean x:Key="IsExpanded">True</x:Boolean>
@@ -996,19 +996,19 @@
                                     </scg:Dictionary>
                                   </sap:WorkflowViewStateService.ViewState>
                                   <TryCatch.Try>
-                                    <ui:IfElseIf DisplayName="Else If" sap:VirtualizedContainerService.HintSize="1540,5823.2" sap2010:WorkflowViewState.IdRef="IfElseIf_25">
+                                    <ui:IfElseIf DisplayName="Else If" sap:VirtualizedContainerService.HintSize="1789.6,10475.2" sap2010:WorkflowViewState.IdRef="IfElseIf_25">
                                       <ui:IfElseIf.ConditionBlocks>
                                         <sc:BindingList x:TypeArguments="ui:IfElseIfBlock" AllowEdit="True" AllowNew="True" AllowRemove="True" RaiseListChangedEvents="True">
                                           <ui:IfElseIfBlock BlockType="If" Condition="[out_CurrentRow(&quot;Type&quot;).ToString.Contains(&quot;1040&quot;)]">
                                             <ui:IfElseIfBlock.Then>
-                                              <Sequence DisplayName="Body" sap:VirtualizedContainerService.HintSize="1489.6,4709.6" sap2010:WorkflowViewState.IdRef="Sequence_512">
+                                              <Sequence DisplayName="Body" sap:VirtualizedContainerService.HintSize="1598.4,9361.6" sap2010:WorkflowViewState.IdRef="Sequence_512">
                                                 <sap:WorkflowViewStateService.ViewState>
                                                   <scg:Dictionary x:TypeArguments="x:String, x:Object">
                                                     <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                                                     <x:Boolean x:Key="IsPinned">True</x:Boolean>
                                                   </scg:Dictionary>
                                                 </sap:WorkflowViewStateService.ViewState>
-                                                <uix:NCheckState DisplayName="Check App State 'Data Sharing'" sap:VirtualizedContainerService.HintSize="1427.2,56.8" sap2010:WorkflowViewState.IdRef="NCheckState_40" ScopeIdentifier="10a2d4e3-a094-41c8-8413-864c06710377" Timeout="5" Version="V3">
+                                                <uix:NCheckState DisplayName="Check App State 'Data Sharing'" sap:VirtualizedContainerService.HintSize="1536,56.8" sap2010:WorkflowViewState.IdRef="NCheckState_40" ScopeIdentifier="10a2d4e3-a094-41c8-8413-864c06710377" Timeout="5" Version="V3">
                                                   <uix:NCheckState.IfExists>
                                                     <Sequence DisplayName="Target appears" sap:VirtualizedContainerService.HintSize="449.6,462.4" sap2010:WorkflowViewState.IdRef="Sequence_531">
                                                       <sap:WorkflowViewStateService.ViewState>
@@ -1071,7 +1071,7 @@
                                                     </scg:Dictionary>
                                                   </sap:WorkflowViewStateService.ViewState>
                                                 </uix:NCheckState>
-                                                <Switch x:TypeArguments="x:String" DisplayName="Switch" Expression="[out_CurrentRow(&quot;Year&quot;).ToString]" sap:VirtualizedContainerService.HintSize="1427.2,4564" sap2010:WorkflowViewState.IdRef="Switch`1_2">
+                                                <Switch x:TypeArguments="x:String" DisplayName="Switch" Expression="[out_CurrentRow(&quot;Year&quot;).ToString]" sap:VirtualizedContainerService.HintSize="1536,9216" sap2010:WorkflowViewState.IdRef="Switch`1_2">
                                                   <sap:WorkflowViewStateService.ViewState>
                                                     <scg:Dictionary x:TypeArguments="x:String, x:Object">
                                                       <x:Boolean x:Key="IsPinned">True</x:Boolean>
@@ -7044,14 +7044,14 @@
                                                       </scg:Dictionary>
                                                     </sap:WorkflowViewStateService.ViewState>
                                                   </uix:NApplicationCard>
-                                                  <Sequence x:Key="2024" DisplayName="Do" sap:VirtualizedContainerService.HintSize="1387.2,4330.4" sap2010:WorkflowViewState.IdRef="Sequence_670">
+                                                  <Sequence x:Key="2024" DisplayName="Do" sap:VirtualizedContainerService.HintSize="1496,8982.4" sap2010:WorkflowViewState.IdRef="Sequence_670">
                                                     <sap:WorkflowViewStateService.ViewState>
                                                       <scg:Dictionary x:TypeArguments="x:String, x:Object">
                                                         <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                                                         <x:Boolean x:Key="IsPinned">True</x:Boolean>
                                                       </scg:Dictionary>
                                                     </sap:WorkflowViewStateService.ViewState>
-                                                    <Switch x:TypeArguments="x:String" DisplayName="Switch" Expression="[out_CurrentRow(&quot;Filing Status&quot;).ToString.ToLower]" sap:VirtualizedContainerService.HintSize="1324.8,56.8" sap2010:WorkflowViewState.IdRef="Switch`1_4">
+                                                    <Switch x:TypeArguments="x:String" DisplayName="Switch" Expression="[out_CurrentRow(&quot;Filing Status&quot;).ToString.ToLower]" sap:VirtualizedContainerService.HintSize="1433.6,56.8" sap2010:WorkflowViewState.IdRef="Switch`1_4">
                                                       <sap:WorkflowViewStateService.ViewState>
                                                         <scg:Dictionary x:TypeArguments="x:String, x:Object">
                                                           <x:Boolean x:Key="IsPinned">False</x:Boolean>
@@ -7124,7 +7124,7 @@
                                                         </sap:WorkflowViewStateService.ViewState>
                                                       </Assign>
                                                     </Switch>
-                                                    <ui:CommentOut DisplayName="Comment Out" sap:VirtualizedContainerService.HintSize="1324.8,56.8" sap2010:WorkflowViewState.IdRef="CommentOut_149">
+                                                    <ui:CommentOut DisplayName="Comment Out" sap:VirtualizedContainerService.HintSize="1433.6,56.8" sap2010:WorkflowViewState.IdRef="CommentOut_149">
                                                       <ui:CommentOut.Body>
                                                         <Sequence DisplayName="Ignored Activities" sap2010:WorkflowViewState.IdRef="Sequence_737">
                                                           <ui:IfElseIf DisplayName="Else If -Assign no" sap:VirtualizedContainerService.HintSize="1324.8,56.8" sap2010:WorkflowViewState.IdRef="IfElseIf_27">
@@ -7267,11 +7267,11 @@
                                                         </Sequence>
                                                       </ui:CommentOut.Body>
                                                     </ui:CommentOut>
-                                                    <Sequence DisplayName="Filing Status" sap:VirtualizedContainerService.HintSize="1324.8,56.8" sap2010:WorkflowViewState.IdRef="Sequence_636">
+                                                    <Sequence DisplayName="Filing Status" sap:VirtualizedContainerService.HintSize="1433.6,1124.8" sap2010:WorkflowViewState.IdRef="Sequence_636">
                                                       <sap:WorkflowViewStateService.ViewState>
                                                         <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                                                          <x:Boolean x:Key="IsExpanded">False</x:Boolean>
-                                                          <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                                                          <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                                                          <x:Boolean x:Key="IsPinned">True</x:Boolean>
                                                         </scg:Dictionary>
                                                       </sap:WorkflowViewStateService.ViewState>
                                                       <uix:NApplicationCard AttachMode="ByInstance" DisplayName="Use Application: 2023 UltraTax CS  / 1040 [RTWTQER ANDERSON, JACK] - [Input Screen     Ctrl+I] (f9f3" sap:VirtualizedContainerService.HintSize="471.2,1004" sap2010:WorkflowViewState.IdRef="NApplicationCard_90" ScopeGuid="c9651c68-c509-4eaa-b21e-9c9d82640565" Version="V2">
@@ -7290,7 +7290,7 @@
                                                               <ui:RetryScope DisplayName="Retry Scope" sap:VirtualizedContainerService.HintSize="375.2,416.8" sap2010:WorkflowViewState.IdRef="RetryScope_16" NumberOfRetries="4" RetryInterval="00:00:02">
                                                                 <ui:RetryScope.ActivityBody>
                                                                   <ActivityAction>
-                                                                    <uix:NTypeInto ActivateBefore="True" ClickBeforeMode="Single" DisplayName="Type Into- Filling Status" EmptyFieldMode="SingleLine" sap:VirtualizedContainerService.HintSize="333.6,218.4" sap2010:WorkflowViewState.IdRef="NTypeInto_110" ScopeIdentifier="c9651c68-c509-4eaa-b21e-9c9d82640565" Text="[FillingType]" Version="V3">
+                                                                    <uix:NTypeInto ActivateBefore="True" ClickBeforeMode="Single" DelayAfter="5" DisplayName="Type Into- Filling Status" EmptyFieldMode="SingleLine" sap:VirtualizedContainerService.HintSize="333.6,218.4" sap2010:WorkflowViewState.IdRef="NTypeInto_110" ScopeIdentifier="c9651c68-c509-4eaa-b21e-9c9d82640565" Text="[FillingType]" Version="V3">
                                                                       <uix:NTypeInto.Target>
                                                                         <uix:TargetAnchorable CvElementArea="1808, 284, 55, 40" CvType="InputBox" DesignTimeRectangle="1806, 282, 61, 48" DesignTimeScaleFactor="1.25" ElementType="InputBox" FriendlyName="'Filing Status'" Guid="8170c48c-7289-421b-9c2e-f5aa2b72dce3" InformativeScreenshot="5ae8d4dbb6fad55474a549e257f69915.png" IsResponsive="True" ScopeSelectorArgument="&lt;wnd app='msrdc.exe' cls='RAIL_WINDOW' title='2023 UltraTax CS  / 1040 [RTWTQER ANDERSON, JACK] - [Input Scree*' /&gt;" SearchSteps="CV" TargetType="ComputerVisionBased" Version="V2" Visibility="Interactive">
                                                                           <uix:TargetAnchorable.Anchors>
@@ -7344,27 +7344,27 @@
                                                         </sap:WorkflowViewStateService.ViewState>
                                                       </uix:NApplicationCard>
                                                     </Sequence>
-                                                    <Sequence DisplayName="TP/SP Info" sap:VirtualizedContainerService.HintSize="1324.8,3136.8" sap2010:WorkflowViewState.IdRef="Sequence_662">
+                                                    <Sequence DisplayName="TP/SP Info" sap:VirtualizedContainerService.HintSize="1433.6,4968" sap2010:WorkflowViewState.IdRef="Sequence_662">
                                                       <sap:WorkflowViewStateService.ViewState>
                                                         <scg:Dictionary x:TypeArguments="x:String, x:Object">
                                                           <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                                                           <x:Boolean x:Key="IsPinned">True</x:Boolean>
                                                         </scg:Dictionary>
                                                       </sap:WorkflowViewStateService.ViewState>
-                                                      <uix:NApplicationCard AttachMode="ByInstance" CloseMode="Never" ContinueOnError="False" DisplayName="Use Application: 2023 UltraTax CS  / 1040 [ERHYQERH ANDERSON, JACK] - [Input Screen     Ctrl+I] (f9f" sap:VirtualizedContainerService.HintSize="1262.4,3016" sap2010:WorkflowViewState.IdRef="NApplicationCard_98" OpenMode="Never" ScopeGuid="5f0f10da-3fd3-4cfd-b512-fa38c40c0460" Version="V2">
+                                                      <uix:NApplicationCard AttachMode="ByInstance" CloseMode="Never" ContinueOnError="False" DisplayName="Use Application: 2023 UltraTax CS  / 1040 [ERHYQERH ANDERSON, JACK] - [Input Screen     Ctrl+I] (f9f" sap:VirtualizedContainerService.HintSize="1371.2,4847.2" sap2010:WorkflowViewState.IdRef="NApplicationCard_98" OpenMode="Never" ScopeGuid="5f0f10da-3fd3-4cfd-b512-fa38c40c0460" Version="V2">
                                                         <uix:NApplicationCard.Body>
                                                           <ActivityAction x:TypeArguments="x:Object">
                                                             <ActivityAction.Argument>
                                                               <DelegateInArgument x:TypeArguments="x:Object" Name="WSSessionData" />
                                                             </ActivityAction.Argument>
-                                                            <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="1228.8,2701.6" sap2010:WorkflowViewState.IdRef="Sequence_661">
+                                                            <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="1337.6,4532.8" sap2010:WorkflowViewState.IdRef="Sequence_661">
                                                               <sap:WorkflowViewStateService.ViewState>
                                                                 <scg:Dictionary x:TypeArguments="x:String, x:Object">
                                                                   <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                                                                   <x:Boolean x:Key="IsPinned">True</x:Boolean>
                                                                 </scg:Dictionary>
                                                               </sap:WorkflowViewStateService.ViewState>
-                                                              <ui:CommentOut DisplayName="Comment Out" sap:VirtualizedContainerService.HintSize="1166.4,56.8" sap2010:WorkflowViewState.IdRef="CommentOut_130">
+                                                              <ui:CommentOut DisplayName="Comment Out" sap:VirtualizedContainerService.HintSize="1275.2,56.8" sap2010:WorkflowViewState.IdRef="CommentOut_130">
                                                                 <ui:CommentOut.Body>
                                                                   <Sequence DisplayName="Ignored Activities" sap2010:WorkflowViewState.IdRef="Sequence_671">
                                                                     <uix:NApplicationCard AttachMode="ByInstance" ContinueOnError="True" DisplayName="Use Application: Data Sharing - Pending Updates - \\Remote, 256-bit SSL/TLS." sap:VirtualizedContainerService.HintSize="449.6,56.8" sap2010:WorkflowViewState.IdRef="NApplicationCard_91" ScopeGuid="60e54812-aea5-4007-ab9d-cbe8ff6f98e1" Version="V2">
@@ -7413,7 +7413,7 @@
                                                                   </Sequence>
                                                                 </ui:CommentOut.Body>
                                                               </ui:CommentOut>
-                                                              <uix:NTypeInto ActivateBefore="True" ClickBeforeMode="Double" DisplayName="Type Into- Taxpayer SSN" EmptyFieldMode="SingleLine" sap:VirtualizedContainerService.HintSize="1166.4,56.8" sap2010:WorkflowViewState.IdRef="NTypeInto_111" OutUiElement="[outputElement]" ScopeIdentifier="5f0f10da-3fd3-4cfd-b512-fa38c40c0460" Text="[out_CurrentRow(&quot;SSN&quot;).ToString+  &quot;[k(Down)]&quot;]" Version="V3">
+                                                              <uix:NTypeInto ActivateBefore="True" ClickBeforeMode="Double" DisplayName="Type Into- Taxpayer SSN" EmptyFieldMode="SingleLine" sap:VirtualizedContainerService.HintSize="1275.2,56.8" sap2010:WorkflowViewState.IdRef="NTypeInto_111" OutUiElement="[outputElement]" ScopeIdentifier="5f0f10da-3fd3-4cfd-b512-fa38c40c0460" Text="[out_CurrentRow(&quot;SSN&quot;).ToString+  &quot;[k(Down)]&quot;]" Version="V3">
                                                                 <uix:NTypeInto.Target>
                                                                   <uix:TargetAnchorable CvTextArea="1070, 253, 217, 28" CvTextArgument="111-11-1111" CvType="Text" DesignTimeRectangle="1070, 253, 217, 28" DesignTimeScaleFactor="1.25" ElementType="Text" FriendlyName="'First name'" Guid="409ce350-ce9f-47f5-b36d-b913ddfdb863" InformativeScreenshot="249b06685136b0fead2d84f9b58b96da.png" ScopeSelectorArgument="&lt;wnd app='msrdc.exe' cls='RAIL_WINDOW' title='2023 UltraTax CS  / 1040 [DAFHAH ANDERSON, JACK] - [Input Screen*' /&gt;" SearchSteps="CV" TargetType="ComputerVisionBased" Version="V2" Visibility="Interactive">
                                                                     <uix:TargetAnchorable.Anchors>
@@ -7430,7 +7430,7 @@
                                                                   </scg:Dictionary>
                                                                 </sap:WorkflowViewStateService.ViewState>
                                                               </uix:NTypeInto>
-                                                              <uix:NApplicationCard AttachMode="ByInstance" ContinueOnError="True" DisplayName="Use Application: wfica32.exe" sap:VirtualizedContainerService.HintSize="1166.4,56.8" sap2010:WorkflowViewState.IdRef="NApplicationCard_92" ScopeGuid="d924b507-7386-4105-b4c3-3680c9641f7f" Version="V2">
+                                                              <uix:NApplicationCard AttachMode="ByInstance" ContinueOnError="True" DisplayName="Use Application: wfica32.exe" sap:VirtualizedContainerService.HintSize="1275.2,596" sap2010:WorkflowViewState.IdRef="NApplicationCard_92" ScopeGuid="d924b507-7386-4105-b4c3-3680c9641f7f" Version="V2">
                                                                 <uix:NApplicationCard.Body>
                                                                   <ActivityAction x:TypeArguments="x:Object">
                                                                     <ActivityAction.Argument>
@@ -7461,12 +7461,12 @@
                                                                 </uix:NApplicationCard.TargetApp>
                                                                 <sap:WorkflowViewStateService.ViewState>
                                                                   <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                                                                    <x:Boolean x:Key="IsPinned">False</x:Boolean>
-                                                                    <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+                                                                    <x:Boolean x:Key="IsPinned">True</x:Boolean>
+                                                                    <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                                                                   </scg:Dictionary>
                                                                 </sap:WorkflowViewStateService.ViewState>
                                                               </uix:NApplicationCard>
-                                                              <uix:NApplicationCard AttachMode="ByInstance" ContinueOnError="True" DisplayName="Use Application: wfica32.exe" sap:VirtualizedContainerService.HintSize="1166.4,56.8" sap2010:WorkflowViewState.IdRef="NApplicationCard_93" ScopeGuid="d924b507-7386-4105-b4c3-3680c9641f7f" Version="V2">
+                                                              <uix:NApplicationCard AttachMode="ByInstance" ContinueOnError="True" DisplayName="Use Application: wfica32.exe" sap:VirtualizedContainerService.HintSize="1275.2,56.8" sap2010:WorkflowViewState.IdRef="NApplicationCard_93" ScopeGuid="d924b507-7386-4105-b4c3-3680c9641f7f" Version="V2">
                                                                 <uix:NApplicationCard.Body>
                                                                   <ActivityAction x:TypeArguments="x:Object">
                                                                     <ActivityAction.Argument>
@@ -7502,7 +7502,7 @@
                                                                   </scg:Dictionary>
                                                                 </sap:WorkflowViewStateService.ViewState>
                                                               </uix:NApplicationCard>
-                                                              <p:CVScope ContinueOnError="{x:Null}" DelayBefore="{x:Null}" ScopeId="{x:Null}" Server="{x:Null}" CvMethod="ElementDetection, OCR" DesignTimeCacheId="34789e9b-1d95-46d6-b616-6c1c29ffb247" DisplayName="CV Screen Scope 'utw22.exe 2022'" sap:VirtualizedContainerService.HintSize="1166.4,56.8" sap2010:WorkflowViewState.IdRef="CVScope_45" SendOnPremData="False" Version="V6">
+                                                              <p:CVScope ContinueOnError="{x:Null}" DelayBefore="{x:Null}" ScopeId="{x:Null}" Server="{x:Null}" CvMethod="ElementDetection, OCR" DesignTimeCacheId="34789e9b-1d95-46d6-b616-6c1c29ffb247" DisplayName="CV Screen Scope 'utw22.exe 2022'" sap:VirtualizedContainerService.HintSize="1275.2,769.6" sap2010:WorkflowViewState.IdRef="CVScope_45" SendOnPremData="False" Version="V6">
                                                                 <p:CVScope.Body>
                                                                   <ActivityAction x:TypeArguments="x:Object">
                                                                     <ActivityAction.Argument>
@@ -7514,7 +7514,7 @@
                                                                           <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                                                                         </scg:Dictionary>
                                                                       </sap:WorkflowViewStateService.ViewState>
-                                                                      <p:CvTypeIntoWithDescriptor DelayScreenshotAfterScroll="{x:Null}" DeselectAfter="{x:Null}" SendWindowMessages="{x:Null}" SimulateType="{x:Null}" Activate="True" ClickBeforeTyping="True" Descriptor="[&quot;Target: InputBox (976,261,307,41)&quot; +&#xD;&#xA;&quot;Anchor: Text 'First name' (243,268,144,25)&quot; +&#xD;&#xA;&quot;Anchor: Text 'Taxpayer' (959,189,103,24)&quot;]" DesignTimeCacheId="34789e9b-1d95-46d6-b616-6c1c29ffb247" DesignTimeScaleFactor="1" DisplayName="CV Type Into - InputBox" EmptyField="True" sap:VirtualizedContainerService.HintSize="400,214.4" sap2010:WorkflowViewState.IdRef="CvTypeIntoWithDescriptor_192" InformativeScreenshot="221fcd4d1600db596d82599a39e122c4" NumberOfScrolls="1" ScrollDirection="None" Text="[out_CurrentRow(&quot;FirstName&quot;).ToString + &quot;[k(Down)]&quot;]" Version="V6">
+                                                                      <p:CvTypeIntoWithDescriptor DelayScreenshotAfterScroll="{x:Null}" DeselectAfter="{x:Null}" SendWindowMessages="{x:Null}" SimulateType="{x:Null}" Activate="True" ClickBeforeTyping="True" DelayBefore="3" DelayMS="3" Descriptor="[&quot;Target: InputBox (976,261,307,41)&quot; +&#xA;&quot;Anchor: Text 'First name' (243,268,144,25)&quot; +&#xA;&quot;Anchor: Text 'Taxpayer' (959,189,103,24)&quot;]" DesignTimeCacheId="34789e9b-1d95-46d6-b616-6c1c29ffb247" DesignTimeScaleFactor="1" DisplayName="CV Type Into - InputBox" EmptyField="True" sap:VirtualizedContainerService.HintSize="400,214.4" sap2010:WorkflowViewState.IdRef="CvTypeIntoWithDescriptor_192" InformativeScreenshot="221fcd4d1600db596d82599a39e122c4" NumberOfScrolls="1" ScrollDirection="None" Text="[out_CurrentRow(&quot;FirstName&quot;).ToString + &quot;[k(Down)]&quot;]" Version="V6">
                                                                         <p:CvTypeIntoWithDescriptor.DesignTimeDescriptor>
                                                                           <uc:CvDescriptor Id="f4453138-9fd6-45ae-acc6-0814c3ae0fe0">
                                                                             <uc:CvDescriptor.Anchors>
@@ -8929,12 +8929,12 @@
                                                                 </p:CVScope.UseLocalServer>
                                                                 <sap:WorkflowViewStateService.ViewState>
                                                                   <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                                                                    <x:Boolean x:Key="IsExpanded">False</x:Boolean>
-                                                                    <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                                                                    <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                                                                    <x:Boolean x:Key="IsPinned">True</x:Boolean>
                                                                   </scg:Dictionary>
                                                                 </sap:WorkflowViewStateService.ViewState>
                                                               </p:CVScope>
-                                                              <ui:CommentOut DisplayName="Comment Out" sap:VirtualizedContainerService.HintSize="1166.4,56.8" sap2010:WorkflowViewState.IdRef="CommentOut_119">
+                                                              <ui:CommentOut DisplayName="Comment Out" sap:VirtualizedContainerService.HintSize="1275.2,56.8" sap2010:WorkflowViewState.IdRef="CommentOut_119">
                                                                 <ui:CommentOut.Body>
                                                                   <Sequence DisplayName="Ignored Activities" sap:VirtualizedContainerService.HintSize="416,24.8" sap2010:WorkflowViewState.IdRef="Sequence_641">
                                                                     <sap:WorkflowViewStateService.ViewState>
@@ -8969,7 +8969,7 @@
                                                                   </scg:Dictionary>
                                                                 </sap:WorkflowViewStateService.ViewState>
                                                               </ui:CommentOut>
-                                                              <ui:CommentOut DisplayName="Comment Out" sap:VirtualizedContainerService.HintSize="1166.4,56.8" sap2010:WorkflowViewState.IdRef="CommentOut_120">
+                                                              <ui:CommentOut DisplayName="Comment Out" sap:VirtualizedContainerService.HintSize="1275.2,56.8" sap2010:WorkflowViewState.IdRef="CommentOut_120">
                                                                 <ui:CommentOut.Body>
                                                                   <Sequence DisplayName="Ignored Activities" sap:VirtualizedContainerService.HintSize="449.6,330.4" sap2010:WorkflowViewState.IdRef="Sequence_642">
                                                                     <sap:WorkflowViewStateService.ViewState>
@@ -9003,7 +9003,7 @@
                                                                   </scg:Dictionary>
                                                                 </sap:WorkflowViewStateService.ViewState>
                                                               </ui:CommentOut>
-                                                              <ui:LogMessage DisplayName="Log Message (Taxpayer information)" sap:VirtualizedContainerService.HintSize="1166.4,176" sap2010:WorkflowViewState.IdRef="LogMessage_108" Level="[UiPath.Core.Activities.LogLevel.Info]" Message="[&quot;Taxpayer information is entered&quot;]">
+                                                              <ui:LogMessage DisplayName="Log Message (Taxpayer information)" sap:VirtualizedContainerService.HintSize="1275.2,176" sap2010:WorkflowViewState.IdRef="LogMessage_108" Level="[UiPath.Core.Activities.LogLevel.Info]" Message="[&quot;Taxpayer information is entered&quot;]">
                                                                 <sap:WorkflowViewStateService.ViewState>
                                                                   <scg:Dictionary x:TypeArguments="x:String, x:Object">
                                                                     <x:Boolean x:Key="IsExpanded">True</x:Boolean>
@@ -9011,7 +9011,7 @@
                                                                   </scg:Dictionary>
                                                                 </sap:WorkflowViewStateService.ViewState>
                                                               </ui:LogMessage>
-                                                              <If Condition="[out_CurrentRow(&quot;Filing Status&quot;).ToString.ToLower.Contains(&quot;married&quot;)]" DisplayName="If- For Spouse" sap:VirtualizedContainerService.HintSize="1166.4,1855.2" sap2010:WorkflowViewState.IdRef="If_48">
+                                                              <If Condition="[out_CurrentRow(&quot;Filing Status&quot;).ToString.ToLower.Contains(&quot;married&quot;)]" DisplayName="If- For Spouse" sap:VirtualizedContainerService.HintSize="1275.2,2434.4" sap2010:WorkflowViewState.IdRef="If_48">
                                                                 <sap:WorkflowViewStateService.ViewState>
                                                                   <scg:Dictionary x:TypeArguments="x:String, x:Object">
                                                                     <x:Boolean x:Key="IsExpanded">True</x:Boolean>
@@ -9019,14 +9019,14 @@
                                                                   </scg:Dictionary>
                                                                 </sap:WorkflowViewStateService.ViewState>
                                                                 <If.Then>
-                                                                  <Sequence DisplayName="Then" sap:VirtualizedContainerService.HintSize="1132.8,1580" sap2010:WorkflowViewState.IdRef="Sequence_659">
+                                                                  <Sequence DisplayName="Then" sap:VirtualizedContainerService.HintSize="1241.6,2159.2" sap2010:WorkflowViewState.IdRef="Sequence_659">
                                                                     <sap:WorkflowViewStateService.ViewState>
                                                                       <scg:Dictionary x:TypeArguments="x:String, x:Object">
                                                                         <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                                                                         <x:Boolean x:Key="IsPinned">True</x:Boolean>
                                                                       </scg:Dictionary>
                                                                     </sap:WorkflowViewStateService.ViewState>
-                                                                    <uix:NTypeInto ActivateBefore="True" ClickBeforeMode="Double" DisplayName="Type Into- Taxpayer SSN" EmptyFieldMode="SingleLine" sap:VirtualizedContainerService.HintSize="1070.4,250.4" sap2010:WorkflowViewState.IdRef="NTypeInto_114" ScopeIdentifier="5f0f10da-3fd3-4cfd-b512-fa38c40c0460" Text="[out_CurrentRow(&quot;Spouse SSN&quot;).ToString+  &quot;[k(Down)]&quot;]" Version="V3">
+                                                                    <uix:NTypeInto ActivateBefore="True" ClickBeforeMode="Double" DelayAfter="3" DisplayName="Type Into- Taxpayer SSN" EmptyFieldMode="SingleLine" sap:VirtualizedContainerService.HintSize="1179.2,250.4" sap2010:WorkflowViewState.IdRef="NTypeInto_114" ScopeIdentifier="5f0f10da-3fd3-4cfd-b512-fa38c40c0460" Text="[out_CurrentRow(&quot;Spouse SSN&quot;).ToString+  &quot;[k(Down)]&quot;]" Version="V3">
                                                                       <uix:NTypeInto.Target>
                                                                         <uix:TargetAnchorable CvElementArea="1629, 251, 234, 41" CvType="InputBox" DesignTimeRectangle="1628, 251, 234, 41" DesignTimeScaleFactor="1.25" ElementType="InputBox" FriendlyName="'Spouse'" Guid="ba8b5281-5045-49b1-8c22-aaa3b6c0f56f" InformativeScreenshot="1ce11247727a22098b21da0be1aa96a4.png" ScopeSelectorArgument="&lt;wnd app='msrdc.exe' cls='RAIL_WINDOW' title='2024 UltraTax CS  / 1040 [ULAB2517] - [Input Screen     Ctrl+I] *' /&gt;" SearchSteps="CV" TargetType="ComputerVisionBased" Version="V2" Visibility="Interactive">
                                                                           <uix:TargetAnchorable.Anchors>
@@ -9043,14 +9043,14 @@
                                                                         </scg:Dictionary>
                                                                       </sap:WorkflowViewStateService.ViewState>
                                                                     </uix:NTypeInto>
-                                                                    <Parallel sap:VirtualizedContainerService.HintSize="1070.4,118.4" sap2010:WorkflowViewState.IdRef="Parallel_1">
+                                                                    <Parallel sap:VirtualizedContainerService.HintSize="1179.2,118.4" sap2010:WorkflowViewState.IdRef="Parallel_1">
                                                                       <sap:WorkflowViewStateService.ViewState>
                                                                         <scg:Dictionary x:TypeArguments="x:String, x:Object">
                                                                           <x:Boolean x:Key="IsPinned">True</x:Boolean>
                                                                           <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                                                                         </scg:Dictionary>
                                                                       </sap:WorkflowViewStateService.ViewState>
-                                                                      <uix:NApplicationCard AttachMode="ByInstance" CloseMode="Never" ContinueOnError="True" DisplayName="Use Application: Remote Desktop Usage" sap:VirtualizedContainerService.HintSize="240,40" sap2010:WorkflowViewState.IdRef="NApplicationCard_111" OpenMode="Never" ScopeGuid="e16033fc-f135-4f51-9af4-0505fb156912" Timeout="15" Version="V2">
+                                                                      <uix:NApplicationCard AttachMode="ByInstance" CloseMode="Never" ContinueOnError="True" DisplayName="Use Application: Remote Desktop Usage" sap:VirtualizedContainerService.HintSize="348.8,40" sap2010:WorkflowViewState.IdRef="NApplicationCard_111" OpenMode="Never" ScopeGuid="e16033fc-f135-4f51-9af4-0505fb156912" Timeout="5" Version="V2">
                                                                         <uix:NApplicationCard.Body>
                                                                           <ActivityAction x:TypeArguments="x:Object">
                                                                             <ActivityAction.Argument>
@@ -9134,7 +9134,7 @@
                                                                           </scg:Dictionary>
                                                                         </sap:WorkflowViewStateService.ViewState>
                                                                       </uix:NApplicationCard>
-                                                                      <uix:NApplicationCard AttachMode="ByInstance" CloseMode="Never" ContinueOnError="True" DisplayName="Use Application: wfica32.exe" sap:VirtualizedContainerService.HintSize="248,40" sap2010:WorkflowViewState.IdRef="NApplicationCard_95" OpenMode="Never" ScopeGuid="d924b507-7386-4105-b4c3-3680c9641f7f" Version="V2">
+                                                                      <uix:NApplicationCard AttachMode="ByInstance" CloseMode="Never" ContinueOnError="True" DisplayName="Use Application: wfica32.exe" sap:VirtualizedContainerService.HintSize="248,40" sap2010:WorkflowViewState.IdRef="NApplicationCard_95" OpenMode="Never" ScopeGuid="d924b507-7386-4105-b4c3-3680c9641f7f" Timeout="5" Version="V2">
                                                                         <uix:NApplicationCard.Body>
                                                                           <ActivityAction x:TypeArguments="x:Object">
                                                                             <ActivityAction.Argument>
@@ -9207,7 +9207,7 @@
                                                                         </sap:WorkflowViewStateService.ViewState>
                                                                       </uix:NApplicationCard>
                                                                     </Parallel>
-                                                                    <uix:NApplicationCard AttachMode="ByInstance" CloseMode="Never" ContinueOnError="True" DisplayName="Use Application: Remote Desktop Usage" sap:VirtualizedContainerService.HintSize="1070.4,56.8" sap2010:WorkflowViewState.IdRef="NApplicationCard_115" OpenMode="Never" ScopeGuid="e16033fc-f135-4f51-9af4-0505fb156912" Timeout="5" Version="V2">
+                                                                    <uix:NApplicationCard AttachMode="ByInstance" CloseMode="Never" ContinueOnError="True" DisplayName="Use Application: Remote Desktop Usage" sap:VirtualizedContainerService.HintSize="1179.2,636" sap2010:WorkflowViewState.IdRef="NApplicationCard_115" OpenMode="Never" ScopeGuid="e16033fc-f135-4f51-9af4-0505fb156912" Timeout="5" Version="V2">
                                                                       <uix:NApplicationCard.Body>
                                                                         <ActivityAction x:TypeArguments="x:Object">
                                                                           <ActivityAction.Argument>
@@ -9244,12 +9244,12 @@
                                                                       </uix:NApplicationCard.TargetApp>
                                                                       <sap:WorkflowViewStateService.ViewState>
                                                                         <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                                                                          <x:Boolean x:Key="IsPinned">False</x:Boolean>
-                                                                          <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+                                                                          <x:Boolean x:Key="IsPinned">True</x:Boolean>
+                                                                          <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                                                                         </scg:Dictionary>
                                                                       </sap:WorkflowViewStateService.ViewState>
                                                                     </uix:NApplicationCard>
-                                                                    <uix:NTypeInto ActivateBefore="True" ClickBeforeMode="Double" DisplayName="Type Into- First Name" EmptyFieldMode="SingleLine" sap:VirtualizedContainerService.HintSize="1070.4,250.4" sap2010:WorkflowViewState.IdRef="NTypeInto_115" ScopeIdentifier="5f0f10da-3fd3-4cfd-b512-fa38c40c0460" Text="[out_CurrentRow(&quot;Spouse FirstName&quot;).ToString+ &quot;[k(Down)]&quot;]" Version="V3">
+                                                                    <uix:NTypeInto ActivateBefore="True" ClickBeforeMode="Double" DelayAfter="3" DelayBefore="5" DisplayName="Type Into- First Name" EmptyFieldMode="SingleLine" sap:VirtualizedContainerService.HintSize="1179.2,250.4" sap2010:WorkflowViewState.IdRef="NTypeInto_115" ScopeIdentifier="5f0f10da-3fd3-4cfd-b512-fa38c40c0460" Text="[out_CurrentRow(&quot;Spouse FirstName&quot;).ToString+ &quot;[k(Down)]&quot;]" Version="V3">
                                                                       <uix:NTypeInto.Target>
                                                                         <uix:TargetAnchorable CvElementArea="1566, 288, 296, 39" CvType="InputBox" DesignTimeRectangle="1566, 288, 296, 39" DesignTimeScaleFactor="1.25" ElementType="InputBox" FriendlyName="'Spouse'" Guid="fb5f6b80-7cbe-43ab-a409-a8ce5cdc0f24" InformativeScreenshot="5522b553b9acaf112db32daf1ba17d44.png" IsResponsive="True" ScopeSelectorArgument="&lt;wnd app='msrdc.exe' cls='RAIL_WINDOW' title='2023 UltraTax CS  / 1040 [CHECKRET LAND, JACK] - [Input Screen  *' /&gt;" SearchSteps="CV" TargetType="ComputerVisionBased" Version="V2" Visibility="Interactive">
                                                                           <uix:TargetAnchorable.Anchors>
@@ -9266,7 +9266,7 @@
                                                                         </scg:Dictionary>
                                                                       </sap:WorkflowViewStateService.ViewState>
                                                                     </uix:NTypeInto>
-                                                                    <uix:NTypeInto ActivateBefore="True" ClickBeforeMode="Double" DisplayName="Type Into- Last Name" EmptyFieldMode="SingleLine" sap:VirtualizedContainerService.HintSize="1070.4,250.4" sap2010:WorkflowViewState.IdRef="NTypeInto_116" ScopeIdentifier="5f0f10da-3fd3-4cfd-b512-fa38c40c0460" Text="[out_CurrentRow(&quot;Spouse Last Name&quot;).ToString + &quot;[k(Down)]&quot;]" Version="V3">
+                                                                    <uix:NTypeInto ActivateBefore="True" ClickBeforeMode="Double" DisplayName="Type Into- Last Name" EmptyFieldMode="SingleLine" sap:VirtualizedContainerService.HintSize="1179.2,250.4" sap2010:WorkflowViewState.IdRef="NTypeInto_116" ScopeIdentifier="5f0f10da-3fd3-4cfd-b512-fa38c40c0460" Text="[out_CurrentRow(&quot;Spouse Last Name&quot;).ToString + &quot;[k(Down)]&quot;]" Version="V3">
                                                                       <uix:NTypeInto.Target>
                                                                         <uix:TargetAnchorable CvElementArea="1440, 328, 422, 39" CvType="InputBox" DesignTimeRectangle="1440, 328, 422, 39" DesignTimeScaleFactor="1.25" ElementType="InputBox" FriendlyName="'Last name'" Guid="dad8233e-e510-4ba4-999c-f136fd05d4b5" InformativeScreenshot="8e6bbc897cf019e3ae1be80ccd08fba4.png" ScopeSelectorArgument="&lt;wnd app='msrdc.exe' cls='RAIL_WINDOW' title='2023 UltraTax CS  / 1040 [CHECKRET LAND, JACK] - [Input Screen  *' /&gt;" SearchSteps="CV" TargetType="ComputerVisionBased" Version="V2" Visibility="Interactive">
                                                                           <uix:TargetAnchorable.Anchors>
@@ -9283,7 +9283,7 @@
                                                                         </scg:Dictionary>
                                                                       </sap:WorkflowViewStateService.ViewState>
                                                                     </uix:NTypeInto>
-                                                                    <ui:LogMessage DisplayName="Log Message (Taxpayer information)" sap:VirtualizedContainerService.HintSize="1070.4,176" sap2010:WorkflowViewState.IdRef="LogMessage_109" Level="[UiPath.Core.Activities.LogLevel.Info]" Message="[&quot;Taxpayer Spouse information is entered&quot;]">
+                                                                    <ui:LogMessage DisplayName="Log Message (Taxpayer information)" sap:VirtualizedContainerService.HintSize="1179.2,176" sap2010:WorkflowViewState.IdRef="LogMessage_109" Level="[UiPath.Core.Activities.LogLevel.Info]" Message="[&quot;Taxpayer Spouse information is entered&quot;]">
                                                                       <sap:WorkflowViewStateService.ViewState>
                                                                         <scg:Dictionary x:TypeArguments="x:String, x:Object">
                                                                           <x:Boolean x:Key="IsExpanded">True</x:Boolean>
@@ -9291,7 +9291,7 @@
                                                                         </scg:Dictionary>
                                                                       </sap:WorkflowViewStateService.ViewState>
                                                                     </ui:LogMessage>
-                                                                    <ui:CommentOut DisplayName="Comment Out" sap:VirtualizedContainerService.HintSize="1070.4,56.8" sap2010:WorkflowViewState.IdRef="CommentOut_121">
+                                                                    <ui:CommentOut DisplayName="Comment Out" sap:VirtualizedContainerService.HintSize="1179.2,56.8" sap2010:WorkflowViewState.IdRef="CommentOut_121">
                                                                       <ui:CommentOut.Body>
                                                                         <Sequence DisplayName="Ignored Activities" sap:VirtualizedContainerService.HintSize="416,336.8" sap2010:WorkflowViewState.IdRef="Sequence_646">
                                                                           <sap:WorkflowViewStateService.ViewState>
@@ -9317,7 +9317,7 @@
                                                                         </scg:Dictionary>
                                                                       </sap:WorkflowViewStateService.ViewState>
                                                                     </ui:CommentOut>
-                                                                    <ui:CommentOut DisplayName="Comment Out" sap:VirtualizedContainerService.HintSize="1070.4,56.8" sap2010:WorkflowViewState.IdRef="CommentOut_122">
+                                                                    <ui:CommentOut DisplayName="Comment Out" sap:VirtualizedContainerService.HintSize="1179.2,56.8" sap2010:WorkflowViewState.IdRef="CommentOut_122">
                                                                       <ui:CommentOut.Body>
                                                                         <Sequence DisplayName="Ignored Activities" sap2010:WorkflowViewState.IdRef="Sequence_647">
                                                                           <uix:NTypeInto ActivateBefore="True" ClickBeforeMode="Single" DisplayName="Type Into- DOB" EmptyFieldMode="SingleLine" sap:VirtualizedContainerService.HintSize="353.6,56.8" sap2010:WorkflowViewState.IdRef="NTypeInto_118" Text="[out_CurrentRow(&quot;DOB&quot;).ToString + &quot;[k(Down)]&quot;]" Version="V3">
@@ -9331,7 +9331,7 @@
                                                                         </Sequence>
                                                                       </ui:CommentOut.Body>
                                                                     </ui:CommentOut>
-                                                                    <ui:CommentOut DisplayName="Comment Out" sap:VirtualizedContainerService.HintSize="1070.4,56.8" sap2010:WorkflowViewState.IdRef="CommentOut_123">
+                                                                    <ui:CommentOut DisplayName="Comment Out" sap:VirtualizedContainerService.HintSize="1179.2,56.8" sap2010:WorkflowViewState.IdRef="CommentOut_123">
                                                                       <ui:CommentOut.Body>
                                                                         <Sequence DisplayName="Ignored Activities" sap2010:WorkflowViewState.IdRef="Sequence_648">
                                                                           <uix:NClick ActivateBefore="True" ClickType="Single" DelayAfter="5" DisplayName="Click 'Tp/Sp Info'" sap:VirtualizedContainerService.HintSize="353.6,56.8" sap2010:WorkflowViewState.IdRef="NClick_163" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="5f0f10da-3fd3-4cfd-b512-fa38c40c0460" Version="V3">
@@ -10938,11 +10938,11 @@
                                                         </sap:WorkflowViewStateService.ViewState>
                                                       </uix:NApplicationCard>
                                                     </Sequence>
-                                                    <Sequence DisplayName="Address" sap:VirtualizedContainerService.HintSize="704.8,56.8" sap2010:WorkflowViewState.IdRef="Sequence_667">
+                                                    <Sequence DisplayName="Address" sap:VirtualizedContainerService.HintSize="1324.8,1809.6" sap2010:WorkflowViewState.IdRef="Sequence_667">
                                                       <sap:WorkflowViewStateService.ViewState>
                                                         <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                                                          <x:Boolean x:Key="IsExpanded">False</x:Boolean>
-                                                          <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                                                          <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                                                          <x:Boolean x:Key="IsPinned">True</x:Boolean>
                                                         </scg:Dictionary>
                                                       </sap:WorkflowViewStateService.ViewState>
                                                       <uix:NApplicationCard AttachMode="ByInstance" CloseMode="Never" DisplayName="Use Application: 2023 UltraTax CS  / 1040 [ULAB0750 Anderson, Jack] - [Input Screen     Ctrl+I] (f9f" sap:VirtualizedContainerService.HintSize="452,1688.8" sap2010:WorkflowViewState.IdRef="NApplicationCard_99" OpenMode="Never" ScopeGuid="b4eb9a28-63b3-4b62-8f84-868740470a2a" Version="V2">
@@ -10990,7 +10990,7 @@
                                                                   </scg:Dictionary>
                                                                 </sap:WorkflowViewStateService.ViewState>
                                                               </uix:NTypeInto>
-                                                              <uix:NTypeInto ActivateBefore="True" ClickBeforeMode="Single" DisplayName="Type Into 'msrdc.exe 2024'" EmptyFieldMode="SingleLine" sap:VirtualizedContainerService.HintSize="353.6,250.4" sap2010:WorkflowViewState.IdRef="NTypeInto_139" ScopeIdentifier="b4eb9a28-63b3-4b62-8f84-868740470a2a" Text="[out_CurrentRow(&quot;State&quot;).ToString + &quot;[k(Tab)]&quot;]" Version="V3">
+                                                              <uix:NTypeInto ActivateBefore="True" ClickBeforeMode="Single" DelayAfter="3" DelayBefore="3" DisplayName="Type Into 'msrdc.exe 2024'" EmptyFieldMode="SingleLine" sap:VirtualizedContainerService.HintSize="353.6,250.4" sap2010:WorkflowViewState.IdRef="NTypeInto_139" ScopeIdentifier="b4eb9a28-63b3-4b62-8f84-868740470a2a" Text="[out_CurrentRow(&quot;State&quot;).ToString + &quot;[k(Tab)]&quot;]" Version="V3">
                                                                 <uix:NTypeInto.Target>
                                                                   <uix:TargetAnchorable CvElementArea="1003, 492, 23, 34" CvType="ArrowButton" DesignTimeRectangle="1003, 492, 23, 34" DesignTimeScaleFactor="1.25" ElementType="ArrowButton" FriendlyName="'msrdc.exe 2024'" Guid="22220d28-af65-450a-98ce-e8e582c34bb8" InformativeScreenshot="0fc8ea0e4277d243095d414e85674e21.png" ScopeSelectorArgument="&lt;wnd app='msrdc.exe' cls='RAIL_WINDOW' title='2024 UltraTax CS  / 1040 [ULAB5641 ANDERSON, JACK &amp;amp; Jill] - [Inp*' /&gt;" SearchSteps="CV" TargetType="ComputerVisionBased" Version="V2" Visibility="Interactive">
                                                                     <uix:TargetAnchorable.Anchors>
@@ -13129,7 +13129,7 @@
                                                         </sap:WorkflowViewStateService.ViewState>
                                                       </uix:NApplicationCard>
                                                     </Sequence>
-                                                    <If Condition="[out_CurrentRow(&quot;Proforma Details&quot;).ToString.ToLower.Contains(&quot;yes&quot;)]" DisplayName="If-Proforma Details" sap:VirtualizedContainerService.HintSize="704.8,420.8" sap2010:WorkflowViewState.IdRef="If_47">
+                                                    <If Condition="[out_CurrentRow(&quot;Proforma Details&quot;).ToString.ToLower.Contains(&quot;yes&quot;)]" DisplayName="If-Proforma Details" sap:VirtualizedContainerService.HintSize="1324.8,420.8" sap2010:WorkflowViewState.IdRef="If_47">
                                                       <sap:WorkflowViewStateService.ViewState>
                                                         <scg:Dictionary x:TypeArguments="x:String, x:Object">
                                                           <x:Boolean x:Key="IsExpanded">True</x:Boolean>
@@ -13168,7 +13168,7 @@
                                                         </Sequence>
                                                       </If.Else>
                                                     </If>
-                                                    <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="704.8,176" sap2010:WorkflowViewState.IdRef="LogMessage_107" Level="[UiPath.Core.Activities.LogLevel.Info]" Message="[&quot;All required details are entered.&quot;]">
+                                                    <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="1324.8,176" sap2010:WorkflowViewState.IdRef="LogMessage_107" Level="[UiPath.Core.Activities.LogLevel.Info]" Message="[&quot;All required details are entered.&quot;]">
                                                       <sap:WorkflowViewStateService.ViewState>
                                                         <scg:Dictionary x:TypeArguments="x:String, x:Object">
                                                           <x:Boolean x:Key="IsExpanded">True</x:Boolean>
